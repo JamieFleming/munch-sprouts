@@ -1143,7 +1143,7 @@ input[type="radio"] {
 .difficulty {
   /* border: 2px solid red; */
   align-self: flex-end;
-  max-width: 30%;
+  max-width: 20%;
 }
 
 .difficulty:hover {
