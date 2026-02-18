@@ -729,6 +729,7 @@ padding: 2rem;
   border-radius: 30px;
   padding: 0.1rem;
   width: 30%;
+  min-width: 10rem;
   text-wrap: nowrap;
   text-align: center;
   background-color: #eceef2;
