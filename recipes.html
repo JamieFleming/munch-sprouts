@@ -33,6 +33,8 @@
     <!-- CSS -->
     <link rel="stylesheet" href="./css/styles.css">
 
+    <img loading="lazy" decoding="async">
+
     <title>MunchSprouts - Recipes</title>
 </head>
 
@@ -40,7 +42,7 @@
 
 <body>
 
-    <header class="site-header">
+    <header class="site-header">  
         <div class="header-container">
             <a href="https://munchsprouts.co.uk" class="logo-title-link" aria-label="Go to homepage">
                 <div class="title-container">
@@ -72,22 +74,58 @@
 
     <main class="recipes-main">
 
-        <nav class="recipe-nav">
+        <!-- Navigation section to navigate to recipes -->
+        <section class="recipe-navigation">
+
+            <!-- Navigate via age -->
+            <nav class="recipe-nav">
                 <ul>
                     <li><a href="#four-months">4-6 Months</a></li>
                     <li><a href="#six-months">6+ Months</a></li>
                     <li><a href="#ten-months">10+ Months</a></li>
                 </ul>
             </nav>
+
+            <!-- Navigate via recipe name -->
+             <section class="recipe-jump">
+                <select name="recipe-select" id="recipe-select" onchange="scrollToRecipe()">
+                    <option value="">View All Recipes</option>
+                    <option value="#four-months">--------------- 4-6 Months ---------------</option>
+                    <option value="#avocado-basil-puree">Avocado & Basil Puree</option>
+                    <option value="#aubergine-pepper-sweet-potato">Aubergine, Pepper & Sweet Potato Puree</option>
+                    <option value="#butternut-squash-sweetcorn-peas-puree">Butternut Squash, Sweetcorn and Pea Puree</option>
+                    <option value="#brussels-sprouts-puree">Brussels Sprout Puree</option>
+                    <option value="#carrot-puree">Carrot Puree</option>
+                    <option value="#broccoli-puree">Broccoli Puree</option>
+                    <option value="#six-months">--------------- 6+ Months ---------------</option>
+                    <option value="#bright-start-breakfast-bowl">Bright Start Breakfast Bowl</option>
+                    <option value="#herby-scrambled-egg">Herby Scrambled Egg</option>
+                    <option value="#my-first-chicken-curry">My First Chicken Curry</option>
+                    <option value="#pea-and-ham-bake">Pea & Hame Bake</option>
+                    <option value="#creamy-hotpot">Creamy Hotpot</option>
+                    <option value="#ten-months">--------------- 10+  Months ---------------</option>
+                    <option value="#cheesy-pitta-pizzas">Cheesy Pitta Pizzas</option>
+                    <option value="#baked-bean-breakfast-pancakes">Baked Bean Breakfast Pancakes</option>
+                    <option value="#smoky-bean-one-pot-hotpot">Smoky bean One-Pot Hotpot</option>
+                    <option value="#green-bean-pesto-pasta">Green Bean Pesto Pasta</option>
+                    <option value="#cheesy-broccoli-potato-gratin">Cheesy Broccoli & Potato Gratin</option>
+                    <option value="#on-the-go-porridge-bars">On the Go Porridge Bars</option>
+                    <option value="#fruity-porridge">Fruity Porridge</option>
+                </select>
+            </section>
+        </section>
+        
         
         <section class="recipes-title">
             <h2>BLW Recipes</h2>
-            <p>Nutritious, baby-friendly recipes designed for self-feeeding.</p>
+            <p>Nutritious, baby-friendly recipes designed for self-feeding.</p>
             <img src="./images/recipes-hero.png" alt="Baby eating food" class="recipes-title-image">
         </section>
 
+        <!-- Recipe section -->
         <section class="recipes">
 
+            <!-- Recipes for 4-6 months -->
             <section class="four-months signs-baby-ready month-section" id="four-months">
 
                 <div class="recipes-info-title">
@@ -97,6 +135,7 @@
 
                 <div class="recipe-cards">
 
+                    <!-- Avocado and basil puree-->
                     <article class="recipe-card" id="avocado-basil-puree">
 
                         <div class="recipe-name">
@@ -161,6 +200,7 @@
                         </div>
                     </article>
 
+                    <!-- Aubergine, pepper and sweet potato puree -->
                     <article class="recipe-card" id="aubergine-pepper-sweet-potato">
 
                         <div class="recipe-name">
@@ -225,6 +265,7 @@
                         </div>
                     </article>
 
+                    <!-- Butternut squash, sweetcorn and pea puree -->
                     <article class="recipe-card" id="butternut-squash-sweetcorn-peas-puree">
 
                         <div class="recipe-name">
@@ -286,6 +327,7 @@
 
                     </article>
 
+                    <!-- Brussels sprout puree -->
                     <article class="recipe-card" id="brussels-sprouts-puree">
 
                         <div class="recipe-name">
@@ -345,6 +387,7 @@
 
                     </article>
 
+                    <!-- Carrot puree -->
                     <article class="recipe-card" id="carrot-puree">
 
                         <div class="recipe-name">
@@ -403,6 +446,7 @@
 
                     </article>
 
+                    <!-- Broccoli puree -->
                     <article class="recipe-card" id="broccoli-puree">
 
                         <div class="recipe-name">
@@ -465,6 +509,7 @@
 
             </section>
 
+            <!-- Recipes for 6+ months -->
             <section class="six-months signs-baby-ready month-section" id="six-months">
 
                 <div class="recipes-info-title">
@@ -474,6 +519,7 @@
 
                 <div class="recipe-cards">
 
+                    <!-- Bright Start Breakfast Bowl -->
                     <article class="recipe-card " id="bright-start-breakfast-bowl">
 
                         <div class="recipe-name">
@@ -538,6 +584,7 @@
 
                     </article>
 
+                    <!-- Herby Scrambled Egg -->
                     <article class="recipe-card" id="herby-scrambled-egg">
 
                         <div class="recipe-name">
@@ -599,6 +646,7 @@
 
                     </article>
 
+                    <!-- My First Chicken Curry -->
                     <article class="recipe-card" id="my-first-chicken-curry">
 
                         <div class="recipe-name">
@@ -662,6 +710,7 @@
 
                     </article>
 
+                    <!-- Pea & Hame Bake -->
                     <article class="recipe-card" id="pea-and-ham-bake">
 
                         <div class="recipe-name">
@@ -736,6 +785,7 @@
 
                     </article>
 
+                    <!-- Creamy Hotpot -->
                     <article class="recipe-card" id="creamy-hotpot">
 
                         <div class="recipe-name">
@@ -805,6 +855,7 @@
                 </div>
             </section>
 
+            <!-- Recipes for 7+ months -->
             <!-- <section class="seven-months signs-baby-ready month-section">
 
             </section>
@@ -813,6 +864,7 @@
 
             <section class="nine-months signs-baby-ready month-section"></section> -->
 
+            <!-- Recipes for 10+ months -->
             <section class="ten-months signs-baby-ready month-section" id="ten-months">
 
                 <div class="recipes-info-title">
@@ -822,6 +874,7 @@
 
                 <div class="recipe-cards">
 
+                    <!-- Cheesy Pitta Pizzas -->
                     <article class="recipe-card" id="cheesy-pitta-pizzas">
 
                         <div class="recipe-name">
@@ -885,6 +938,7 @@
 
                     </article>
 
+                    <!-- Baked Bean Breakfast Pancakes -->
                     <article class="recipe-card" id="baked-bean-breakfast-pancakes">
 
                         <div class="recipe-name">
@@ -948,6 +1002,7 @@
 
                     </article>
 
+                    <!-- Smoky Bean One Pot Hotpot -->
                     <article class="recipe-card" id="smoky-bean-one-pot-hotpot">
 
                         <div class="recipe-name">
@@ -1008,6 +1063,7 @@
 
                     </article>
 
+                    <!-- Green Bean Pesto Pasta -->
                     <article class="recipe-card" id="green-bean-pesto-pasta">
 
                         <div class="recipe-name">
@@ -1070,6 +1126,7 @@
 
                     </article>
 
+                    <!-- Cheesy Broccoli Potato Gratin -->
                     <article class="recipe-card" id="cheesy-broccoli-potato-gratin">
 
                         <div class="recipe-name">
@@ -1113,7 +1170,7 @@
                                 <li>Add the broccoli evenly across the potato. Top with the remaining potato.</li>
                                 <li>Pour the cheese sauce over the top, ensuring to wet the whole layer (the sauce won't cover the top).</li>
                                 <li>Bake in the oven at 190°C for 35 minutes.</li>
-                                <li>Mash down finely for little ones from 7 months or more chunkily for older babies.</li>
+                                <li>Mash down finely for little ones from 7 months or more chunky for older babies.</li>
                             </ol>
                         </div>
 
@@ -1133,6 +1190,7 @@
 
                     </article>
 
+                    <!-- On The Go Porridge Bars -->
                     <article class="recipe-card" id="on-the-go-porridge-bars">
 
                         <div class="recipe-name">
@@ -1174,7 +1232,7 @@
                                 <li>Line a small baking tray with baking parchment. Place the oats + milk in a small saucepan + bring to the boil, then reduce the heat + simmer for 8 minutes, stirring frequently, or until the oats are very soft + mushy – it should be a thick porridge consistency.</li>
                                 <li>Transfer to a bowl + stir in the raisins, cinnamon and seeds, then spread out the porridge on the prepared baking sheet in an even layer about 1cm thick. Cover and chill for 30 minutes or until set.</li>
                                 <li>Cut the porridge into 6 fingers each 7 cm long by 2.5 cm wide.</li>
-                                <li>Melt the butter in a large, nonstick frying pan and cook the fingers for 3 minutes on each side or until golden. Leave to cool slightly before serving.</li>
+                                <li>Melt the butter in a large, non-stick frying pan and cook the fingers for 3 minutes on each side or until golden. Leave to cool slightly before serving.</li>
                             </ol>
                         </div>
 
@@ -1194,6 +1252,7 @@
 
                     </article>
 
+                    <!-- Fruity Porridge -->
                     <article class="recipe-card" id="fruity-porridge">
 
                         <div class="recipe-name">
@@ -1260,13 +1319,17 @@
 
         </section>
 
+        <!-- Back to top button -->
+         <button id="back-to-top" onclick="scrollToTop()" title="Back to Top"><h2>&uarr;</h2>
+        </button>
+
     </main>
 
     <footer class="site-footer">
         <div class="footer-text">
             <div class="footer-desc">
                 <div class="footer-logo">
-                <img src="./images/logo.png" alt="Cartoon baby hand holding brocolli" id="footer-logo">
+                <img src="./images/logo.png" alt="Cartoon baby hand holding broccoli" id="footer-logo">
                 <h3>Munch Sprouts</h3>
                 </div>
                 <p>Your complete guide to introducing solid foods to your baby with fun, safe, and nutritious recipes.</p>
@@ -1281,7 +1344,7 @@
         <div class="horizontal-rule"></div>
 
         <div class="copyright">
-            <p>&copy; 2026 MunchSprouts. For informational purposes only.</p>
+            <p>&copy; 2026 MunchSprouts. For informational purposes only. | Content may be inspired by public sources under UK fair dealing.</p>
         </div>
     </footer>
 

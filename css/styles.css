@@ -52,7 +52,9 @@ body {
   line-height: 1.6;
   color: #333;
   background: var(--background);
+  /* padding-top: 1rem; */
 }
+
 
 h2 {
   /* text-shadow: 2px 2px 10px var(--text-charcoal-hover); */
@@ -65,7 +67,9 @@ h2 {
   box-shadow: 0 2px 10px rgba(0,0,0,0.1);
   /* border: 2px solid red; */
   z-index: 5;
-  position: sticky;
+  position: relative;
+  top: 0px;
+  /* margin-top: 1rem; */
 }
 
 .header-container {
@@ -179,11 +183,7 @@ h2 {
 main {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 0;
 }
-
-
-
 
 /* Home Page */
 
@@ -197,7 +197,7 @@ main {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  gap: 20px;
+  gap: 1rem;
   background-color: var(--accent-purple);
   flex-wrap: wrap;
   box-shadow: 0px 10px 10px var(--accent-purple-darker);
@@ -632,7 +632,9 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  /* margin: 2rem auto; */
 }
+
 
 .getting-started-title {
 /* border: 2px solid firebrick; */
@@ -1155,6 +1157,15 @@ input[type="radio"] {
   color: var(--text-charcoal-light);
 }
 
+/* .four-months-tab {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+} */
+
+
 
 /* Recipe Card */
 
@@ -1291,6 +1302,519 @@ input[type="radio"] {
   gap: 1rem;
 }
 
+.recipe-card li::marker {
+  color: var(--accent-purple-darker)
+}
+
+/* Recipe Jump Menu */
+.recipe-jump {
+  text-align: center;
+  padding: 2rem;
+  background: var(--accent-purple);
+  border-radius: 10px;
+  margin: 1rem auto;
+  max-width: 400px;
+}
+
+.recipe-jump select {
+  padding: 0.75rem ;  /* Right padding for arrow */
+  border-radius: 8px;
+  border: 2px solid var(--primary-green);
+  font-size: 1rem;
+  background: white;
+  width: 100%;
+  max-width: 300px;
+  text-align: center;
+  
+  /* CROSS-BROWSER FIX */
+  -webkit-appearance: none;     /* Safari/Chrome */
+  -moz-appearance: none;        /* Firefox */
+  appearance: none;             /* Modern */
+  
+  /* Custom arrow */
+  /* background-image: url("image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
+  background-position: right 0.75rem center;
+  background-repeat: no-repeat;
+  background-size: 1.5em 1.5em; */
+}
+
+
+/* Back to Top */
+#back-to-top {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  background: var(--primary-green);
+  color: white;
+  border: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  text-align: center;
+  font-weight:900;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(76,175,80,0.4);
+  display: none;
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+#back-to-top h2 {
+  margin: 0 auto;
+  /* border: 2px solid red; */
+  /* padding-bottom: 0.4rem; */
+}
+
+#back-to-top:hover {
+  background: var(--primary-green-dark);
+  transform: scale(1.1);
+}
+
+
+
+
+/* Safety Page */
+
+/* Title */
+.safety-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.safety-title {
+  /* border: 2px solid red; */
+  padding: 2rem 0;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+.safety-title p {
+  margin-left: 3.5rem;
+  color: var(--text-charcoal-light)
+}
+
+.title-and-image {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+/* Emergency box */
+/* Emergency Preparedness */
+
+.emergency-box, .emergency-preparedness {
+  border: 1px solid red;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  background-color: #fbf2f1;
+  width: 90%;
+  border-radius: 10px;
+}
+
+.emergency-box img, .emergency-preparedness img {
+  /* border: 2px solid red; */
+  margin: 0 0 0 1rem;
+  background-color: red;
+}
+
+.warning-info, .preparedness-info {
+  /* border: 2px solid red; */
+  font-size: 0.8rem;
+  padding: 0.5rem;
+}
+
+.warning-info h3, .preparedness-info h3, .preparedness-info p {
+  color: #6f1e20;
+}
+
+.warning-info p, .preparedness-info li {
+  color: #870A18;
+}
+
+.preparedness-info h3, .preparedness-info p, .preparedness-info li {
+  font-size: 1.2em;
+  margin-left: 2em;
+}
+
+.emergency-preparedness img {
+  margin-left: 2em;
+  /* border: 2px solid; */
+}
+
+.preparedness-info ul {
+  list-style-position: inside;
+}
+
+/* Gagging vs Choking */
+
+.gagging-vs-choking, .safe-food-chars, .high-risk-foods {
+  /* border: 2px solid firebrick; */
+  width: 100%;
+  background: var(--neutral-white);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 10px;
+  gap: 1rem;
+  padding: 1rem;
+  width: 90%;
+  box-shadow: 0 10px 10px var(--text-charcoal-hover);
+}
+
+.gagging-vs-choking img {
+  background: #81C784;
+  color: white;
+}
+
+.gagging-vs-choking-title {
+  /* border: 2px solid firebrick; */
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+.gagging-vs-choking p {
+  color: var(--text-charcoal-light)
+}
+
+.gagging-vs-choking-info {
+  /* border: 2px solid red; */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  /* width: 100% */
+}
+
+.gagging-box-title, .choking-box-title {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 0 0;
+  /* border: 2px solid red; */
+}
+
+.gagging-box-title {
+  margin: 2em 0;
+}
+
+.gagging-box, .choking-box{
+  /* border: 2px solid blue; */
+  padding: 1rem;
+  margin: 1rem 0;
+  font-size: 0.9rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 1rem;
+  width: 30em;
+  height: 30em;
+  border-radius: 10px;
+  & ul {
+    list-style-position: inside;
+  }
+}
+
+.gagging-box {
+  background-color: #f3fdf5;
+  border: 1px solid green;
+}
+
+.choking-box {
+  background-color: #fbf2f1;
+  border: 1px solid red;
+  & img {
+    background-color: red;
+  }
+}
+
+.important-info-box {
+  background-color: #fefce8;
+  font-size: 0.9rem;
+  padding: 1rem;
+  border-radius: 10px;
+  border: 1px solid #faf08b;
+}
+
+.gagging-box ul, .choking-box ul {
+  color: var(--text-charcoal-light)
+}
+
+
+/* Safe food characteristics */
+
+.safe-food-chars {
+  /* border: 2px solid red; */
+  gap: 0.2rem
+}
+
+.safe-food-chars-title {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  /* border: 2px solid red; */
+  gap: 1rem;
+  margin-bottom: 2rem;
+  color: #46813e;
+}
+
+.safe-food-chars img {
+  background-color: #6ac85a;
+  align-self: flex-start;
+  /* border: 2px solid blue; */
+}
+
+.safe-food-char-info {
+  /* border: 2px solid blue; */
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: 1rem
+}
+
+.safe-food-chars p {
+  /* border: 2px solid red; */
+  align-self: flex-start;
+  margin: 0 3.5rem;
+}
+
+/* High risk foods */
+
+.high-risk-foods {
+  /* border: 2px solid red; */
+  gap: 0.2rem
+}
+
+.high-risk-foods-title {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  /* border: 2px solid red; */
+  gap: 1rem;
+  margin-bottom: 2rem;
+  color: #a50008;
+}
+
+.high-risk-foods img {
+  background-color: #d83039;
+  align-self: flex-start;
+  /* border: 2px solid blue; */
+}
+
+.high-risk-foods-info {
+  /* border: 2px solid blue; */
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: 1rem
+}
+
+.high-risk-foods p {
+  /* border: 2px solid red; */
+  align-self: flex-start;
+  margin: 0 3.5rem;
+}
+
+
+/* Creating a safe environment */
+/* How to modify high-risk foods */
+
+.safe-environment, .modify-high-risk-foods {
+  /* border: 2px solid firebrick; */
+  width: 100%;
+  background: var(--neutral-white);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 10px;
+  gap: 1rem;
+  padding: 1rem;
+  width: 90%;
+  box-shadow: 0 10px 10px var(--text-charcoal-hover);
+}
+
+.safe-environment-title, .modify-title {
+  align-self: flex-start;
+  padding: 1rem 2rem;
+}
+
+/* .signs-baby-ready img {
+  background: #81C784;
+  color: white;
+} */
+
+
+.safe-environment p, .modify-high-risk-foods p {
+  color: var(--text-charcoal-light)
+}
+
+.safe-environment-info, .modify-info {
+  /* border: 2px solid firebrick; */
+  background-color: #eceef2;
+  border: 2px solid var(--text-charcoal-hover);
+  width: 100%;
+  border-radius: 10px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 1em;
+  /* height: 10rem; */
+  width: 90%;
+  transition: all 0.3s ease;
+}
+
+.safe-environment-info-title, .modify-info-title {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.safe-environment-info ul {
+  list-style-position: inside;
+}
+
+.modify-info {
+  background-color: var(--accent-purple);
+  border: 2px solid var(--accent-purple-darker)
+}
+
+
+
+
+
+/* Resources Page */
+
+.resources-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+  /* Title section */
+.resources-title {
+  /* border: 2px solid red; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1em;
+}
+
+.resources-title img {
+  width: 5em;
+  height: 5em;
+  padding: 1em;
+}
+
+.resources-title h2 {
+  font-size: 2em;
+  font-weight: 600;
+}
+
+.resources-title p {
+  color: var(--text-charcoal-light);
+  margin: 1em;
+}
+
+  /* FAQ section */
+.faq-section {
+  /* border: 2px solid red; */
+  background: var(--neutral-white);
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+  padding: 1rem;
+  max-width: 90%;
+}
+
+.faq-title {
+  display: flex;
+  gap: 1rem;
+  margin: 0.5rem;
+}
+
+.faq-section p {
+  color: var(--text-charcoal-light);
+  margin: 0.5rem;
+}
+
+.faq-item {
+  /* border: 2px solid red; */
+  border-bottom: 1px solid var(--accent-purple-darker);
+  margin-bottom: 1rem;
+}
+
+.faq-item input[type="checkbox"] {
+  display: none;  /* Hide checkbox */
+}
+
+.faq-question {
+  /* border: 2px solid red; */
+  display: block;
+  width: 100%;
+  padding: 1rem;
+  font-weight: 600;
+  color: var(--text-charcoal-dark);
+  cursor: pointer;
+  background: var(--accent-purple);
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  margin-bottom: 0;
+}
+
+.faq-question:hover {
+  background: var(--accent-purple-darker);
+}
+
+.faq-answer {
+  /* border: 2px solid red; */
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  padding: 0 1.5rem;
+}
+
+.faq-item input:checked + .faq-question {
+  background: var(--primary-green);
+  color: white;
+  border-radius: 10px 10px 0 0;
+}
+
+.faq-item input:checked ~ .faq-answer {
+  max-height: 200px;  /* Adjust as needed */
+  padding: 1.5rem;
+  background: var(--neutral-light);
+}
+
+.tips-and-tricks {
+  margin: 2rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1356,6 +1880,10 @@ input[type="radio"] {
   .start-btns button {
     width: 80%;
     align-self: center;
+  }
+
+  .gagging-box, .choking-box{
+    min-width: 80%;
   }
 }
 

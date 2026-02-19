@@ -34,3 +34,25 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 });
+
+// Smooth scroll to recipe
+function scrollToRecipe() {
+  const select = document.getElementById('recipe-select');
+  const target = document.querySelector(select.value);
+  if (target) {
+    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+}
+
+// Back to top
+function scrollToTop() {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+// Show/hide back-to-top button
+window.addEventListener('scroll', () => {
+  const btn = document.getElementById('back-to-top');
+  if (btn) {
+    btn.style.display = window.scrollY > 300 ? 'block' : 'none';
+  }
+});
