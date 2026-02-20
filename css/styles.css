@@ -2353,7 +2353,7 @@ input[type="radio"] {
   padding: 2rem;
   border-radius: 16px;
   margin: 2rem auto;
-  max-width: 800px;
+  width: 90%;
   box-shadow: 0 8px 32px rgba(0,0,0,0.1);
 }
 
