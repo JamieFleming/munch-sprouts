@@ -2378,7 +2378,7 @@ input[type="radio"] {
 
 /* Collapsed: Rotate arrow up */
 .recipe-index.collapsed .toggle-icon {
-  transform: rotate(180deg);
+  /* transform: rotate(180deg); */
 }
 
 /* Collapsed: Hide list + search */
@@ -2418,10 +2418,26 @@ input[type="radio"] {
 
 /* Recipe List */
 .recipe-list {
-  columns: 2;           /* 2-column layout */
+  columns: 2;              /* ← KEEP 2-column magic */
   column-gap: 2rem;
-  column-fill: balance; /* Even columns */
+  column-fill: balance;
   gap: 1rem;
+  
+  /* Collapse animation */
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  margin: 0;
+  padding: 0;
+}
+
+/* OPEN state */
+.recipe-index:not(.collapsed) .recipe-list {
+  max-height: 2000px;  /* Tall enough for all recipes */
+  opacity: 1;
+  margin-top: 1rem;
+  padding: 0;
 }
 
 .recipe-link {

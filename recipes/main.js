@@ -98,13 +98,13 @@ document.addEventListener('DOMContentLoaded', async () => {
 
 // Add toggle functionality
 document.getElementById('recipe-toggle').addEventListener('click', () => {
-  document.querySelector('.recipe-index').classList.toggle('collapsed');
+  const index = document.querySelector('.recipe-index');
+  index.classList.toggle('collapsed');
+  
+  // Rotate arrow
+  const icon = document.querySelector('.toggle-icon');
+  icon.textContent = index.classList.contains('collapsed') ? '▲' : '▼';
 });
-
-// Update count in toggle
-function updateRecipeCount(count) {
-  document.getElementById('recipe-count').textContent = count;
-}
 
 // In loadRecipeIndex(), after generating list:
 updateRecipeCount(recipes.length);
