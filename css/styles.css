@@ -1520,9 +1520,9 @@ input[type="radio"] {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  gap: 1rem;
-  width: 30em;
-  height: 30em;
+  min-height: 30em;
+  width: 45%;
+  /* flex-wrap: wrap; */
   border-radius: 10px;
   & ul {
     list-style-position: inside;
@@ -1767,7 +1767,6 @@ input[type="radio"] {
 }
 
 .faq-question {
-  
   display: block;
   width: 100%;
   padding: 1rem;
@@ -1777,7 +1776,7 @@ input[type="radio"] {
   background: var(--accent-purple);
   border-radius: 10px;
   transition: all 0.3s ease;
-  margin-bottom: 0;
+  margin-bottom: 1rem;
 }
 
 .faq-question:hover {
@@ -1799,7 +1798,7 @@ input[type="radio"] {
 }
 
 .faq-item input:checked ~ .faq-answer {
-  max-height: 200px;  /* Adjust as needed */
+  max-height: 300px;  /* Adjust as needed */
   padding: 1.5rem;
   background: var(--neutral-light);
 }
@@ -2239,8 +2238,16 @@ input[type="radio"] {
   }
 
   .gagging-box, .choking-box{
-    min-width: 80%;
+    max-width: 80%;
+    /* padding-bottom: 50rem; */
+    /* border: 2px solid red */
+    min-width: calc(90vw - 1rem);
   }
+
+  .safe-environment-info, .modify-info, .info-card {
+    width: 100%;
+  }
+
 }
 
 
@@ -2477,6 +2484,10 @@ input[type="radio"] {
   .recipe-index {
     padding: 1.5rem;
     margin: 1rem;
+  }
+
+  .faq-answer {
+
   }
 }
 
