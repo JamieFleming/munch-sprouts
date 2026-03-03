@@ -1798,7 +1798,7 @@ input[type="radio"] {
 }
 
 .faq-item input:checked ~ .faq-answer {
-  max-height: 300px;  /* Adjust as needed */
+  max-height: 700px;  /* Adjust as needed */
   padding: 1.5rem;
   background: var(--neutral-light);
 }
@@ -2241,7 +2241,8 @@ input[type="radio"] {
     max-width: 80%;
     /* padding-bottom: 50rem; */
     /* border: 2px solid red */
-    min-width: calc(90vw - 1rem);
+    /* min-width: calc(90vw - 1rem); */
+    flex-basis: calc(90vw - 1rem);
   }
 
   .safe-environment-info, .modify-info, .info-card {
