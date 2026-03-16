@@ -40,7 +40,7 @@
     }
 
     .why-card {
-        @apply bg-white rounded-xl flex flex-col items-center p-10 w-[300px] h-[300px] justify-center gap-5;
+        @apply bg-white rounded-xl flex flex-col items-center p-10 w-75 h-75 justify-center gap-5;
     }
 
     .icon-border {
