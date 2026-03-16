@@ -19,7 +19,8 @@ document.addEventListener('DOMContentLoaded', function () {
     const isOpen = menuToggle.getAttribute('aria-expanded') === 'true';
 
     menuToggle.setAttribute('aria-expanded', !isOpen);
-    nav.classList.toggle('hidden');
+    nav.classList.toggle('nav-hidden');
+    nav.classList.toggle('nav-visible');
 
     console.log('Menu toggled:', !isOpen); // Debug
   });

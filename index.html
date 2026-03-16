@@ -73,22 +73,24 @@
       </header>
 
       <!-- navigation -->
-      <nav class="primary-nav hidden">
-        <ul class="flex flex-col items-center gap-1">
+      <nav class="primary-nav bg-bg-main nav-hidden fixed mt-14">
+        <ul class="flex flex-col items-center gap-2.5 p-2.5">
           <li class="nav-elems this-page">
-            <a href="index.html">Home</a>
+            <a href="index.html" class="block h-full w-full">Home</a>
           </li>
           <li class="nav-elems">
-            <a href="./getting-started.html">Getting Started</a>
+            <a href="./getting-started.html" class="block h-full w-full"
+              >Getting Started</a
+            >
           </li>
           <li class="nav-elems">
-            <a href="./recipes.html">Recipes</a>
+            <a href="./recipes.html" class="block h-full w-full">Recipes</a>
           </li>
           <li class="nav-elems">
-            <a href="./safety.html">Safety</a>
+            <a href="./safety.html" class="block h-full w-full">Safety</a>
           </li>
           <li class="nav-elems">
-            <a href="./resources.html">Resources</a>
+            <a href="./resources.html" class="block h-full w-full">Resources</a>
           </li>
         </ul>
       </nav>
@@ -104,13 +106,13 @@
         </p>
         <button
           class="bg-primary-green-dark w-3xs cursor-pointer rounded-xl py-1 text-white shadow-md"
-          href="./getting-started.html"
+          onclick="window.location.href = './getting-started.html'"
         >
           Get Started
         </button>
         <button
           class="bg-primary-green w-3xs cursor-pointer rounded-xl py-1 text-white shadow-md"
-          href="./recipes.html"
+          onclick="window.location.href = './recipes.html'"
         >
           Browse Recipes
         </button>
@@ -276,7 +278,7 @@
         </div>
         <button
           class="border-primary-pink-dark text-primary-pink-dark w-3xs cursor-pointer self-center rounded-xl border bg-white py-1 shadow-lg"
-          href="./getting-started.html"
+          onclick="window.location.href = './getting-started.html'"
         >
           Learn More
         </button>
@@ -295,13 +297,13 @@
         </p>
         <button
           class="border-primary-pink-dark text-primary-pink-dark w-3xs cursor-pointer rounded-xl border bg-white py-1 shadow-lg"
-          href="./safety.html"
+          onclick="window.location.href = './safety.html'"
         >
           Safety First
         </button>
         <button
           class="bg-primary-pink-dark w-3xs cursor-pointer rounded-xl py-1 text-white shadow-lg"
-          href="./recipes.html"
+          onclick="window.location.href = './recipes.html'"
         >
           View Recipes
         </button>
