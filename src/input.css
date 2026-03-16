@@ -1,53 +1,62 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 @theme {
-    --color-bg-main: #F9FAFB;
-    --color-bg-purple: #F9F4FE;
-    --color-bg-warning: #FBF2F1;
-    --color-primary-purple: #E0C5FA;--color-secondary-purple: #ECDDFE;
-    --color-text-charcoal-light: #666666;
-    --color-text-charcoal-dark: #1A1A1A;
-    --color-primary-green: #4CAF50;
-    --color-primary-green-light: #81C784;
-    --color-primary-green-dark: #2E7D32;
-    --color-primary-pink-dark: #D53696;
-    --color-warning-stroke: #FF0000;
-    --font-caveat: 'Caveat', cursive;
-    --font-josefin: 'Josefin Sans', sans-serif;
+  --color-bg-main: #f9fafb;
+  --color-bg-purple: #f9f4fe;
+  --color-bg-warning: #fbf2f1;
+  --color-primary-purple: #e0c5fa;
+  --color-secondary-purple: #ecddfe;
+  --color-text-charcoal-light: #666666;
+  --color-text-charcoal-dark: #1a1a1a;
+  --color-primary-green: #4caf50;
+  --color-primary-green-light: #81c784;
+  --color-primary-green-dark: #2e7d32;
+  --color-primary-pink-dark: #d53696;
+  --color-warning-stroke: #ff0000;
+  --font-caveat: 'Caveat', cursive;
+  --font-josefin: 'Josefin Sans', sans-serif;
 }
 
 @layer base {
-    html {
-        font-family: 'Josefin Sans';
-    }
+  html {
+    font-family: 'Josefin Sans';
+  }
 }
 
 @layer components {
-    .heading2 {
-        @apply text-xl font-bold;
-    }
+  .heading2 {
+    @apply text-xl font-bold;
+  }
 
-    .heading3 {
-        @apply text-lg font-bold;
-    }
+  .heading3 {
+    @apply text-lg font-bold;
+  }
 
-    .para {
-        @apply text-sm text-text-charcoal-light;
-    }
+  .para {
+    @apply text-text-charcoal-light text-sm;
+  }
 
-    .section-base {
-        @apply  flex flex-col gap-5 items-center p-5 shadow-md;
-    }
+  .section-base {
+    @apply flex flex-col items-center gap-5 p-5 shadow-md;
+  }
 
-    .why-card {
-        @apply bg-white rounded-xl flex flex-col items-center p-10 w-75 h-75 justify-center gap-5;
-    }
+  .why-card {
+    @apply flex h-75 w-75 flex-col items-center justify-center gap-5 rounded-xl bg-white p-10;
+  }
 
-    .icon-border {
-        @apply w-16 h-16 bg-bg-purple rounded-full border-primary-purple border-2 flex items-center justify-center;
-    }
+  .icon-border {
+    @apply bg-bg-purple border-primary-purple flex h-16 w-16 items-center justify-center rounded-full border-2;
+  }
 
-    .icon {
-        @apply size-10 text-primary-pink-dark;
-    }
+  .icon {
+    @apply text-primary-pink-dark size-10;
+  }
+
+  .nav-elems {
+    @apply bg-bg-purple hover:bg-secondary-purple w-screen cursor-pointer py-3 text-center ease-linear;
+  }
+
+  .this-page {
+    @apply bg-primary-purple hover:bg-primary-purple;
+  }
 }

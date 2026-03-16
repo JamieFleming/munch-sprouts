@@ -29,15 +29,16 @@
     --default-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
-    --color-bg-main: #F9FAFB;
-    --color-bg-purple: #F9F4FE;
-    --color-bg-warning: #FBF2F1;
-    --color-primary-purple: #E0C5FA;
+    --color-bg-main: #f9fafb;
+    --color-bg-purple: #f9f4fe;
+    --color-bg-warning: #fbf2f1;
+    --color-primary-purple: #e0c5fa;
+    --color-secondary-purple: #ecddfe;
     --color-text-charcoal-light: #666666;
-    --color-primary-green: #4CAF50;
-    --color-primary-green-dark: #2E7D32;
-    --color-primary-pink-dark: #D53696;
-    --color-warning-stroke: #FF0000;
+    --color-primary-green: #4caf50;
+    --color-primary-green-dark: #2e7d32;
+    --color-primary-pink-dark: #d53696;
+    --color-warning-stroke: #ff0000;
   }
 }
 @layer base {
@@ -501,6 +502,28 @@
     height: calc(var(--spacing) * 10);
     color: var(--color-primary-pink-dark);
   }
+  .nav-elems {
+    width: 100vw;
+    cursor: pointer;
+    background-color: var(--color-bg-purple);
+    padding-block: calc(var(--spacing) * 3);
+    text-align: center;
+    --tw-ease: linear;
+    transition-timing-function: linear;
+    &:hover {
+      @media (hover: hover) {
+        background-color: var(--color-secondary-purple);
+      }
+    }
+  }
+  .this-page {
+    background-color: var(--color-primary-purple);
+    &:hover {
+      @media (hover: hover) {
+        background-color: var(--color-primary-purple);
+      }
+    }
+  }
 }
 @property --tw-rotate-x {
   syntax: "*";
@@ -643,6 +666,10 @@
   inherits: false;
   initial-value: 0 0 #0000;
 }
+@property --tw-ease {
+  syntax: "*";
+  inherits: false;
+}
 @layer properties {
   @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
     *, ::before, ::after, ::backdrop {
@@ -677,6 +704,7 @@
       --tw-ring-offset-width: 0px;
       --tw-ring-offset-color: #fff;
       --tw-ring-offset-shadow: 0 0 #0000;
+      --tw-ease: initial;
     }
   }
 }
