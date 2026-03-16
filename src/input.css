@@ -16,14 +16,30 @@
 
 @layer components {
     .heading2 {
-        @apply text-2xl font-bold
+        @apply text-2xl font-bold;
+    }
+
+    .heading3 {
+        @apply text-xl font-bold;
     }
 
     .para {
-        @apply text-base text-text-charcoal-light
+        @apply text-base text-text-charcoal-light;
     }
 
     .section-base {
-        @apply  flex flex-col gap-5 items-center p-2.5 shadow-md
+        @apply  flex flex-col gap-5 items-center p-2.5 shadow-md;
+    }
+
+    .why-card {
+        @apply bg-white rounded-xl flex flex-col items-center p-10 w-[300px] h-[300px] justify-center gap-5;
+    }
+
+    .icon-border {
+        @apply w-16 h-16 bg-bg-purple rounded-full border-primary-purple border-2 flex items-center justify-center;
+    }
+
+    .icon {
+        @apply size-10 text-primary-pink-dark;
     }
 }

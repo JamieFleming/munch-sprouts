@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="output.css" rel="stylesheet">
+    <title>Munch Sprouts</title>
+</head>
+<body>
+    <div class="body flex flex-col bg-bg-main gap-5">
+
+        <!-- Header -->
+        <header class="flex items-center p-2.5 justify-between shadow-md bg-white">
+            <img src="./images/logo.png" alt="munch sprouts logo" class="w-[62px]">
+            <h1 class="text-3xl font-bold">Munch Sprouts</h1>
+            <div class="hamburger-symbol">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                </svg>
+            </div>
+        </header>
+
+        <!-- Introduction -->
+        <section class="intro section-base bg-bg-purple">
+            <h2 class="text-2xl font-bold">Your Complete Guide to Baby Led Weaning</h2>
+            <p class="para">Your complete guide to introducing solid foods to your baby with fun, safe, and nutritious recipes.</p>
+            <button class="bg-primary-green-dark rounded-xl text-white py-1 w-4/5 shadow-md cursor-pointer">Get Started</button>
+            <button class="bg-primary-green rounded-xl text-white py-1 w-4/5 shadow-md cursor-pointer">Browse Recipes</button>
+            <img src="./images/header-image.jpeg" alt="child with teething toy" class="rounded-xl">
+        </section>
+
+        <!-- What is BLW -->
+        <section class="what-section section-base bg-white">
+            <h2 class="heading2">What is Baby Led Weaning</h2>
+            <p class="para text-center">Baby Led Weaning (BLW) is an approach to introduce solid foods where babies feed themselves from the very start, rather than being spoon-fed purees. This method encourages babies to explore food at their own pace, encouraging independence and helping them develop healthy eating habits.</p>
+        </section>
+
+        <!-- Why choose BLW -->
+        <section class="why-section section-base bg-bg-purple">
+            <h2 class="heading2 text-center">Why Choose Baby Led Weaning?</h2>
+            <div class="carousel-container w-full max-w-2xl mx-auto px-4 flex gap-4 overflow-x-auto snap-x snap-mandatory scrollbar-hide pb-8 scroll-pb-8">
+                <!-- Info Cards -->
+                <div class="why-card min-w-[260px] flex-none snap-center">
+                    <div class="icon-border">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="icon">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M15.182 15.182a4.5 4.5 0 0 1-6.364 0M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0ZM9.75 9.75c0 .414-.168.75-.375.75S9 10.164 9 9.75 9.168 9 9.375 9s.375.336.375.75Zm-.375 0h.008v.015h-.008V9.75Zm5.625 0c0 .414-.168.75-.375.75s-.375-.336-.375-.75.168-.75.375-.75.375.336.375.75Zm-.375 0h.008v.015h-.008V9.75Z" />
+                        </svg>
+                    </div>
+                    <h3 class="heading3 text-nowrap">Develops Independence</h3>
+                    <p class="para text-center">Babies learn to self-feed and explore foods at their own pace</p>
+                </div>
+                <div class="why-card flex-none snap-center w-72 shrink-0">
+                    <div class="icon-border">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="icon">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M15.182 15.182a4.5 4.5 0 0 1-6.364 0M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0ZM9.75 9.75c0 .414-.168.75-.375.75S9 10.164 9 9.75 9.168 9 9.375 9s.375.336.375.75Zm-.375 0h.008v.015h-.008V9.75Zm5.625 0c0 .414-.168.75-.375.75s-.375-.336-.375-.75.168-.75.375-.75.375.336.375.75Zm-.375 0h.008v.015h-.008V9.75Z" />
+                        </svg>
+                    </div>
+                    <h3 class="heading3 text-nowrap">Improves Motor Skills</h3>
+                    <p class="para text-center">Hand-eye coordination and fine motor skills are developed through self feeding</p>
+                </div>
+                <div class="why-card flex-none snap-center w-72 shrink-0">
+                    <div class="icon-border">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="icon">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M15.182 15.182a4.5 4.5 0 0 1-6.364 0M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0ZM9.75 9.75c0 .414-.168.75-.375.75S9 10.164 9 9.75 9.168 9 9.375 9s.375.336.375.75Zm-.375 0h.008v.015h-.008V9.75Zm5.625 0c0 .414-.168.75-.375.75s-.375-.336-.375-.75.168-.75.375-.75.375.336.375.75Zm-.375 0h.008v.015h-.008V9.75Z" />
+                        </svg>
+                    </div>
+                    <h3 class="heading3 text-nowrap">Develops Independence</h3>
+                    <p class="para text-center">Babies learn to self-feed and explore foods at their own pace</p>
+                </div>
+                <div class="why-card flex-none snap-center w-72 shrink-0">
+                    <div class="icon-border">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="icon">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M15.182 15.182a4.5 4.5 0 0 1-6.364 0M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0ZM9.75 9.75c0 .414-.168.75-.375.75S9 10.164 9 9.75 9.168 9 9.375 9s.375.336.375.75Zm-.375 0h.008v.015h-.008V9.75Zm5.625 0c0 .414-.168.75-.375.75s-.375-.336-.375-.75.168-.75.375-.75.375.336.375.75Zm-.375 0h.008v.015h-.008V9.75Z" />
+                        </svg>
+                    </div>
+                    <h3 class="heading3 text-nowrap">Develops Independence</h3>
+                    <p class="para text-center">Babies learn to self-feed and explore foods at their own pace</p>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

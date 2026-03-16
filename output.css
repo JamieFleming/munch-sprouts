@@ -9,6 +9,8 @@
       "Courier New", monospace;
     --color-white: #fff;
     --spacing: 0.25rem;
+    --container-lg: 32rem;
+    --container-2xl: 42rem;
     --text-base: 1rem;
     --text-base--line-height: calc(1.5 / 1);
     --text-xl: 1.25rem;
@@ -206,6 +208,9 @@
       max-width: 96rem;
     }
   }
+  .mx-auto {
+    margin-inline: auto;
+  }
   .block {
     display: block;
   }
@@ -227,6 +232,21 @@
   }
   .w-\[62px\] {
     width: 62px;
+  }
+  .w-full {
+    width: 100%;
+  }
+  .max-w-2xl {
+    max-width: var(--container-2xl);
+  }
+  .max-w-lg {
+    max-width: var(--container-lg);
+  }
+  .min-w-\[260px\] {
+    min-width: 260px;
+  }
+  .min-w-\[280px\] {
+    min-width: 280px;
   }
   .flex-none {
     flex: none;
@@ -252,6 +272,9 @@
   .snap-center {
     scroll-snap-align: center;
   }
+  .scroll-pb-8 {
+    scroll-padding-bottom: calc(var(--spacing) * 8);
+  }
   .flex-col {
     flex-direction: column;
   }
@@ -266,6 +289,9 @@
   }
   .gap-1 {
     gap: calc(var(--spacing) * 1);
+  }
+  .gap-4 {
+    gap: calc(var(--spacing) * 4);
   }
   .gap-5 {
     gap: calc(var(--spacing) * 5);
@@ -297,6 +323,9 @@
   .p-2\.5 {
     padding: calc(var(--spacing) * 2.5);
   }
+  .px-4 {
+    padding-inline: calc(var(--spacing) * 4);
+  }
   .px-5 {
     padding-inline: calc(var(--spacing) * 5);
   }
@@ -305,6 +334,9 @@
   }
   .pb-4 {
     padding-bottom: calc(var(--spacing) * 4);
+  }
+  .pb-8 {
+    padding-bottom: calc(var(--spacing) * 8);
   }
   .text-center {
     text-align: center;
