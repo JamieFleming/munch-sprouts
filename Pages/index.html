@@ -32,6 +32,8 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="/css/styles.css">
+     <!-- Tailwind -->
+      <!-- <link href="/src/output.css" rel="stylesheet"> -->
 
     <img loading="lazy" decoding="async">
 
@@ -41,16 +43,16 @@
 
 <script src="./js/main.js"></script>
 
-<body>
+<body class="flex flex-col">
     <!-- Site header -->
-    <header class="site-header">
+    <header class="site-header flex flex-row py-1 px-5">
         <div class="header-container">
             <a href="https://munchsprouts.co.uk" class="logo-title-link" aria-label="Go to homepage">
-                <div class="title-container">
+                <div class="title-container flex gap-1">
                     <div class="logo-title-container">
-                        <img src="/images/logo.png" alt="MunchSprouts Logo" class="logo">
+                        <img src="/images/logo.png" alt="MunchSprouts Logo" class="logo ">
                     </div>
-                    <h1 class="site-title">Munch Sprouts</h1>
+                    <h1 class="site-title text-3xl">Munch Sprouts</h1>
                 </div>
             </a>
 
@@ -61,7 +63,7 @@
                 <span class="hamburger-line"></span>
             </button>
 
-            <nav class="primary-nav">
+            <nav class="primary-nav hidden">
                 <ul>
                     <li class="active"><a href="/Pages/index.html">Home</a></li>
                     <li><a href="/Pages/getting-started.html">Getting Started</a></li>

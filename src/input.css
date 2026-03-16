@@ -1,0 +1,29 @@
+@import "tailwindcss";
+
+@theme {
+    --color-bg-main: #F9FAFB;
+    --color-bg-purple: #F9F4FE;
+    --color-bg-warning: #F9F4FE;
+    --color-primary-purple: #E0C5FA;--color-secondary-purple: #ECDDFE;
+    --color-text-charcoal-light: #666666;
+    --color-text-charcoal-dark: #1A1A1A;
+    --color-primary-green: #4CAF50;
+    --color-primary-green-light: #81C784;
+    --color-primary-green-dark: #2E7D32;
+    --color-primary-pink-dark: #D53696;
+    --color-warning-stroke: #FF0000;
+}
+
+@layer components {
+    .heading2 {
+        @apply text-2xl font-bold
+    }
+
+    .para {
+        @apply text-base text-text-charcoal-light
+    }
+
+    .section-base {
+        @apply  flex flex-col gap-5 items-center p-2.5 shadow-md
+    }
+}

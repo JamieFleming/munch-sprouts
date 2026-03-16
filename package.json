@@ -19,6 +19,11 @@
   },
   "homepage": "https://github.com/JamieFleming/munch-sprouts#readme",
   "dependencies": {
+    "@tailwindcss/cli": "^4.2.1",
     "tailwindcss": "^4.2.1"
+  },
+  "devDependencies": {
+    "prettier": "^3.8.1",
+    "prettier-plugin-tailwindcss": "^0.7.2"
   }
 }
