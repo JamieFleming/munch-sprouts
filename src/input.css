@@ -3,7 +3,7 @@
 @theme {
     --color-bg-main: #F9FAFB;
     --color-bg-purple: #F9F4FE;
-    --color-bg-warning: #F9F4FE;
+    --color-bg-warning: #FBF2F1;
     --color-primary-purple: #E0C5FA;--color-secondary-purple: #ECDDFE;
     --color-text-charcoal-light: #666666;
     --color-text-charcoal-dark: #1A1A1A;
@@ -12,19 +12,27 @@
     --color-primary-green-dark: #2E7D32;
     --color-primary-pink-dark: #D53696;
     --color-warning-stroke: #FF0000;
+    --font-caveat: 'Caveat', cursive;
+    --font-josefin: 'Josefin Sans', sans-serif;
+}
+
+@layer base {
+    html {
+        font-family: 'Josefin Sans';
+    }
 }
 
 @layer components {
     .heading2 {
-        @apply text-2xl font-bold;
-    }
-
-    .heading3 {
         @apply text-xl font-bold;
     }
 
+    .heading3 {
+        @apply text-lg font-bold;
+    }
+
     .para {
-        @apply text-base text-text-charcoal-light;
+        @apply text-sm text-text-charcoal-light;
     }
 
     .section-base {
