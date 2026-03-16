@@ -25,15 +25,15 @@
 
 @layer components {
   .heading2 {
-    @apply text-xl font-bold;
+    @apply text-2xl font-bold;
   }
 
   .heading3 {
-    @apply text-lg font-bold;
+    @apply text-xl font-bold;
   }
 
   .para {
-    @apply text-text-charcoal-light text-sm;
+    @apply text-text-charcoal-light text-base;
   }
 
   .section-base {
