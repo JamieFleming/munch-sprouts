@@ -47,14 +47,18 @@
     <title>Baby Led Weaning Recipes & Guides (UK) | MunchSprouts</title>
   </head>
   <body>
-    <div class="body bg-bg-main flex flex-col gap-5">
+    <div class="body bg-bg-main flex flex-col gap-5 lg:grid lg:grid-cols-2">
       <!-- Header -->
       <header
-        class="fixed flex w-screen items-center justify-between bg-white p-2.5 shadow-md"
+        class="row-span-5 flex w-screen items-center justify-between bg-white p-2.5 shadow-md lg:inline-block lg:w-[450px] lg:border"
       >
-        <img src="./images/logo.png" alt="munch sprouts logo" class="w-10" />
-        <h1 class="text-3xl font-bold">Munch Sprouts</h1>
-        <div class="hamburger-symbol hover:cursor-pointer">
+        <div class="flex w-full items-center justify-between lg:border">
+          <img src="./images/logo.png" alt="munch sprouts logo" class="w-10" />
+          <h1 class="text-3xl font-bold">Munch Sprouts</h1>
+          <div></div>
+        </div>
+
+        <div class="hamburger-symbol hover:cursor-pointer lg:hidden">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -73,10 +77,16 @@
       </header>
 
       <!-- navigation -->
-      <nav class="primary-nav bg-bg-main nav-hidden fixed mt-14">
+      <nav
+        class="primary-nav bg-bg-main nav-hidden fixed mt-14 lg:flex lg:w-112.5 lg:flex-col lg:opacity-100"
+      >
         <ul class="flex flex-col items-center gap-2.5 p-2.5">
           <li class="nav-elems this-page">
-            <a href="index.html" class="block h-full w-full">Home</a>
+            <a
+              href="index.html"
+              class="text-primary-pink-dark block h-full w-full"
+              >Home</a
+            >
           </li>
           <li class="nav-elems">
             <a href="./getting-started.html" class="block h-full w-full"
@@ -96,50 +106,56 @@
       </nav>
 
       <!-- Introduction -->
-      <section class="intro section-base bg-bg-purple mt-16">
+      <section class="intro section-base bg-bg-purple">
         <h2 class="text-2xl font-bold">
           Your Complete Guide to Baby Led Weaning
         </h2>
-        <p class="para">
+        <p class="para text-ce">
           Your complete guide to introducing solid foods to your baby with fun,
           safe, and nutritious recipes.
         </p>
-        <button
-          class="bg-primary-green-dark w-3xs cursor-pointer rounded-xl py-1 text-white shadow-md"
-          onclick="window.location.href = './getting-started.html'"
+        <div
+          class="flex flex-col gap-2.5 md:w-3xl md:flex-row md:justify-center md:gap-5"
         >
-          Get Started
-        </button>
-        <button
-          class="bg-primary-green w-3xs cursor-pointer rounded-xl py-1 text-white shadow-md"
-          onclick="window.location.href = './recipes.html'"
-        >
-          Browse Recipes
-        </button>
-        <img
-          src="./images/header-image.jpeg"
-          alt="child with teething toy"
-          class="rounded-xl"
-        />
-      </section>
-
-      <!-- What is BLW -->
-      <section class="what-section section-base bg-white">
-        <h2 class="heading2 text-center">What is Baby Led Weaning</h2>
-        <p class="para text-center">
-          Baby Led Weaning (BLW) is an approach to introduce solid foods where
-          babies feed themselves from the very start, rather than being
-          spoon-fed purees. This method encourages babies to explore food at
-          their own pace, encouraging independence and helping them develop
-          healthy eating habits.
-        </p>
+          <button
+            class="bg-primary-green-dark w-3xs cursor-pointer rounded-xl py-1 text-white shadow-md"
+            onclick="window.location.href = './getting-started.html'"
+          >
+            Get Started
+          </button>
+          <button
+            class="bg-primary-green w-3xs cursor-pointer rounded-xl py-1 text-white shadow-md"
+            onclick="window.location.href = './recipes.html'"
+          >
+            Browse Recipes
+          </button>
+        </div>
+        <div class="flex flex-col gap-2.5 md:flex-row">
+          <img
+            src="./images/header-image.jpeg"
+            alt="child with teething toy"
+            class="rounded-xl md:w-96"
+          />
+          <section
+            class="what-section section-base rounded-xl bg-white md:w-96"
+          >
+            <h2 class="heading2 text-center">What is Baby Led Weaning</h2>
+            <p class="para text-center">
+              Baby Led Weaning (BLW) is an approach to introduce solid foods
+              where babies feed themselves from the very start, rather than
+              being spoon-fed purees. This method encourages babies to explore
+              food at their own pace, encouraging independence and helping them
+              develop healthy eating habits.
+            </p>
+          </section>
+        </div>
       </section>
 
       <!-- Why choose BLW -->
       <section class="why-section section-base bg-bg-purple">
         <h2 class="heading2 text-center">Why Choose Baby Led Weaning?</h2>
         <div
-          class="carousel-container scrollbar-hide mx-auto flex w-full max-w-2xl snap-x snap-mandatory scroll-pb-8 gap-4 overflow-x-auto px-4 pb-8"
+          class="carousel-container scrollbar-hide mx-auto flex w-full max-w-2xl snap-x snap-mandatory scroll-pb-8 gap-4 overflow-x-auto px-4 pb-8 md:grid md:grid-cols-2"
         >
           <!-- Info Cards -->
           <div class="why-card min-w-65 flex-none snap-center">
@@ -295,18 +311,22 @@
           Explore our comprehensive guides, safety tips and delicious recipes
           designed for your little one
         </p>
-        <button
-          class="border-primary-pink-dark text-primary-pink-dark w-3xs cursor-pointer rounded-xl border bg-white py-1 shadow-lg"
-          onclick="window.location.href = './safety.html'"
+        <div
+          class="flex flex-col gap-2.5 md:flex-row md:justify-center md:gap-5"
         >
-          Safety First
-        </button>
-        <button
-          class="bg-primary-pink-dark w-3xs cursor-pointer rounded-xl py-1 text-white shadow-lg"
-          onclick="window.location.href = './recipes.html'"
-        >
-          View Recipes
-        </button>
+          <button
+            class="border-primary-pink-dark text-primary-pink-dark w-3xs cursor-pointer rounded-xl border bg-white py-1 shadow-lg"
+            onclick="window.location.href = './safety.html'"
+          >
+            Safety First
+          </button>
+          <button
+            class="bg-primary-pink-dark w-3xs cursor-pointer rounded-xl py-1 text-white shadow-lg"
+            onclick="window.location.href = './recipes.html'"
+          >
+            View Recipes
+          </button>
+        </div>
       </section>
 
       <footer class="section-base bg-white">

@@ -50,562 +50,574 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="./css/styles.css" />
+    <link href="output.css" rel="stylesheet" />
 
     <title>MunchSprouts - Getting Started</title>
   </head>
 
-  <script src="./js/main.js"></script>
 
   <body>
     <!-- Site header -->
-    <header class="site-header">
-      <div class="header-container">
-        <a
-          href="https://munchsprouts.co.uk"
-          class="logo-title-link"
-          aria-label="Go to homepage"
-        >
-          <div class="title-container">
-            <div class="logo-title-container">
-              <img
-                src="./images/logo.png"
-                alt="MunchSprouts Logo"
-                class="logo"
-              />
-            </div>
-            <h1 class="site-title">Munch Sprouts</h1>
-          </div>
-        </a>
+    
 
-        <!-- Button for mobile -->
-        <button
-          class="mobile-menu-toggle"
-          aria-label="Open menu"
-          aria-expanded="false"
-        >
-          <span class="hamburger-line"></span>
-          <span class="hamburger-line"></span>
-          <span class="hamburger-line"></span>
-        </button>
+    <div class="body bg-bg-main flex flex-col gap-5"></div>
+    <!-- Header -->
+      <header
+        class="fixed flex w-screen items-center justify-between bg-white p-2.5 shadow-md">
+        <img src="./images/logo.png" alt="munch sprouts logo" class="w-10" />
+        <h1 class="text-3xl font-bold">Munch Sprouts</h1>
+        <div class="hamburger-symbol hover:cursor-pointer">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="size-6"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+            />
+          </svg>
+        </div>
+      </header>
 
-        <nav class="primary-nav">
-          <ul>
-            <li><a href="./index.html">Home</a></li>
-            <li class="active">
-              <a href="./getting-started.html">Getting Started</a>
-            </li>
-            <li><a href="./recipes.html">Recipes</a></li>
-            <li><a href="./safety.html">Safety</a></li>
-            <li><a href="./resources.html">Resources</a></li>
-          </ul>
-        </nav>
-      </div>
-    </header>
+      <!-- navigation -->
+      <nav class="primary-nav bg-bg-main nav-hidden fixed mt-14">
+        <ul class="flex flex-col items-center gap-2.5 p-2.5">
+          <li class="nav-elems this-page">
+            <a
+              href="index.html"
+              class="text-primary-pink-dark block h-full w-full"
+              >Home</a
+            >
+          </li>
+          <li class="nav-elems">
+            <a href="./getting-started.html" class="block h-full w-full"
+              >Getting Started</a
+            >
+          </li>
+          <li class="nav-elems">
+            <a href="./recipes.html" class="block h-full w-full">Recipes</a>
+          </li>
+          <li class="nav-elems">
+            <a href="./safety.html" class="block h-full w-full">Safety</a>
+          </li>
+          <li class="nav-elems">
+            <a href="./resources.html" class="block h-full w-full">Resources</a>
+          </li>
+        </ul>
+      </nav>
 
-    <!-- Main section -->
-    <main class="getting-started-main">
-      <!-- Title section -->
-      <section class="getting-started-title">
-        <h2>Getting Started with BLW</h2>
-        <p>
-          Everything you need to know to begin your baby led weaning journey
-          with confidence!
-        </p>
-      </section>
-
-      <!-- Signs your baby is ready section -->
-      <section class="signs-baby-ready">
-        <div class="ready-info">
-          <div class="info-card-header">
-            <img src="./images/icons/tick.svg" alt="tick" class="icon" />
-            <h3>Signs Your Baby is Ready</h3>
-          </div>
+      <!-- Main section -->
+      <main class="getting-started-main">
+        <!-- Title section -->
+        <section class="getting-started-title">
+          <h2>Getting Started with BLW</h2>
           <p>
-            Most babies are ready to start BLW from around 6 months, but look
-            for these signs:
+            Everything you need to know to begin your baby led weaning journey
+            with confidence!
           </p>
-        </div>
+        </section>
 
-        <div class="info-card">
-          <img src="./images/icons/tick.svg" alt="tick" class="icon" />
-          <div class="info-card-content">
-            <h3>They Can Sit Upright Independently</h3>
-            <p>Your baby can sit in a high chair without support</p>
-          </div>
-        </div>
-        <div class="info-card">
-          <img src="./images/icons/tick.svg" alt="tick" class="icon" />
-          <div class="info-card-content">
-            <h3>Long Tongue-Thrust Reflex</h3>
-            <p>They no longer automatically push food out with tongue</p>
-          </div>
-        </div>
-        <div class="info-card">
-          <img src="./images/icons/tick.svg" alt="tick" class="icon" />
-          <div class="info-card-content">
-            <h3>They Show Interest In Food</h3>
-            <p>Your baby watches others eat and reaches out for food</p>
-          </div>
-        </div>
-        <div class="info-card">
-          <img src="./images/icons/tick.svg" alt="tick" class="icon" />
-          <div class="info-card-content">
-            <h3>Good Head Control</h3>
-            <p>Your baby can hold their head steady and turn it side to side</p>
-          </div>
-        </div>
-      </section>
-
-      <!-- Core principles, techniques, first foods and setup tips section -->
-      <section class="tool-tips">
-        <!-- Tab control -->
-        <!-- Radio buttons (hidden) -->
-        <input type="radio" id="tab1" name="tabs" checked />
-        <input type="radio" id="tab2" name="tabs" />
-        <input type="radio" id="tab3" name="tabs" />
-        <input type="radio" id="tab4" name="tabs" />
-        <!-- Tab Buttons -->
-        <div class="tab-buttons">
-          <label for="tab1" class="tab-btn active">Core Principles</label>
-          <label for="tab2" class="tab-btn">Techniques</label>
-          <label for="tab3" class="tab-btn">First Foods</label>
-          <label for="tab4" class="tab-btn">Setup Tips</label>
-        </div>
-
-        <!-- Tab Content -->
-        <div class="tab-content">
-          <!-- Core principles tab -->
-          <div class="tab-panel core-prin">
-            <div class="tab-title">
-              <h3>Core Principles of BLW</h3>
-              <p>The foundation of successful baby led weaning.</p>
+        <!-- Signs your baby is ready section -->
+        <section class="signs-baby-ready">
+          <div class="ready-info">
+            <div class="info-card-header">
+              <img src="./images/icons/tick.svg" alt="tick" class="icon" />
+              <h3>Signs Your Baby is Ready</h3>
             </div>
-            <div class="core-prin-card">
-              <h3>1. Baby is in Control</h3>
-              <p>
-                Let your baby decide what, how much, and how fast they eat.
-                Never force or pressure them to eat. They'll eat when they are
-                hungry and stop when they're full.
-              </p>
-              <p class="bordered-tip">Self-Regulation</p>
-            </div>
-            <div class="core-prin-card">
-              <h3>2. Food Before One is Just for Fun</h3>
-              <p>
-                Breast milk or formula remains the primary source of nutrition
-                in the first year. Solid foods are for exploration, practice and
-                fun.
-              </p>
-              <p class="bordered-tip">Low Pressure</p>
-            </div>
-            <div class="core-prin-card">
-              <h3>3. Include Baby in Family Meals</h3>
-              <p>
-                Whenever it is possible, let baby join family mealtimes. They
-                learn by watching and being a part of the social experience of
-                eating together.
-              </p>
-              <p class="bordered-tip">Social Learning</p>
-            </div>
-            <div class="core-prin-card">
-              <h3>Offer a Variety of Foods</h3>
-              <p>
-                Expose your baby to different flavours, textures, and colours.
-                This will help them to develop a well-rounded palate and reduce
-                picky eating later.
-              </p>
-              <p class="bordered-tip">Variety</p>
-            </div>
+            <p>
+              Most babies are ready to start BLW from around 6 months, but look
+              for these signs:
+            </p>
           </div>
 
-          <!-- Techniques tab -->
-          <div class="tab-panel techniques">
-            <div class="tab-title">
-              <h3>Feeding Techniques & Methods</h3>
-              <p>How to prepare and serve food for baby led weaning</p>
+          <div class="info-card">
+            <img src="./images/icons/tick.svg" alt="tick" class="icon" />
+            <div class="info-card-content">
+              <h3>They Can Sit Upright Independently</h3>
+              <p>Your baby can sit in a high chair without support</p>
             </div>
-            <div class="techniques-card">
-              <h3>Food Size & Shape</h3>
-              <p>
-                Cut foods into pieces no larger than an adult sized finger. This
-                makes it easy for babies to grasp foods with their whole fist
-                and leave some sticking out the top to bit
-              </p>
-              <ul>
-                <li>
-                  Stick-shaped pieces about 2 inches long and 0.5 inches wide
-                </li>
-                <li>
-                  As pincer grasp develops (~8-10 months), offer smaller pieces
-                </li>
-                <li>Avoid round, hard shapes that could block babies airway</li>
-              </ul>
+          </div>
+          <div class="info-card">
+            <img src="./images/icons/tick.svg" alt="tick" class="icon" />
+            <div class="info-card-content">
+              <h3>Long Tongue-Thrust Reflex</h3>
+              <p>They no longer automatically push food out with tongue</p>
             </div>
-            <div class="techniques-card">
-              <h3>Texture Guidelines</h3>
-              <p>
-                Foods should be soft enough to squish between your fingers, but
-                not so mushy they fall apart. Think of the consistency:
-              </p>
-              <ul>
-                <li>Ripe avocado, banana, or well-cooked sweet potato</li>
-                <li>Steamed until fork-tender for harder vegetables</li>
-                <li>
-                  Meat should be moist and tender, cooked slowly or ground
-                </li>
-              </ul>
+          </div>
+          <div class="info-card">
+            <img src="./images/icons/tick.svg" alt="tick" class="icon" />
+            <div class="info-card-content">
+              <h3>They Show Interest In Food</h3>
+              <p>Your baby watches others eat and reaches out for food</p>
             </div>
-            <div class="techniques-card">
-              <h3>Meal Structure</h3>
-              <p>
-                Offer 2-3 foods at each meal, including different food groups:
-              </p>
-              <ul>
-                <li>A protein (meat, fish, eggs, beans, tofu)</li>
-                <li>A fruit or vegetable</li>
-                <li>A carbohydrate (bread, pasta, rice, potato)</li>
-              </ul>
+          </div>
+          <div class="info-card">
+            <img src="./images/icons/tick.svg" alt="tick" class="icon" />
+            <div class="info-card-content">
+              <h3>Good Head Control</h3>
+              <p>Your baby can hold their head steady and turn it side to side</p>
             </div>
-            <div class="warning">
-              <img
-                src="./images/icons/warning.svg"
-                alt="Exclamation mark"
-                class="icon"
-              />
-              <div class="warning-content">
-                <h3>Important Note</h3>
+          </div>
+        </section>
+
+        <!-- Core principles, techniques, first foods and setup tips section -->
+        <section class="tool-tips">
+          <!-- Tab control -->
+          <!-- Radio buttons (hidden) -->
+          <input type="radio" id="tab1" name="tabs" checked />
+          <input type="radio" id="tab2" name="tabs" />
+          <input type="radio" id="tab3" name="tabs" />
+          <input type="radio" id="tab4" name="tabs" />
+          <!-- Tab Buttons -->
+          <div class="tab-buttons">
+            <label for="tab1" class="tab-btn active">Core Principles</label>
+            <label for="tab2" class="tab-btn">Techniques</label>
+            <label for="tab3" class="tab-btn">First Foods</label>
+            <label for="tab4" class="tab-btn">Setup Tips</label>
+          </div>
+
+          <!-- Tab Content -->
+          <div class="tab-content">
+            <!-- Core principles tab -->
+            <div class="tab-panel core-prin">
+              <div class="tab-title">
+                <h3>Core Principles of BLW</h3>
+                <p>The foundation of successful baby led weaning.</p>
+              </div>
+              <div class="core-prin-card">
+                <h3>1. Baby is in Control</h3>
                 <p>
-                  Always supervise your baby during meals. Never leave them
-                  alone while eating
+                  Let your baby decide what, how much, and how fast they eat.
+                  Never force or pressure them to eat. They'll eat when they are
+                  hungry and stop when they're full.
                 </p>
+                <p class="bordered-tip">Self-Regulation</p>
+              </div>
+              <div class="core-prin-card">
+                <h3>2. Food Before One is Just for Fun</h3>
+                <p>
+                  Breast milk or formula remains the primary source of nutrition
+                  in the first year. Solid foods are for exploration, practice and
+                  fun.
+                </p>
+                <p class="bordered-tip">Low Pressure</p>
+              </div>
+              <div class="core-prin-card">
+                <h3>3. Include Baby in Family Meals</h3>
+                <p>
+                  Whenever it is possible, let baby join family mealtimes. They
+                  learn by watching and being a part of the social experience of
+                  eating together.
+                </p>
+                <p class="bordered-tip">Social Learning</p>
+              </div>
+              <div class="core-prin-card">
+                <h3>Offer a Variety of Foods</h3>
+                <p>
+                  Expose your baby to different flavours, textures, and colours.
+                  This will help them to develop a well-rounded palate and reduce
+                  picky eating later.
+                </p>
+                <p class="bordered-tip">Variety</p>
               </div>
             </div>
-          </div>
 
-          <!-- First foods tab-->
-          <div class="tab-panel first-foods">
-            <div class="tab-title">
-              <h3>Best First Foods for BLW</h3>
-              <p>Safe & nutritious foods to start your BLW journey</p>
-            </div>
-
-            <div class="first-foods-card">
-              <h3>Vegetables</h3>
-              <ul>
-                <li>Steamed Broccoli Florets</li>
-                <li>Roasted Sweet Potato Wedges</li>
-                <li>Steamed Carrot Sticks</li>
-                <li>Cooked Green Beans</li>
-                <li>Avocado Slices</li>
-              </ul>
-            </div>
-            <div class="first-foods-card">
-              <h3>Fruits</h3>
-              <ul>
-                <li>Banana Spears</li>
-                <li>Ripe Pear Slices</li>
-                <li>Steamed Apple Wedges</li>
-                <li>Mango Strips</li>
-                <li>Melon Sticks</li>
-              </ul>
-            </div>
-            <div class="first-foods-card">
-              <h3>Proteins</h3>
-              <ul>
-                <li>Scrambled Eggs (well-cooked)</li>
-                <li>Chicken Strips (moist, shredded)</li>
-                <li>Flaked Fish (boneless)</li>
-                <li>Lentils (mashed or whole)</li>
-                <li>Tofu Strips</li>
-              </ul>
-            </div>
-            <div class="first-foods-card">
-              <h3>Carbohydrates</h3>
-              <ul>
-                <li>Toast Strips with Butter</li>
-                <li>Pasta (large shapes)</li>
-                <li>Rice Cakes</li>
-                <li>Oatmeal Fingers</li>
-                <li>Pancakes Cut into Slices</li>
-              </ul>
-            </div>
-            <div class="first-foods-card warning" id="allergens-warning">
-              <div class="warning-title">
+            <!-- Techniques tab -->
+            <div class="tab-panel techniques">
+              <div class="tab-title">
+                <h3>Feeding Techniques & Methods</h3>
+                <p>How to prepare and serve food for baby led weaning</p>
+              </div>
+              <div class="techniques-card">
+                <h3>Food Size & Shape</h3>
+                <p>
+                  Cut foods into pieces no larger than an adult sized finger. This
+                  makes it easy for babies to grasp foods with their whole fist
+                  and leave some sticking out the top to bit
+                </p>
+                <ul>
+                  <li>
+                    Stick-shaped pieces about 2 inches long and 0.5 inches wide
+                  </li>
+                  <li>
+                    As pincer grasp develops (~8-10 months), offer smaller pieces
+                  </li>
+                  <li>Avoid round, hard shapes that could block babies airway</li>
+                </ul>
+              </div>
+              <div class="techniques-card">
+                <h3>Texture Guidelines</h3>
+                <p>
+                  Foods should be soft enough to squish between your fingers, but
+                  not so mushy they fall apart. Think of the consistency:
+                </p>
+                <ul>
+                  <li>Ripe avocado, banana, or well-cooked sweet potato</li>
+                  <li>Steamed until fork-tender for harder vegetables</li>
+                  <li>
+                    Meat should be moist and tender, cooked slowly or ground
+                  </li>
+                </ul>
+              </div>
+              <div class="techniques-card">
+                <h3>Meal Structure</h3>
+                <p>
+                  Offer 2-3 foods at each meal, including different food groups:
+                </p>
+                <ul>
+                  <li>A protein (meat, fish, eggs, beans, tofu)</li>
+                  <li>A fruit or vegetable</li>
+                  <li>A carbohydrate (bread, pasta, rice, potato)</li>
+                </ul>
+              </div>
+              <div class="warning">
                 <img
                   src="./images/icons/warning.svg"
                   alt="Exclamation mark"
                   class="icon"
                 />
-                <h3>Foods to Avoid (First Year)</h3>
-              </div>
-              <div class="warning-content">
-                <ul>
-                  <li>Honey (risk of botulism)</li>
-                  <li>Whole nuts (choking hazard - nut butters are okay)</li>
-                  <li>Added Salt or Sugar</li>
-                  <li>Whole Grapes or Cherry Tomatoes (cut lengthways)</li>
-                  <li>Raw Apple or Carrot (too hard)</li>
-                  <li>Popcorn (choking hazard)</li>
-                </ul>
+                <div class="warning-content">
+                  <h3>Important Note</h3>
+                  <p>
+                    Always supervise your baby during meals. Never leave them
+                    alone while eating
+                  </p>
+                </div>
               </div>
             </div>
 
-            <div class="allergens">
+            <!-- First foods tab-->
+            <div class="tab-panel first-foods">
               <div class="tab-title">
-                <h3>Introducing Allergens</h3>
-                <p>
-                  Current research suggests introducing common allergens early
-                  (around 6 months) and often. Introduce one new allergen at a
-                  time, in small amounts and watch for a reaction.
-                </p>
+                <h3>Best First Foods for BLW</h3>
+                <p>Safe & nutritious foods to start your BLW journey</p>
               </div>
-              <div class="allergens-cards">
+
+              <div class="first-foods-card">
+                <h3>Vegetables</h3>
                 <ul>
-                  <li>Peanuts</li>
-                  <li>Dairy</li>
-                  <li>Soy</li>
-                  <li>Fish</li>
-                  <li>Eggs</li>
-                  <li>Tree Nuts</li>
-                  <li>Wheat</li>
-                  <li>Shellfish</li>
+                  <li>Steamed Broccoli Florets</li>
+                  <li>Roasted Sweet Potato Wedges</li>
+                  <li>Steamed Carrot Sticks</li>
+                  <li>Cooked Green Beans</li>
+                  <li>Avocado Slices</li>
                 </ul>
               </div>
-            </div>
-          </div>
-
-          <!-- Setup tips tab -->
-          <div class="tab-panel setup-tips">
-            <div class="tab-title">
-              <h3>Setting Up for Success</h3>
-              <p>Essential equipment and tips for BLW mealtimes</p>
-            </div>
-
-            <div class="equipment">
-              <div class="equipment-card warning">
-                <img src="./images/icons/tick.svg" alt="tick" class="icon" />
-                <div class="equipment-content">
-                  <h3>Sturdy High Chair</h3>
-                  <p>
-                    Find one that allows your baby to sit upright with their
-                    feet supported
-                  </p>
-                </div>
+              <div class="first-foods-card">
+                <h3>Fruits</h3>
+                <ul>
+                  <li>Banana Spears</li>
+                  <li>Ripe Pear Slices</li>
+                  <li>Steamed Apple Wedges</li>
+                  <li>Mango Strips</li>
+                  <li>Melon Sticks</li>
+                </ul>
               </div>
-
-              <div class="equipment-card warning">
-                <img src="./images/icons/tick.svg" alt="tick" class="icon" />
-                <div class="equipment-content">
-                  <h3>Bibs (Long-Sleeved)</h3>
-                  <p>
-                    Catch mess and protect clothes - silicone bibs work great!
-                  </p>
-                </div>
+              <div class="first-foods-card">
+                <h3>Proteins</h3>
+                <ul>
+                  <li>Scrambled Eggs (well-cooked)</li>
+                  <li>Chicken Strips (moist, shredded)</li>
+                  <li>Flaked Fish (boneless)</li>
+                  <li>Lentils (mashed or whole)</li>
+                  <li>Tofu Strips</li>
+                </ul>
               </div>
-
-              <div class="equipment-card warning">
-                <img src="./images/icons/tick.svg" alt="tick" class="icon" />
-                <div class="equipment-content">
-                  <h3>Splat Mat</h3>
-                  <p>Place under the high chair for easy cleanup</p>
-                </div>
+              <div class="first-foods-card">
+                <h3>Carbohydrates</h3>
+                <ul>
+                  <li>Toast Strips with Butter</li>
+                  <li>Pasta (large shapes)</li>
+                  <li>Rice Cakes</li>
+                  <li>Oatmeal Fingers</li>
+                  <li>Pancakes Cut into Slices</li>
+                </ul>
               </div>
-
-              <div class="equipment-card warning">
-                <img src="./images/icons/tick.svg" alt="tick" class="icon" />
-                <div class="equipment-content">
-                  <h3>Open Cups</h3>
-                  <p>Start practising with small open cups for water</p>
+              <div class="first-foods-card warning" id="allergens-warning">
+                <div class="warning-title">
+                  <img
+                    src="./images/icons/warning.svg"
+                    alt="Exclamation mark"
+                    class="icon"
+                  />
+                  <h3>Foods to Avoid (First Year)</h3>
                 </div>
-              </div>
-            </div>
-
-            <div class="tab-title">
-              <h3>Creating the Right Environment</h3>
-              <p>
-                Make sure you create a positive and healthy environment for your
-                baby
-              </p>
-            </div>
-            <div class="environment">
-              <div class="environment-card warning">
-                <img src="./images/icons/clock.svg" alt="clock" class="icon" />
-                <div class="environment-content choose-time">
-                  <h3>Choose the Right Time</h3>
-                  <p>
-                    Start when your baby is happy and alert, not overtired or
-                    overly hungry. Mid-morning or early afternoon often works
-                    well.
-                  </p>
-                </div>
-              </div>
-
-              <div class="environment-card warning">
-                <img
-                  src="./images/icons/people.svg"
-                  alt="people"
-                  class="icon"
-                />
-                <div class="environment-content">
-                  <h3>Eat Together</h3>
-                  <p>
-                    Sit with your baby and eat your meal too. They learn by
-                    watching you and enjoy the social aspect of shared meals.
-                  </p>
-                </div>
-              </div>
-
-              <div class="environment-card warning">
-                <img
-                  src="./images/icons/warning.svg"
-                  alt="exclamation mark"
-                  class="icon"
-                />
-                <div class="environment-content">
-                  <h3>Stay Calm About Mess</h3>
-                  <p>
-                    Mess is learning! Expect food to end up everywhere. This
-                    exploration is how babies learn about food textures,
-                    temperatures and tastes.
-                  </p>
-                </div>
-              </div>
-
-              <div class="pro-tips-card warning">
-                <div class="pro-tips-content">
-                  <h3>Pro Tips</h3>
+                <div class="warning-content">
                   <ul>
-                    <li>
-                      Strip baby down to their nappy in warm weather for easier
-                      cleanup
-                    </li>
-                    <li>
-                      Keep a warm cloth or baby wipes handy for quick face and
-                      hand wipes
-                    </li>
-                    <li>
-                      Take photos and videos - these moments are precious and
-                      fleeting!
-                    </li>
+                    <li>Honey (risk of botulism)</li>
+                    <li>Whole nuts (choking hazard - nut butters are okay)</li>
+                    <li>Added Salt or Sugar</li>
+                    <li>Whole Grapes or Cherry Tomatoes (cut lengthways)</li>
+                    <li>Raw Apple or Carrot (too hard)</li>
+                    <li>Popcorn (choking hazard)</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="allergens">
+                <div class="tab-title">
+                  <h3>Introducing Allergens</h3>
+                  <p>
+                    Current research suggests introducing common allergens early
+                    (around 6 months) and often. Introduce one new allergen at a
+                    time, in small amounts and watch for a reaction.
+                  </p>
+                </div>
+                <div class="allergens-cards">
+                  <ul>
+                    <li>Peanuts</li>
+                    <li>Dairy</li>
+                    <li>Soy</li>
+                    <li>Fish</li>
+                    <li>Eggs</li>
+                    <li>Tree Nuts</li>
+                    <li>Wheat</li>
+                    <li>Shellfish</li>
                   </ul>
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
 
-      <!-- Timeline & Proression section -->
-      <section class="timeline">
-        <!-- Timeline title -->
-        <div class="timeline-info">
-          <h3>BLW Timeline & Progression</h3>
-          <p>What to expect as your baby grows</p>
-        </div>
+            <!-- Setup tips tab -->
+            <div class="tab-panel setup-tips">
+              <div class="tab-title">
+                <h3>Setting Up for Success</h3>
+                <p>Essential equipment and tips for BLW mealtimes</p>
+              </div>
 
-        <!-- 6 Months -->
-        <div class="timeline-info-card" id="six-months-info">
-          <div class="timeline-date">
-            <h3>6M</h3>
-            <div class="vr"></div>
+              <div class="equipment">
+                <div class="equipment-card warning">
+                  <img src="./images/icons/tick.svg" alt="tick" class="icon" />
+                  <div class="equipment-content">
+                    <h3>Sturdy High Chair</h3>
+                    <p>
+                      Find one that allows your baby to sit upright with their
+                      feet supported
+                    </p>
+                  </div>
+                </div>
+
+                <div class="equipment-card warning">
+                  <img src="./images/icons/tick.svg" alt="tick" class="icon" />
+                  <div class="equipment-content">
+                    <h3>Bibs (Long-Sleeved)</h3>
+                    <p>
+                      Catch mess and protect clothes - silicone bibs work great!
+                    </p>
+                  </div>
+                </div>
+
+                <div class="equipment-card warning">
+                  <img src="./images/icons/tick.svg" alt="tick" class="icon" />
+                  <div class="equipment-content">
+                    <h3>Splat Mat</h3>
+                    <p>Place under the high chair for easy cleanup</p>
+                  </div>
+                </div>
+
+                <div class="equipment-card warning">
+                  <img src="./images/icons/tick.svg" alt="tick" class="icon" />
+                  <div class="equipment-content">
+                    <h3>Open Cups</h3>
+                    <p>Start practising with small open cups for water</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="tab-title">
+                <h3>Creating the Right Environment</h3>
+                <p>
+                  Make sure you create a positive and healthy environment for your
+                  baby
+                </p>
+              </div>
+              <div class="environment">
+                <div class="environment-card warning">
+                  <img src="./images/icons/clock.svg" alt="clock" class="icon" />
+                  <div class="environment-content choose-time">
+                    <h3>Choose the Right Time</h3>
+                    <p>
+                      Start when your baby is happy and alert, not overtired or
+                      overly hungry. Mid-morning or early afternoon often works
+                      well.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="environment-card warning">
+                  <img
+                    src="./images/icons/people.svg"
+                    alt="people"
+                    class="icon"
+                  />
+                  <div class="environment-content">
+                    <h3>Eat Together</h3>
+                    <p>
+                      Sit with your baby and eat your meal too. They learn by
+                      watching you and enjoy the social aspect of shared meals.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="environment-card warning">
+                  <img
+                    src="./images/icons/warning.svg"
+                    alt="exclamation mark"
+                    class="icon"
+                  />
+                  <div class="environment-content">
+                    <h3>Stay Calm About Mess</h3>
+                    <p>
+                      Mess is learning! Expect food to end up everywhere. This
+                      exploration is how babies learn about food textures,
+                      temperatures and tastes.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="pro-tips-card warning">
+                  <div class="pro-tips-content">
+                    <h3>Pro Tips</h3>
+                    <ul>
+                      <li>
+                        Strip baby down to their nappy in warm weather for easier
+                        cleanup
+                      </li>
+                      <li>
+                        Keep a warm cloth or baby wipes handy for quick face and
+                        hand wipes
+                      </li>
+                      <li>
+                        Take photos and videos - these moments are precious and
+                        fleeting!
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="timeline-card-content">
-            <h3>6 Months: Starting Out</h3>
+        </section>
+
+        <!-- Timeline & Proression section -->
+        <section class="timeline">
+          <!-- Timeline title -->
+          <div class="timeline-info">
+            <h3>BLW Timeline & Progression</h3>
+            <p>What to expect as your baby grows</p>
+          </div>
+
+          <!-- 6 Months -->
+          <div class="timeline-info-card" id="six-months-info">
+            <div class="timeline-date">
+              <h3>6M</h3>
+              <div class="vr"></div>
+            </div>
+            <div class="timeline-card-content">
+              <h3>6 Months: Starting Out</h3>
+              <p>
+                Begin with simple, single-ingredient foods. Baby uses palmar grasp
+                (whole hand). Most foods end up on the floor - this is normal!
+                Focus on exploration, not nutrition.
+              </p>
+              <div class="bordered-tip"><p>1-2 meals per day</p></div>
+            </div>
+          </div>
+
+          <!-- 7-8 Months -->
+          <div class="timeline-info-card" id="seven-months-info">
+            <div class="timeline-date">
+              <h3>7-8M</h3>
+              <div class="vr"></div>
+            </div>
+            <div class="timeline-card-content">
+              <h3>7-8 Months: Building Skills</h3>
+              <p>
+                More foods makes it to the mouth. Start introducing more variety
+                and combination meals. Begin offering water with meals in an open
+                cup.
+              </p>
+              <div class="bordered-tip"><p>2-3 meals per day</p></div>
+            </div>
+          </div>
+
+          <!-- 9-11 Months -->
+          <div class="timeline-info-card" id="nine-months-info">
+            <div class="timeline-date">
+              <h3>9-11M</h3>
+              <div class="vr"></div>
+            </div>
+            <div class="timeline-card-content">
+              <h3>9-11 Months: Pincer Grasp</h3>
+              <p>
+                Pincer grasp develops (thumb and index finger). They can now
+                handle smaller pieces. Eating becomes more efficient. Your baby
+                will start eating more substantial amounts.
+              </p>
+              <div class="bordered-tip"><p>3 Meals + 1-2 snacks</p></div>
+            </div>
+          </div>
+
+          <!-- 12+ Months -->
+          <div class="timeline-info-card" id="twelve-months-info">
+            <div class="timeline-date">
+              <h3>12M+</h3>
+              <div class="vr"></div>
+            </div>
+            <div class="timeline-card-content">
+              <h3>12 Months+: Family Foods</h3>
+              <p>
+                Baby should be fully integrated into family meals. They can handle
+                most textures and foods. Solid foods become primary nutrition
+                source. They may show preferences and dislikes.
+              </p>
+              <div class="bordered-tip"><p>3 meals + 2 snacks</p></div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <!-- Footer -->
+      <footer class="site-footer">
+        <div class="footer-text">
+          <div class="footer-desc">
+            <div class="footer-logo">
+              <img
+                src="./images/logo.png"
+                alt="Cartoon baby hand holding broccoli"
+                id="footer-logo"
+              />
+              <h3>Munch Sprouts</h3>
+            </div>
             <p>
-              Begin with simple, single-ingredient foods. Baby uses palmar grasp
-              (whole hand). Most foods end up on the floor - this is normal!
-              Focus on exploration, not nutrition.
+              Your complete guide to introducing solid foods to your baby with
+              fun, safe, and nutritious recipes.
             </p>
-            <div class="bordered-tip"><p>1-2 meals per day</p></div>
           </div>
-        </div>
 
-        <!-- 7-8 Months -->
-        <div class="timeline-info-card" id="seven-months-info">
-          <div class="timeline-date">
-            <h3>7-8M</h3>
-            <div class="vr"></div>
-          </div>
-          <div class="timeline-card-content">
-            <h3>7-8 Months: Building Skills</h3>
+          <div class="important-info">
+            <h3>Important Note</h3>
             <p>
-              More foods makes it to the mouth. Start introducing more variety
-              and combination meals. Begin offering water with meals in an open
-              cup.
+              Always consult with your GP and health visitor before starting baby
+              led weaning. This site is for general information only and should
+              not replace professional advice.
             </p>
-            <div class="bordered-tip"><p>2-3 meals per day</p></div>
           </div>
         </div>
 
-        <!-- 9-11 Months -->
-        <div class="timeline-info-card" id="nine-months-info">
-          <div class="timeline-date">
-            <h3>9-11M</h3>
-            <div class="vr"></div>
-          </div>
-          <div class="timeline-card-content">
-            <h3>9-11 Months: Pincer Grasp</h3>
-            <p>
-              Pincer grasp develops (thumb and index finger). They can now
-              handle smaller pieces. Eating becomes more efficient. Your baby
-              will start eating more substantial amounts.
-            </p>
-            <div class="bordered-tip"><p>3 Meals + 1-2 snacks</p></div>
-          </div>
+        <div class="horizontal-rule"></div>
+
+        <div class="copyright">
+          <p>&copy; 2026 MunchSprouts. For informational purposes only.</p>
         </div>
+      </footer>
+    </div>
 
-        <!-- 12+ Months -->
-        <div class="timeline-info-card" id="twelve-months-info">
-          <div class="timeline-date">
-            <h3>12M+</h3>
-            <div class="vr"></div>
-          </div>
-          <div class="timeline-card-content">
-            <h3>12 Months+: Family Foods</h3>
-            <p>
-              Baby should be fully integrated into family meals. They can handle
-              most textures and foods. Solid foods become primary nutrition
-              source. They may show preferences and dislikes.
-            </p>
-            <div class="bordered-tip"><p>3 meals + 2 snacks</p></div>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <!-- Footer -->
-    <footer class="site-footer">
-      <div class="footer-text">
-        <div class="footer-desc">
-          <div class="footer-logo">
-            <img
-              src="./images/logo.png"
-              alt="Cartoon baby hand holding broccoli"
-              id="footer-logo"
-            />
-            <h3>Munch Sprouts</h3>
-          </div>
-          <p>
-            Your complete guide to introducing solid foods to your baby with
-            fun, safe, and nutritious recipes.
-          </p>
-        </div>
-
-        <div class="important-info">
-          <h3>Important Note</h3>
-          <p>
-            Always consult with your GP and health visitor before starting baby
-            led weaning. This site is for general information only and should
-            not replace professional advice.
-          </p>
-        </div>
-      </div>
-
-      <div class="horizontal-rule"></div>
-
-      <div class="copyright">
-        <p>&copy; 2026 MunchSprouts. For informational purposes only.</p>
-      </div>
-    </footer>
+  <script src="./js/main.js"></script>
   </body>
 </html>
