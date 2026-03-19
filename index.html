@@ -47,12 +47,14 @@
     <title>Baby Led Weaning Recipes & Guides (UK) | MunchSprouts</title>
   </head>
   <body>
-    <div class="body bg-bg-main flex flex-col gap-5 lg:grid lg:grid-cols-2">
+    <div class="body bg-bg-main flex flex-col gap-5">
       <!-- Header -->
       <header
-        class="row-span-5 flex w-screen items-center justify-between bg-white p-2.5 shadow-md lg:inline-block lg:w-[450px] lg:border"
+        class="flex w-screen items-center justify-between bg-white p-2.5 shadow-md"
       >
-        <div class="flex w-full items-center justify-between lg:border">
+        <div
+          class="flex w-full items-center justify-between lg:justify-start lg:gap-5"
+        >
           <img src="./images/logo.png" alt="munch sprouts logo" class="w-10" />
           <h1 class="text-3xl font-bold">Munch Sprouts</h1>
           <div></div>
@@ -74,12 +76,33 @@
             />
           </svg>
         </div>
+
+        <!-- Lg navigation -->
+        <div class="hidden lg:flex">
+          <nav class="h-full">
+            <ul class="flex h-full items-center gap-5 p-2.5">
+              <li class="lg-nav-elems lg-this-page">
+                <a href="index.html" class="text-primary-pink-dark">Home</a>
+              </li>
+              <li class="lg-nav-elems">
+                <a href="./getting-started.html" class="">Getting Started</a>
+              </li>
+              <li class="lg-nav-elems">
+                <a href="./recipes.html" class="">Recipes</a>
+              </li>
+              <li class="lg-nav-elems">
+                <a href="./safety.html" class="">Safety</a>
+              </li>
+              <li class="lg-nav-elems">
+                <a href="./resources.html" class="">Resources</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
       </header>
 
       <!-- navigation -->
-      <nav
-        class="primary-nav bg-bg-main nav-hidden fixed mt-14 lg:flex lg:w-112.5 lg:flex-col lg:opacity-100"
-      >
+      <nav class="primary-nav bg-bg-main nav-hidden fixed mt-14 lg:hidden">
         <ul class="flex flex-col items-center gap-2.5 p-2.5">
           <li class="nav-elems this-page">
             <a
@@ -110,7 +133,7 @@
         <h2 class="text-2xl font-bold">
           Your Complete Guide to Baby Led Weaning
         </h2>
-        <p class="para text-ce">
+        <p class="para">
           Your complete guide to introducing solid foods to your baby with fun,
           safe, and nutritious recipes.
         </p>
@@ -155,10 +178,10 @@
       <section class="why-section section-base bg-bg-purple">
         <h2 class="heading2 text-center">Why Choose Baby Led Weaning?</h2>
         <div
-          class="carousel-container scrollbar-hide mx-auto flex w-full max-w-2xl snap-x snap-mandatory scroll-pb-8 gap-4 overflow-x-auto px-4 pb-8 md:grid md:grid-cols-2"
+          class="carousel-container scrollbar-hide mx-auto flex w-full max-w-2xl snap-x snap-mandatory scroll-pb-8 gap-4 overflow-x-auto px-4 pb-8 md:grid md:grid-cols-2 lg:w-full lg:max-w-7xl lg:place-items-center"
         >
           <!-- Info Cards -->
-          <div class="why-card min-w-65 flex-none snap-center">
+          <div class="why-card min-w-65 flex-none snap-center lg:min-w-100">
             <div class="icon-border">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -180,7 +203,9 @@
               Babies learn to self-feed and explore foods at their own pace
             </p>
           </div>
-          <div class="why-card w-72 flex-none shrink-0 snap-center">
+          <div
+            class="why-card w-72 flex-none shrink-0 snap-center lg:min-w-100"
+          >
             <div class="icon-border">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -203,7 +228,9 @@
               self feeding
             </p>
           </div>
-          <div class="why-card w-72 flex-none shrink-0 snap-center">
+          <div
+            class="why-card w-72 flex-none shrink-0 snap-center lg:min-w-100"
+          >
             <div class="icon-border">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -226,7 +253,9 @@
               your baby
             </p>
           </div>
-          <div class="why-card w-72 flex-none shrink-0 snap-center">
+          <div
+            class="why-card w-72 flex-none shrink-0 snap-center lg:min-w-100"
+          >
             <div class="icon-border">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -253,15 +282,17 @@
       </section>
 
       <!-- Ready to begin -->
-      <section class="ready-section section-base bg-bg-purple items-start">
+      <section
+        class="ready-section section-base bg-bg-purple items-start lg:items-center"
+      >
         <h2 class="heading2 self-center text-center">Ready to Begin?</h2>
         <div class="flex flex-col gap-1.5">
-          <div class="top-line flex items-center gap-1.5">
+          <div class="flex w-full items-center gap-1.5">
             <span
-              class="bg-primary-pink-dark flex h-10 w-10 items-center justify-center rounded-full text-white"
+              class="bg-primary-pink-dark flex h-10 w-10 items-center justify-center rounded-full text-white lg:hidden"
               >1</span
             >
-            <h3 class="heading3">Check for readiness signs</h3>
+            <h3 class="heading3 w-full">Check for readiness signs</h3>
           </div>
           <p class="para">
             Ensure your baby shows signs of readiness (usually around 6 months)
@@ -270,7 +301,7 @@
         <div class="flex flex-col gap-1.5">
           <div class="top-line flex items-center gap-1.5">
             <span
-              class="bg-primary-pink-dark flex h-10 w-10 items-center justify-center rounded-full text-white"
+              class="bg-primary-pink-dark flex h-10 w-10 items-center justify-center rounded-full text-white lg:hidden"
               >2</span
             >
             <h3 class="heading3">Learn the basics</h3>
@@ -282,7 +313,7 @@
         <div class="flex flex-col gap-1.5">
           <div class="top-line flex items-center gap-1.5">
             <span
-              class="bg-primary-pink-dark flex h-10 w-10 items-center justify-center rounded-full text-white"
+              class="bg-primary-pink-dark flex h-10 w-10 items-center justify-center rounded-full text-white lg:hidden"
               >3</span
             >
             <h3 class="heading3">Start with simple foods</h3>

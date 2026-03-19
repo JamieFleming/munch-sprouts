@@ -29,7 +29,7 @@
   }
 
   .heading3 {
-    @apply text-xl font-bold;
+    @apply text-xl font-bold lg:w-full lg:text-center;
   }
 
   .para {
@@ -54,6 +54,10 @@
 
   .nav-elems {
     @apply bg-bg-purple hover:bg-secondary-purple w-screen cursor-pointer py-3 text-center ease-linear;
+  }
+
+  .lg-nav-elems {
+    @apply hover:text-primary-purple cursor-pointer px-2.5 text-center text-nowrap;
   }
 
   .this-page {
