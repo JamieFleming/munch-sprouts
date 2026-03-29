@@ -7,6 +7,7 @@
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
+    --color-black: #000;
     --color-white: #fff;
     --spacing: 0.25rem;
     --container-3xs: 16rem;
@@ -28,6 +29,8 @@
     --font-weight-bold: 700;
     --radius-xl: 0.75rem;
     --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+    --default-transition-duration: 150ms;
+    --default-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
     --color-bg-main: #f9fafb;
@@ -194,6 +197,9 @@
   .fixed {
     position: fixed;
   }
+  .relative {
+    position: relative;
+  }
   .sticky {
     position: sticky;
   }
@@ -202,6 +208,9 @@
   }
   .end {
     inset-inline-end: var(--spacing);
+  }
+  .top-20 {
+    top: calc(var(--spacing) * 20);
   }
   .container {
     width: 100%;
@@ -226,6 +235,9 @@
   }
   .mt-14 {
     margin-top: calc(var(--spacing) * 14);
+  }
+  .mt-20 {
+    margin-top: calc(var(--spacing) * 20);
   }
   .block {
     display: block;
@@ -276,11 +288,17 @@
   .grow {
     flex-grow: 1;
   }
+  .border-collapse {
+    border-collapse: collapse;
+  }
   .transform {
     transform: var(--tw-rotate-x,) var(--tw-rotate-y,) var(--tw-rotate-z,) var(--tw-skew-x,) var(--tw-skew-y,);
   }
   .cursor-pointer {
     cursor: pointer;
+  }
+  .resize {
+    resize: both;
   }
   .snap-x {
     scroll-snap-type: x var(--tw-scroll-snap-strictness);
@@ -299,6 +317,9 @@
   }
   .flex-row {
     flex-direction: row;
+  }
+  .flex-wrap {
+    flex-wrap: wrap;
   }
   .items-center {
     align-items: center;
@@ -365,6 +386,9 @@
   .bg-bg-warning {
     background-color: var(--color-bg-warning);
   }
+  .bg-black {
+    background-color: var(--color-black);
+  }
   .bg-primary-green {
     background-color: var(--color-primary-green);
   }
@@ -406,6 +430,12 @@
   }
   .py-1 {
     padding-block: calc(var(--spacing) * 1);
+  }
+  .pt-20 {
+    padding-top: calc(var(--spacing) * 20);
+  }
+  .pt-52 {
+    padding-top: calc(var(--spacing) * 52);
   }
   .pb-8 {
     padding-bottom: calc(var(--spacing) * 8);
@@ -449,6 +479,15 @@
   .shadow-md {
     --tw-shadow: 0 4px 6px -1px var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 2px 4px -2px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
     box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+  }
+  .outline {
+    outline-style: var(--tw-outline-style);
+    outline-width: 1px;
+  }
+  .transition {
+    transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to, opacity, box-shadow, transform, translate, scale, rotate, filter, -webkit-backdrop-filter, backdrop-filter, display, content-visibility, overlay, pointer-events;
+    transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+    transition-duration: var(--tw-duration, var(--default-transition-duration));
   }
   .hover\:cursor-pointer {
     &:hover {
@@ -798,6 +837,11 @@
   inherits: false;
   initial-value: 0 0 #0000;
 }
+@property --tw-outline-style {
+  syntax: "*";
+  inherits: false;
+  initial-value: solid;
+}
 @property --tw-ease {
   syntax: "*";
   inherits: false;
@@ -855,6 +899,7 @@
       --tw-ring-offset-width: 0px;
       --tw-ring-offset-color: #fff;
       --tw-ring-offset-shadow: 0 0 #0000;
+      --tw-outline-style: solid;
       --tw-ease: initial;
       --tw-translate-x: 0;
       --tw-translate-y: 0;

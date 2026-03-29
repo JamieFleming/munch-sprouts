@@ -1,0 +1,613 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- SEO -->
+    <meta
+      name="description"
+      content="Baby led weaning recipes, safety tips, and UK-focused BLW guides to help you start solids with confidence. Discover baby-friendly meals today."
+    />
+    <meta name="author" content="MunchSprouts" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Munch Sprouts - Fun Baby Led Weaning" />
+    <meta
+      name="twitter:description"
+      content="Recipes, safety tips, and trackers for baby led weaning."
+    />
+    <meta
+      name="twitter:image"
+      content="https://munchsprouts.co.uk/images/logo.png"
+    />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="MunchSprouts - Fun Baby Led Weaning" />
+    <meta
+      property="og:description"
+      content="Recipes, safety tips, and trackers for baby led weaning. UK parents."
+    />
+    <meta
+      property="og:image"
+      content="https://munchsprouts.co.uk/images/logo.png"
+    />
+    <meta property="og:url" content="https://munchsprouts.co.uk/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="MunchSprouts" />
+
+    <!-- Styles -->
+    <link href="output.css" rel="stylesheet" />
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+    </style>
+
+    <title>Baby Led Weaning Recipes & Guides (UK) | Tracker</title>
+  </head>
+  <body>
+    <div class="body bg-bg-main flex flex-col gap-5">
+      <header
+        class="fixed flex w-screen items-center justify-between bg-white p-2.5 shadow-md border-2"
+      >
+        <div
+          class="flex w-full items-center justify-between lg:justify-start lg:gap-5"
+        >
+          <img src="./images/logo.png" alt="munch sprouts logo" class="w-10" />
+          <h1 class="text-3xl font-bold">Munch Sprouts</h1>
+          <div></div>
+        </div>
+
+        <div class="hamburger-symbol hover:cursor-pointer lg:hidden">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="size-6"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+            />
+          </svg>
+        </div>
+
+        <!-- Lg navigation -->
+        <div class="hidden lg:flex">
+          <nav class="h-full">
+            <ul class="flex h-full items-center gap-5 p-2.5">
+              <li class="lg-nav-elems lg-this-page">
+                <a href="index.html" class="text-primary-pink-dark">Home</a>
+              </li>
+              <li class="lg-nav-elems">
+                <a href="./getting-started.html" class="">Getting Started</a>
+              </li>
+              <li class="lg-nav-elems">
+                <a href="./recipes.html" class="">Recipes</a>
+              </li>
+              <li class="lg-nav-elems">
+                <a href="./safety.html" class="">Safety</a>
+              </li>
+              <li class="lg-nav-elems">
+                <a href="./resources.html" class="">Resources</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+
+      <!-- navigation -->
+      <nav class="primary-nav bg-bg-main nav-hidden fixed mt-14 lg:hidden">
+        <ul class="flex flex-col items-center gap-2.5 p-2.5">
+          <li class="nav-elems this-page">
+            <a
+              href="index.html"
+              class="block h-full w-full"
+              >Home</a
+            >
+          </li>
+          <li class="nav-elems">
+            <a href="./getting-started.html" class="block h-full w-full"
+              >Getting Started</a
+            >
+          </li>
+          <li class="nav-elems">
+            <a href="./recipes.html" class="block h-full w-full">Recipes</a>
+          </li>
+          <li class="nav-elems">
+            <a href="./safety.html" class="block h-full w-full">Safety</a>
+          </li>
+          <li class="nav-elems">
+            <a href="./resources.html" class="text-primary-pink-dark block h-full w-full">Resources</a>
+          </li>
+        </ul>
+      </nav>
+
+      <main class="body bg-bg-main flex flex-col gap-5 mt-14">
+        <div id="alertBox"></div>
+
+        <!-- Baby Info -->
+        <div class="intro section-base bg-bg-purple">
+            <h2 class="text-2xl font-bold">👶 Baby Information</h2>
+            <div class="">
+                <div class="form-group">
+                    <label for="babyName" class="para">Baby's Name</label>
+                    <input type="text" id="babyName" placeholder="e.g. Sophia" />
+                </div>
+                <div class="form-group">
+                    <label for="birthDate">Date of Birth</label>
+                    <input type="date" id="birthDate" onchange="calcAge()" />
+                </div>
+                <div class="form-group">
+                    <label for="weaningStart">Weaning Start Date</label>
+                    <input type="date" id="weaningStart" />
+                </div>
+                <div class="form-group">
+                    <label for="ageWeeks">Current Age (weeks)</label>
+                    <input
+                    type="text"
+                    id="ageWeeks"
+                    placeholder="Auto-calculated"
+                    readonly
+                    />
+                </div>
+            </div>
+        </div>
+
+        <!-- Stats -->
+        <div class="section">
+            <h2>📊 Statistics Dashboard</h2>
+            <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-label">Unique Foods Tried</div>
+                <div class="stat-value" id="statUnique">0</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-label">Total Attempts</div>
+                <div class="stat-value" id="statAttempts">0</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-label">Foods Liked</div>
+                <div class="stat-value" id="statLiked">0</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-label">Allergic Reactions</div>
+                <div class="stat-value" id="statAllergic">0</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-label">Avg Attempts / Food</div>
+                <div class="stat-value" id="statAvg">0</div>
+            </div>
+            </div>
+            <div id="catBreakdown" class="cat-grid"></div>
+        </div>
+
+        <!-- Add Food -->
+        <div class="section">
+            <h2>➕ Log a Food</h2>
+            <div class="form-grid">
+            <div class="form-group">
+                <label for="foodDate">Date</label>
+                <input type="date" id="foodDate" />
+            </div>
+            <div class="form-group">
+                <label for="foodName">Food Item</label>
+                <input type="text" id="foodName" placeholder="e.g. Sweet Potato" />
+            </div>
+            <div class="form-group">
+                <label for="foodCategory">Category</label>
+                <select id="foodCategory">
+                <option value="">Select category...</option>
+                <option value="Vegetables">🥬 Vegetables</option>
+                <option value="Fruits">🍎 Fruits</option>
+                <option value="Grains">🌾 Grains & Cereals</option>
+                <option value="Proteins">🍗 Proteins</option>
+                <option value="Dairy">🥛 Dairy</option>
+                <option value="Legumes">🫘 Legumes & Pulses</option>
+                <option value="Other">🍽️ Other</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="foodForm">Food Form</label>
+                <select id="foodForm">
+                <option value="">Select form...</option>
+                <option value="Purée">Purée</option>
+                <option value="Mashed">Mashed</option>
+                <option value="Soft/Cut">Soft/Cut</option>
+                <option value="Finger Food">Finger Food</option>
+                <option value="Mixed Texture">Mixed Texture</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="foodReaction">Reaction</label>
+                <select id="foodReaction">
+                <option value="">Select reaction...</option>
+                <option value="Good">😊 Good — Ate well</option>
+                <option value="Neutral">😐 Neutral — Tried, not keen</option>
+                <option value="Rejected">😕 Rejected — Spat out</option>
+                <option value="Gagged">🤢 Gagged</option>
+                </select>
+            </div>
+            </div>
+            <div class="checkboxes-row">
+            <label class="check-item">
+                <input type="checkbox" id="cbLiked" /> Baby Liked It 😊
+            </label>
+            <label class="check-item">
+                <input type="checkbox" id="cbDisliked" /> Baby Disliked It 😞
+            </label>
+            <label class="check-item">
+                <input type="checkbox" id="cbAllergic" /> Allergic Reaction ⚠️
+            </label>
+            </div>
+            <div class="form-group">
+            <label for="foodNotes">Notes</label>
+            <textarea
+                id="foodNotes"
+                placeholder="Texture feedback, observations, concerns..."
+            ></textarea>
+            </div>
+            <div class="btn-group">
+            <button class="btn-primary" onclick="addFood()">✅ Add to Log</button>
+            <button class="btn-outline" onclick="clearForm()">
+                🔄 Clear Form
+            </button>
+            </div>
+        </div>
+
+        <!-- Food Log -->
+        <div class="section">
+            <h2>📋 Food Log</h2>
+            <div id="logContainer">
+            <div class="empty-state">
+                <div class="empty-icon">🍽️</div>
+                <p>No foods logged yet. Add your first food above!</p>
+            </div>
+            </div>
+            <div class="btn-group" style="margin-top: 18px">
+            <button class="btn-secondary" onclick="exportCSV()">
+                📊 Export CSV
+            </button>
+            <button class="btn-danger" onclick="clearAll()">
+                🗑️ Clear All Data
+            </button>
+            </div>
+        </div>
+        </div>
+      </main>
+
+    <script>
+      // ─── STATE ───────────────────────────────────────────────────────────────
+      let foodLog = JSON.parse(
+        localStorage.getItem('munchsprouts_log') || '[]',
+      );
+
+      // ─── INIT ────────────────────────────────────────────────────────────────
+      (function init() {
+        setTodayDate();
+        render();
+      })();
+
+      // ─── HELPERS ─────────────────────────────────────────────────────────────
+      function setTodayDate() {
+        const today = new Date().toISOString().split('T')[0];
+        document.getElementById('foodDate').value = today;
+      }
+
+      function calcAge() {
+        const val = document.getElementById('birthDate').value;
+        if (!val) return;
+        const weeks = Math.floor(
+          (Date.now() - new Date(val)) / (7 * 24 * 60 * 60 * 1000),
+        );
+        document.getElementById('ageWeeks').value = weeks + ' weeks';
+      }
+
+      function normalize(name) {
+        return name.toLowerCase().trim();
+      }
+
+      function groupByFood(log) {
+        const groups = {};
+        log.forEach((entry) => {
+          const key = normalize(entry.name);
+          if (!groups[key]) {
+            groups[key] = {
+              key,
+              name: entry.name,
+              category: entry.category || 'Other',
+              attempts: [],
+            };
+          }
+          groups[key].attempts.push(entry);
+        });
+        return groups;
+      }
+
+      function reactionBadge(r) {
+        if (!r) return '';
+        const map = {
+          Good: 'badge-good',
+          Neutral: 'badge-neutral',
+          Rejected: 'badge-rejected',
+          Gagged: 'badge-gagged',
+        };
+        return `<span class="badge ${map[r] || ''}">${r}</span>`;
+      }
+
+      function likeBar(pct) {
+        return `
+            <div class="like-bar-wrap">
+                <div class="like-bar-bg"><div class="like-bar-fill" style="width:${pct}%"></div></div>
+                <span class="like-pct">${pct}%</span>
+            </div>`;
+      }
+
+      function save() {
+        localStorage.setItem('munchsprouts_log', JSON.stringify(foodLog));
+      }
+
+      function alert_(msg, type = 'success') {
+        const box = document.getElementById('alertBox');
+        const el = document.createElement('div');
+        el.className = `alert alert-${type}`;
+        el.textContent = msg;
+        box.appendChild(el);
+        setTimeout(() => el.remove(), 4000);
+      }
+
+      // ─── ADD FOOD ─────────────────────────────────────────────────────────────
+      function addFood() {
+        const date = document.getElementById('foodDate').value;
+        const name = document.getElementById('foodName').value.trim();
+        const category = document.getElementById('foodCategory').value;
+        const form = document.getElementById('foodForm').value;
+        const reaction = document.getElementById('foodReaction').value;
+        const liked = document.getElementById('cbLiked').checked;
+        const disliked = document.getElementById('cbDisliked').checked;
+        const allergic = document.getElementById('cbAllergic').checked;
+        const notes = document.getElementById('foodNotes').value.trim();
+
+        if (!date || !name || !form) {
+          alert_('Please fill in Date, Food Item, and Food Form.', 'warning');
+          return;
+        }
+
+        // Count existing attempts for this food
+        const existing = foodLog.filter(
+          (f) => normalize(f.name) === normalize(name),
+        );
+        const attemptNum = existing.length + 1;
+
+        const entry = {
+          id: Date.now(),
+          date,
+          name,
+          category,
+          form,
+          reaction,
+          liked,
+          disliked,
+          allergic,
+          notes,
+          attemptNum,
+        };
+        foodLog.push(entry);
+        save();
+        clearForm();
+        render();
+
+        const msg =
+          attemptNum === 1
+            ? `✅ "${name}" added to the log!`
+            : `✅ "${name}" logged again — attempt #${attemptNum}!`;
+        alert_(msg);
+      }
+
+      function clearForm() {
+        ['foodName', 'foodNotes'].forEach(
+          (id) => (document.getElementById(id).value = ''),
+        );
+        ['foodCategory', 'foodForm', 'foodReaction'].forEach(
+          (id) => (document.getElementById(id).value = ''),
+        );
+        ['cbLiked', 'cbDisliked', 'cbAllergic'].forEach(
+          (id) => (document.getElementById(id).checked = false),
+        );
+        setTodayDate();
+      }
+
+      function deleteAttempt(id) {
+        if (!confirm('Delete this attempt?')) return;
+        foodLog = foodLog.filter((f) => f.id !== id);
+        save();
+        render();
+        alert_('Attempt deleted.');
+      }
+
+      function clearAll() {
+        if (!confirm('⚠️ Clear ALL data? This cannot be undone.')) return;
+        foodLog = [];
+        save();
+        render();
+        alert_('All data cleared.');
+      }
+
+      // ─── TOGGLE HISTORY ───────────────────────────────────────────────────────
+      function toggleHistory(key) {
+        const row = document.getElementById('hist_' + key);
+        if (!row) return;
+        row.classList.toggle('open');
+        const btn = document.getElementById('btn_' + key);
+        if (btn)
+          btn.textContent = row.classList.contains('open')
+            ? '▲ Hide History'
+            : '▼ View History';
+      }
+
+      // ─── RENDER ───────────────────────────────────────────────────────────────
+      function render() {
+        renderStats();
+        renderTable();
+      }
+
+      function renderStats() {
+        const groups = groupByFood(foodLog);
+        const keys = Object.keys(groups);
+        const total = foodLog.length;
+        const unique = keys.length;
+        const liked = keys.filter((k) =>
+          groups[k].attempts.some((a) => a.liked),
+        ).length;
+        const allergic = foodLog.filter((f) => f.allergic).length;
+        const avg = unique ? (total / unique).toFixed(1) : '0';
+
+        document.getElementById('statUnique').textContent = unique;
+        document.getElementById('statAttempts').textContent = total;
+        document.getElementById('statLiked').textContent = liked;
+        document.getElementById('statAllergic').textContent = allergic;
+        document.getElementById('statAvg').textContent = avg + 'x';
+
+        // Category breakdown
+        const catDefs = {
+          Vegetables: { icon: '🥬' },
+          Fruits: { icon: '🍎' },
+          Grains: { icon: '🌾' },
+          Proteins: { icon: '🍗' },
+          Dairy: { icon: '🥛' },
+          Legumes: { icon: '🫘' },
+          Other: { icon: '🍽️' },
+        };
+        const catData = {};
+        keys.forEach((k) => {
+          const g = groups[k];
+          const cat = g.category || 'Other';
+          if (!catData[cat]) catData[cat] = { foods: 0, attempts: 0 };
+          catData[cat].foods++;
+          catData[cat].attempts += g.attempts.length;
+        });
+
+        let catHTML = Object.keys(catData)
+          .map((cat) => {
+            const d = catDefs[cat] || { icon: '🍽️' };
+            return `
+                <div class="cat-card">
+                    <div class="cat-icon">${d.icon}</div>
+                    <div class="cat-name">${cat}</div>
+                    <div class="cat-count">${catData[cat].foods}</div>
+                    <div class="cat-stats">${catData[cat].attempts} attempts</div>
+                </div>`;
+          })
+          .join('');
+
+        document.getElementById('catBreakdown').innerHTML =
+          catHTML ||
+          '<p style="color:var(--muted);font-size:13px;">Add foods to see category breakdown.</p>';
+      }
+
+      function renderTable() {
+        const container = document.getElementById('logContainer');
+        const groups = groupByFood(foodLog);
+        const keys = Object.keys(groups);
+
+        if (keys.length === 0) {
+          container.innerHTML = `
+                <div class="empty-state">
+                    <div class="empty-icon">🍽️</div>
+                    <p>No foods logged yet. Add your first food above!</p>
+                </div>`;
+          return;
+        }
+
+        let html = `
+            <table class="log-table">
+                <thead>
+                    <tr>
+                        <th>Food</th>
+                        <th>Category</th>
+                        <th>Attempts</th>
+                        <th>Forms Tried</th>
+                        <th>Latest Reaction</th>
+                        <th>Liked %</th>
+                        <th>⚠️</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>`;
+
+        keys.forEach((key) => {
+          const g = groups[key];
+          const count = g.attempts.length;
+          const badgeCls = count === 1 ? 'one' : 'multi';
+          const forms = [
+            ...new Set(g.attempts.map((a) => a.form).filter(Boolean)),
+          ].join(', ');
+          const latest = g.attempts[count - 1];
+          const likedCnt = g.attempts.filter((a) => a.liked).length;
+          const pct = Math.round((likedCnt / count) * 100);
+          const hasAllergy = g.attempts.some((a) => a.allergic);
+
+          html += `
+                <tr>
+                    <td><strong>${g.name}</strong><span class="attempt-badge ${badgeCls}">${count}x</span></td>
+                    <td>${g.category || '—'}</td>
+                    <td style="text-align:center;">${count}</td>
+                    <td style="font-size:12px;">${forms || '—'}</td>
+                    <td>${reactionBadge(latest.reaction)}</td>
+                    <td>${likeBar(pct)}</td>
+                    <td style="text-align:center;">${hasAllergy ? '⚠️' : ''}</td>
+                    <td>
+                        <button class="btn-secondary btn-sm" id="btn_${key}" onclick="toggleHistory('${key}')">▼ View History</button>
+                    </td>
+                </tr>
+                <tr class="history-row" id="hist_${key}">
+                    <td colspan="8">
+                        <div class="history-inner">
+                            <h4>📅 Attempt History for ${g.name}</h4>
+                            ${g.attempts
+                              .map(
+                                (a, i) => `
+                                <div class="attempt-item">
+                                    <span class="attempt-num">Attempt #${i + 1}</span>
+                                    <span class="attempt-date">${a.date}</span>
+                                    <span>${a.form || '—'}</span>
+                                    <span>${reactionBadge(a.reaction)}</span>
+                                    <span>${a.liked ? '✅ Liked' : a.disliked ? '❌ Disliked' : '—'}</span>
+                                    <span style="color:var(--muted);font-size:11px;">${a.notes || ''}</span>
+                                    <button class="btn-danger btn-sm" onclick="deleteAttempt(${a.id})">Delete</button>
+                                </div>`,
+                              )
+                              .join('')}
+                        </div>
+                    </td>
+                </tr>`;
+        });
+
+        html += '</tbody></table>';
+        container.innerHTML = html;
+      }
+
+      // ─── EXPORT CSV ──────────────────────────────────────────────────────────
+      function exportCSV() {
+        if (!foodLog.length) {
+          alert_('No data to export.', 'warning');
+          return;
+        }
+        let csv =
+          'Date,Food,Category,Attempt #,Form,Reaction,Liked,Disliked,Allergic Reaction,Notes\n';
+        foodLog.forEach((f) => {
+          csv += `"${f.date}","${f.name}","${f.category || ''}","${f.attemptNum || 1}","${f.form}","${f.reaction}","${f.liked ? 'Yes' : 'No'}","${f.disliked ? 'Yes' : 'No'}","${f.allergic ? 'Yes' : 'No'}","${f.notes}"\n`;
+        });
+        const a = document.createElement('a');
+        a.href = 'data:text/csv;charset=utf-8,' + encodeURIComponent(csv);
+        a.download = 'MunchSprouts_Weaning_Log.csv';
+        a.click();
+        alert_('✅ CSV exported!');
+      }
+    </script>
+  </body>
+</html>
