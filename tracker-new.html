@@ -247,7 +247,7 @@
                   <option value="Good">Good — Ate well</option>
                   <option value="Neutral" id="liked">Neutral — Tried, not keen</option>
                   <option value="Rejected" id="disliked">Rejected — Spat out</option>
-                  <option value="Gagged">Gagged</option>
+                  <!-- <option value="Gagged">Gagged</option> -->
                   <option value="Allergic" id=allergic">Allergic Reaction</option>
                   </select>
               </div>
@@ -280,7 +280,7 @@
 
         <!-- Edit Log -->
           <div id="editModal" class="fixed inset-0 bg-black/75 hidden flex items-center justify-center z-50 p-4 md:p-8">
-            <div class="bg-white rounded-3xl p-8 w-full max-w-lg max-h-[90vh] overflow-y-auto shadow-2xl border border-gray-200">
+            <div class="bg-bg-purple rounded-3xl p-8 w-full max-w-lg max-h-[90vh] overflow-y-auto shadow-2xl border border-gray-200">
               <div class="flex items-center justify-between mb-8">
                 <h3 class="text-3xl font-bold text-gray-900">Edit Food Entry</h3>
                 <button onclick="cancelEdit()" class="text-gray-500 hover:text-gray-700 text-2xl">&times;</button>
@@ -291,20 +291,32 @@
               <div class="space-y-6">
                 <div>
                   <label class="block text-sm font-medium text-gray-700 mb-2">Food Name</label>
-                  <input id="foodNameEdit" type="text" class="w-full p-4 border border-gray-300 rounded-2xl focus:ring-2 focus:ring-primary-purple focus:border-primary-purple transition-all" placeholder="e.g. Banana" />
+                  <input id="foodNameEdit" type="text" class="bg-white w-full p-4 border border-gray-300 rounded-2xl focus:ring-2 focus:ring-primary-purple focus:border-primary-purple transition-all" placeholder="e.g. Banana" />
                 </div>
                 
                 <div>
                   <label class="block text-sm font-medium text-gray-700 mb-2">Food Form</label>
-                  <input id="foodFormEdit" type="text" class="w-full p-4 border border-gray-300 rounded-2xl focus:ring-2 focus:ring-primary-purple focus:border-primary-purple transition-all" placeholder="Finger / Mash / Puree" />
+                  <input id="foodFormEdit" type="text" class="bg-white w-full p-4 border border-gray-300 rounded-2xl focus:ring-2 focus:ring-primary-purple focus:border-primary-purple transition-all" placeholder="Finger / Mash / Puree" />
                 </div>
                 
                 <div>
                   <label class="block text-sm font-medium text-gray-700 mb-2">Date</label>
-                  <input id="foodDateEdit" type="date" class="w-full p-4 border border-gray-300 rounded-2xl focus:ring-2 focus:ring-primary-purple focus:border-primary-purple transition-all" />
+                  <input id="foodDateEdit" type="date" class="bg-white w-full p-4 border border-gray-300 rounded-2xl focus:ring-2 focus:ring-primary-purple focus:border-primary-purple transition-all" />
+                </div>
+
+                <div class="form-group  para flex flex-col w-full gap-2.5">
+                  <label for="foodReactionEdit" >Baby's Reaction</label>
+                  <select id="foodReactionEdit" class="input-box bg-white w-full p-4 border border-gray-300 rounded-2xl focus:ring-2 focus:ring-primary-purple focus:border-primary-purple transition-all">
+                  <option value="">Select reaction...</option>
+                  <option value="Good">Good — Ate well</option>
+                  <option value="Neutral" id="liked">Neutral — Tried, not keen</option>
+                  <option value="Rejected" id="disliked">Rejected — Spat out</option>
+                  <!-- <option value="Gagged">Gagged</option> -->
+                  <option value="Allergic" id=allergic">Allergic Reaction</option>
+                  </select>
                 </div>
                 
-                <fieldset class="space-y-3 p-4 bg-gray-50 rounded-2xl border border-gray-200">
+                <!-- <fieldset class="space-y-3 p-4 bg-gray-50 rounded-2xl border border-gray-200">
                   <legend class="text-sm font-medium text-gray-700 px-2">Baby's Reaction</legend>
                   <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
                     <label class="flex items-center p-4 border border-gray-200 rounded-xl hover:bg-emerald-50 cursor-pointer transition-all group">
@@ -320,7 +332,7 @@
                     <input id="cbAllergicEdit" type="radio" class="w-5 h-5 text-red-600 rounded focus:ring-red-500 mr-3" />
                     <span class="font-medium text-red-900 text-lg">⚠️ Allergic Reaction</span>
                   </label>
-                </fieldset>
+                </fieldset> -->
                 
                 <div>
                   <label class="block text-sm font-medium text-gray-700 mb-2">Notes (optional)</label>
@@ -558,9 +570,10 @@
         document.getElementById('foodNameEdit').value = attempt.name;
         document.getElementById('foodFormEdit').value = attempt.form || '';
         document.getElementById('foodDateEdit').value = attempt.date;
-        document.getElementById('cbLikedEdit').checked = attempt.liked || false;
-        document.getElementById('cbDislikedEdit').checked = attempt.disliked || false;
-        document.getElementById('cbAllergicEdit').checked = attempt.allergic || false;
+        document.getElementById('foodReactionEdit').value = attempt.reaction;
+        // document.getElementById('cbLikedEdit').checked = attempt.liked || false;
+        // document.getElementById('cbDislikedEdit').checked = attempt.disliked || false;
+        // document.getElementById('cbAllergicEdit').checked = attempt.allergic || false;
         document.getElementById('notesEdit').value = attempt.notes || '';
         document.getElementById('editAttemptId').value = attemptId;
         
@@ -589,9 +602,10 @@
           name: document.getElementById('foodNameEdit').value,
           form: document.getElementById('foodFormEdit').value,
           date: document.getElementById('foodDateEdit').value,
-          liked: document.getElementById('cbLikedEdit').checked,
-          disliked: document.getElementById('cbDislikedEdit').checked,
-          allergic: document.getElementById('cbAllergicEdit').checked,
+          reaction: document.getElementById('foodReactionEdit').value,
+          // liked: document.getElementById('cbLikedEdit').checked,
+          // disliked: document.getElementById('cbDislikedEdit').checked,
+          // allergic: document.getElementById('cbAllergicEdit').checked,
           notes: document.getElementById('notesEdit').value
         };
         

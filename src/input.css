@@ -74,7 +74,7 @@
   }
 
   .input-box {
-    @apply bg-bg-green text-text-charcoal-light rounded-lg p-1;
+    @apply text-text-charcoal-light rounded-lg bg-white p-1;
   }
 
   .stat-card {
