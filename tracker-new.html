@@ -130,155 +130,195 @@
       <main class="body bg-bg-main flex flex-col gap-5 mt-14">
         <div id="alertBox"></div>
 
+        <!-- Intro Section -->
+        <section class="intro section-base bg-bg-purple">
+          <h2 class="text-2xl font-bold">Weaning Tracker</h2>
+          <p class="para">Track your baby's food journey.</p>
+        </section>
+
         <!-- Baby Info -->
-        <div class="intro section-base bg-bg-purple">
-            <h2 class="text-2xl font-bold">👶 Baby Information</h2>
-            <div class="">
-                <div class="form-group">
-                    <label for="babyName" class="para">Baby's Name</label>
-                    <input type="text" id="babyName" placeholder="e.g. Sophia" />
+        <div class="intro flex flex-col items-center gap-5 p-2.5 shadow-md; bg-bg-purple">
+            <h2 class="text-2xl font-bold">Baby Information</h2>
+            <div class="p-2.5 w-full flex flex-col gap-5">
+                <div class="form-group para flex flex-col w-full gap-2.5">
+                    <label for="babyName" class="=">Baby's Name</label>
+                    <input type="text" id="babyName" placeholder="e.g. Eleia" 
+                    class="input-box"
+                    />
                 </div>
-                <div class="form-group">
+                <div class="form-group para flex flex-col w-full gap-2.5">
                     <label for="birthDate">Date of Birth</label>
-                    <input type="date" id="birthDate" onchange="calcAge()" />
+                    <input type="date" id="birthDate" onchange="calcAge()"
+                    class="input-box text-text-charcoal-light" />
                 </div>
-                <div class="form-group">
+                <div class="form-group para flex flex-col w-full gap-2.5">
                     <label for="weaningStart">Weaning Start Date</label>
-                    <input type="date" id="weaningStart" />
+                    <input type="date" id="weaningStart" 
+                    class="input-box text-text-charcoal-light"/>
                 </div>
-                <div class="form-group">
+                <div class="form-group para flex flex-col w-full gap-2.5 >
                     <label for="ageWeeks">Current Age (weeks)</label>
                     <input
                     type="text"
                     id="ageWeeks"
                     placeholder="Auto-calculated"
                     readonly
+                    class="input-box"
                     />
                 </div>
             </div>
         </div>
 
         <!-- Stats -->
-        <div class="section">
-            <h2>📊 Statistics Dashboard</h2>
-            <div class="stats-grid">
-            <div class="stat-card">
-                <div class="stat-label">Unique Foods Tried</div>
-                <div class="stat-value" id="statUnique">0</div>
-            </div>
-            <div class="stat-card">
-                <div class="stat-label">Total Attempts</div>
-                <div class="stat-value" id="statAttempts">0</div>
-            </div>
-            <div class="stat-card">
-                <div class="stat-label">Foods Liked</div>
-                <div class="stat-value" id="statLiked">0</div>
-            </div>
-            <div class="stat-card">
-                <div class="stat-label">Allergic Reactions</div>
-                <div class="stat-value" id="statAllergic">0</div>
-            </div>
-            <div class="stat-card">
-                <div class="stat-label">Avg Attempts / Food</div>
-                <div class="stat-value" id="statAvg">0</div>
-            </div>
+        <div class="section section-base bg-bg-purple">
+            <h2 class="text-2xl font-bold">Statistics Dashboard</h2>
+            <div class="stats-grid flex flex-col gap-5 w-full">
+              <div class="stat-card ">
+                  <div class="stat-label ">Unique Foods Tried:</div>
+                  <div class="stat-value text-2xl text-primary-green" id="statUnique">0</div>
+              </div>
+              <div class="stat-card">
+                  <div class="stat-label">Total Attempts</div>
+                  <div class="stat-value text-2xl text-primary-green" id="statAttempts">0</div>
+              </div>
+              <div class="stat-card">
+                  <div class="stat-label">Foods Liked</div>
+                  <div class="stat-value text-2xl text-primary-green" id="statLiked">0</div>
+              </div>
+              <div class="stat-card">
+                  <div class="stat-label">Foods Disliked</div>
+                  <div class="stat-value text-2xl text-primary-green" id="statAvg">0</div>
+              </div>
+              <div class="stat-card">
+                  <div class="stat-label">Allergic Reactions</div>
+                  <div class="stat-value text-2xl text-primary-green" id="statAllergic">0</div>
+              </div>
+              
             </div>
             <div id="catBreakdown" class="cat-grid"></div>
         </div>
 
         <!-- Add Food -->
-        <div class="section">
-            <h2>➕ Log a Food</h2>
-            <div class="form-grid">
-            <div class="form-group">
-                <label for="foodDate">Date</label>
-                <input type="date" id="foodDate" />
+        <div class="section section-base bg-bg-purple">
+            <h2 class="text-2xl font-bold">Log a Food</h2>
+            <div class="form-grid p-2.5 w-full flex flex-col gap-5">
+              <div class="form-group para flex flex-col w-full gap-2.5">
+                  <label for="foodDate">Date</label>
+                  <input type="date" id="foodDate" 
+                  class="input-box"/>
+              </div>
+              <div class="form-group  para flex flex-col w-full gap-2.5>
+                  <label for="foodName">Food Item</label>
+                  <input type="text" id="foodName" placeholder="e.g. Sweet Potato"
+                  class="input-box" />
+              </div>
+              <div class="form-group para flex flex-col w-full gap-2.5">
+                  <label for="foodCategory">Category</label>
+                  <select id="foodCategory" class="input-box">
+                  <option value="">Select category...</option>
+                  <option value="Vegetables">Vegetables</option>
+                  <option value="Fruits">Fruits</option>
+                  <option value="Grains">Grains & Cereals</option>
+                  <option value="Proteins">Proteins</option>
+                  <option value="Dairy">Dairy</option>
+                  <option value="Legumes">Legumes & Pulses</option>
+                  <option value="Other">Other</option>
+                  </select>
+              </div>
+              <div class="form-group para flex flex-col w-full gap-2.5">
+                  <label for="foodForm">Food Form</label>
+                  <select id="foodForm" class="input-box">
+                  <option value="">Select form...</option>
+                  <option value="Purée">Purée</option>
+                  <option value="Mashed">Mashed</option>
+                  <option value="Soft/Cut">Soft/Cut</option>
+                  <option value="Finger Food">Finger Food</option>
+                  <option value="Mixed Texture">Mixed Texture</option>
+                  </select>
+              </div>
+              <div class="form-group para flex flex-col w-full gap-2.5">
+                  <label for="foodReaction" >Reaction</label>
+                  <select id="foodReaction" class="input-box">
+                  <option value="">Select reaction...</option>
+                  <option value="Good">Good — Ate well</option>
+                  <option value="Neutral" id="liked">Neutral — Tried, not keen</option>
+                  <option value="Rejected" id="disliked">Rejected — Spat out</option>
+                  <option value="Gagged">Gagged</option>
+                  <option value="Allergic" id=allergic">Allergic Reaction</option>
+                  </select>
+              </div>
             </div>
-            <div class="form-group">
-                <label for="foodName">Food Item</label>
-                <input type="text" id="foodName" placeholder="e.g. Sweet Potato" />
+            <div class="checkboxes-row grid grid-cols-2 gap-2.5 w-full justify-items-center text-text-charcoal-light">
+              <label class="check-item">
+                  <input type="checkbox" id="cbLiked" /> Baby Liked
+              </label>
+              <label class="check-item">
+                  <input type="checkbox" id="cbDisliked" /> Baby Disliked
+              </label>
+              <label class="check-item col-span-2">
+                  <input type="checkbox" id="cbAllergic" /> Allergic Reaction
+              </label>
             </div>
-            <div class="form-group">
-                <label for="foodCategory">Category</label>
-                <select id="foodCategory">
-                <option value="">Select category...</option>
-                <option value="Vegetables">🥬 Vegetables</option>
-                <option value="Fruits">🍎 Fruits</option>
-                <option value="Grains">🌾 Grains & Cereals</option>
-                <option value="Proteins">🍗 Proteins</option>
-                <option value="Dairy">🥛 Dairy</option>
-                <option value="Legumes">🫘 Legumes & Pulses</option>
-                <option value="Other">🍽️ Other</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <label for="foodForm">Food Form</label>
-                <select id="foodForm">
-                <option value="">Select form...</option>
-                <option value="Purée">Purée</option>
-                <option value="Mashed">Mashed</option>
-                <option value="Soft/Cut">Soft/Cut</option>
-                <option value="Finger Food">Finger Food</option>
-                <option value="Mixed Texture">Mixed Texture</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <label for="foodReaction">Reaction</label>
-                <select id="foodReaction">
-                <option value="">Select reaction...</option>
-                <option value="Good">😊 Good — Ate well</option>
-                <option value="Neutral">😐 Neutral — Tried, not keen</option>
-                <option value="Rejected">😕 Rejected — Spat out</option>
-                <option value="Gagged">🤢 Gagged</option>
-                </select>
-            </div>
-            </div>
-            <div class="checkboxes-row">
-            <label class="check-item">
-                <input type="checkbox" id="cbLiked" /> Baby Liked It 😊
-            </label>
-            <label class="check-item">
-                <input type="checkbox" id="cbDisliked" /> Baby Disliked It 😞
-            </label>
-            <label class="check-item">
-                <input type="checkbox" id="cbAllergic" /> Allergic Reaction ⚠️
-            </label>
-            </div>
-            <div class="form-group">
+            <div class="form-group para flex flex-col w-full gap-2.5">
             <label for="foodNotes">Notes</label>
             <textarea
                 id="foodNotes"
-                placeholder="Texture feedback, observations, concerns..."
+                placeholder="Texture feedback, observations, concerns..." class="input-box"
             ></textarea>
             </div>
-            <div class="btn-group">
-            <button class="btn-primary" onclick="addFood()">✅ Add to Log</button>
-            <button class="btn-outline" onclick="clearForm()">
-                🔄 Clear Form
-            </button>
+            <div class="btn-group flex flex-col gap-2.5 w-full items-center">
+              <button class="btn-primary bg-primary-green-dark w-5/6 cursor-pointer rounded-xl py-1 text-white shadow-md hover:bg-primary-green-light" onclick="addFood()">Add to Log</button>
+              <button class="btn-outline bg-warning-stroke w-5/6 cursor-pointer rounded-xl py-1 text-white shadow-md hover:bg-red-400" onclick="clearForm()">
+                  Clear Form
+              </button>
             </div>
         </div>
 
         <!-- Food Log -->
-        <div class="section">
-            <h2>📋 Food Log</h2>
-            <div id="logContainer">
-            <div class="empty-state">
-                <div class="empty-icon">🍽️</div>
-                <p>No foods logged yet. Add your first food above!</p>
+        <div class="section section-base bg-bg-purple">
+            <h2 class="text-2xl font-bold"> Food Log</h2>
+            <div id="logContainer" class="w-full">
+              <div class="empty-state">
+                  <p>No foods logged yet. Add your first food above!</p>
+              </div>
             </div>
-            </div>
-            <div class="btn-group" style="margin-top: 18px">
-            <button class="btn-secondary" onclick="exportCSV()">
-                📊 Export CSV
-            </button>
-            <button class="btn-danger" onclick="clearAll()">
-                🗑️ Clear All Data
-            </button>
+            <div class="btn-group w-full flex  flex-col gap-2.5 items-center">
+              <button class="btn-secondary btn-primary bg-primary-purple text-primary-pink-dark w-5/6 cursor-pointer rounded-xl py-1 shadow-md hover:bg-secondary-purple" onclick="exportCSV()">Export CSV
+              </button>
+              <button class="btn-danger btn-outline bg-warning-stroke w-5/6 cursor-pointer rounded-xl py-1 text-white shadow-md hover:bg-red-400" onclick="clearAll()">Clear All Data
+              </button>
             </div>
         </div>
         </div>
       </main>
+
+      <footer class="section-base bg-white">
+        <div class="flex items-center gap-3">
+          <img src="./images/logo.png" alt="munch sprouts logo" class="w-10" />
+          <h3 class="heading3">Munch Sprouts</h3>
+        </div>
+        <p class="para text-center">
+          Your complete guide to introducing solid foods to your baby with fun,
+          safe and nutritious recipes
+        </p>
+        <div
+          class="bg-bg-warning border-warning-stroke flex flex-col items-center gap-2.5 rounded-xl border-2 p-1"
+        >
+          <h4 class="text-lg font-bold">Important Note</h4>
+          <p class="para text-center">
+            Always consult your GP and Health Visitor before starting baby led
+            weaning. This site is for general information only and should not
+            replace professional advice.
+          </p>
+        </div>
+      </footer>
+
+      <div class="section-base">
+        <p class="para text-center text-xs">
+          &copy 2026 Munch Sprouts. For informational purposes only.
+        </p>
+      </div>
+    </div>
 
     <script>
       // ─── STATE ───────────────────────────────────────────────────────────────
@@ -341,9 +381,11 @@
 
       function likeBar(pct) {
         return `
-            <div class="like-bar-wrap">
-                <div class="like-bar-bg"><div class="like-bar-fill" style="width:${pct}%"></div></div>
-                <span class="like-pct">${pct}%</span>
+            <div class="like-bar-wrap flex gap-2.5 items-center">
+                <div class="like-bar-bg bg-primary-purple rounded-xl h-2 w-14 overflow-hidden">
+                  <div class="like-bar-fill bg-primary-green rounded-xl h-full" style="width: ${pct}%"></div>
+                </div>
+                <p class="like-pct para">${pct}%</p>
             </div>`;
       }
 
@@ -440,13 +482,16 @@
       // ─── TOGGLE HISTORY ───────────────────────────────────────────────────────
       function toggleHistory(key) {
         const row = document.getElementById('hist_' + key);
+        const entry = document.getElementById('ent_' + key);
         if (!row) return;
         row.classList.toggle('open');
+        row.classList.toggle('hidden');
+        entry.classList.toggle('rounded-b-none')
         const btn = document.getElementById('btn_' + key);
         if (btn)
           btn.textContent = row.classList.contains('open')
-            ? '▲ Hide History'
-            : '▼ View History';
+            ? '▲'
+            : '▼';
       }
 
       // ─── RENDER ───────────────────────────────────────────────────────────────
@@ -516,15 +561,14 @@
 
         if (keys.length === 0) {
           container.innerHTML = `
-                <div class="empty-state">
-                    <div class="empty-icon">🍽️</div>
+                <div class="empty-state para w-full text-center">
                     <p>No foods logged yet. Add your first food above!</p>
                 </div>`;
           return;
         }
 
         let html = `
-            <table class="log-table">
+            <table class="log-table w-full text-center">
                 <thead>
                     <tr>
                         <th>Food</th>
@@ -552,33 +596,38 @@
           const hasAllergy = g.attempts.some((a) => a.allergic);
 
           html += `
-                <tr>
-                    <td><strong>${g.name}</strong><span class="attempt-badge ${badgeCls}">${count}x</span></td>
-                    <td>${g.category || '—'}</td>
-                    <td style="text-align:center;">${count}</td>
-                    <td style="font-size:12px;">${forms || '—'}</td>
-                    <td>${reactionBadge(latest.reaction)}</td>
-                    <td>${likeBar(pct)}</td>
-                    <td style="text-align:center;">${hasAllergy ? '⚠️' : ''}</td>
+                <tr class="food-row flex gap-2.5 rounded-xl bg-white p-2.5 justify-between items-center w-full" id="ent_${key}">
+                    <td class="log-name para flex gap-2.5 items-center"><strong>${g.name}</strong><span class="attempt-badge ${badgeCls} py-0.5 px-2.5 bg-primary-purple rounded-full text-sm">${count}x</span></td>
+                    <td class="log-cat hidden">${g.category || '—'}</td>
+                    <td style="text-align:center;" class="log-count hidden">${count}</td>
+                    <td style="font-size:12px;" class="log-date hidden">${forms || '—'}</td>
+                    <td class="log-reaction">${reactionBadge(latest.reaction)}</td>
+                    <td class="log-like-bar">${likeBar(pct)} </td>
+                    <td style="text-align:center;" class="log-allergy hidden">${hasAllergy ? '⚠️' : ''}</td>
                     <td>
-                        <button class="btn-secondary btn-sm" id="btn_${key}" onclick="toggleHistory('${key}')">▼ View History</button>
+                        <button class="btn-secondary btn-sm btn-info" id="btn_${key}" onclick="toggleHistory('${key}')">▼</button>
                     </td>
                 </tr>
-                <tr class="history-row" id="hist_${key}">
-                    <td colspan="8">
-                        <div class="history-inner">
-                            <h4>📅 Attempt History for ${g.name}</h4>
+                <tr class="history-row w-full" id="hist_${key}">
+                    <td class="w-full">
+                        <div class="history-inner bg-white rounded-b-xl para py-5 flex flex-col gap-2.5 p-2.5">
+                            <h4 class="hidden">Attempt History for ${g.name}</h4>
                             ${g.attempts
                               .map(
                                 (a, i) => `
-                                <div class="attempt-item">
-                                    <span class="attempt-num">Attempt #${i + 1}</span>
-                                    <span class="attempt-date">${a.date}</span>
-                                    <span>${a.form || '—'}</span>
-                                    <span>${reactionBadge(a.reaction)}</span>
-                                    <span>${a.liked ? '✅ Liked' : a.disliked ? '❌ Disliked' : '—'}</span>
-                                    <span style="color:var(--muted);font-size:11px;">${a.notes || ''}</span>
-                                    <button class="btn-danger btn-sm" onclick="deleteAttempt(${a.id})">Delete</button>
+                                <div class="attempt-item flex flex-col w-full px-0.5 gap-2.5 items-center">
+                                    <div class="flex justify-between px-5  w-full">
+                                      <span class="attempt-num font-bold">Attempt ${i + 1}</span>
+                                      <span class="attempt-date">${a.date}</span>
+                                    </div>
+                                    <div class="flex justify-between px-5 w-full">
+                                      <span>${a.form || '—'}</span>
+                                      <span class="bg-bg-green border-primary-green-light border-2 text-primary-green-light py-1 px-5 rounded-2xl">${reactionBadge(a.reaction)}</span>  
+                                    </div>
+                                    
+                                    <button class="btn-danger btn-sm btn-outline bg-primary-purple w-5/6 cursor-pointer rounded-xl py-1 shadow-md text-primary-pink-dark" onclick="">Edit Entry</button>
+
+                                    <button class="btn-danger btn-sm btn-outline bg-warning-stroke w-5/6 cursor-pointer rounded-xl py-1 text-white shadow-md hover:bg-red-400" onclick="deleteAttempt(${a.id})">Delete</button>
                                 </div>`,
                               )
                               .join('')}
