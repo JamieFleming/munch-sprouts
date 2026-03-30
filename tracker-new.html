@@ -427,6 +427,7 @@
               name: entry.name,
               category: entry.category || 'Other',
               attempts: [],
+              reaction: entry.reaction,
             };
           }
           groups[key].attempts.push(entry);
@@ -534,9 +535,9 @@
         ['foodCategory', 'foodForm', 'foodReaction'].forEach(
           (id) => (document.getElementById(id).value = ''),
         );
-        ['cbLiked', 'cbDisliked', 'cbAllergic'].forEach(
-          (id) => (document.getElementById(id).checked = false),
-        );
+        // ['cbLiked', 'cbDisliked', 'cbAllergic'].forEach(
+        //   (id) => (document.getElementById(id).checked = false),
+        // );
         setTodayDate();
       }
 
@@ -741,9 +742,10 @@
           const likedCnt = g.attempts.filter((a) => a.liked).length;
           const pct = Math.round((likedCnt / count) * 100);
           const hasAllergy = g.attempts.some((a) => a.allergic);
-          const cat = [
-            ...new Set(g.attempts.map((a) => a.category).filter(Boolean)),
-          ].join(', ');
+          // const cat = [
+          //   ...new Set(g.attempts.map((a) => a.category).filter(Boolean)),
+          // ].join(', ');
+          const reactionBox = document.getElementById('reaction-box');
 
           html += `
                 <tr class="food-row rounded-xl bg-white p-2.5 w-full grid grid-cols-[2fr_2fr_2fr_1fr] grid-rows-1 place-items-center mt-2.5" id="ent_${key}">
@@ -773,7 +775,7 @@
                                     <div class="flex justify-between px-5 w-full">
                                       <span>${a.form || '—'}</span>
                                       <span>${a.category || '—'}</span>
-                                      <span class="bg-bg-green border-primary-green-light border-2 text-primary-green-light py-1 px-5 rounded-2xl">${reactionBadge(a.reaction)}</span>  
+                                      <span class="py-1 px-5 rounded-2xl ${g.reaction === 'Good' ? 'bg-bg-green border-primary-green-light border-2 text-primary-green-light' : g.reaction === 'Rejected' ? 'border-warning-stroke border-2 bg-bg-warning text-warning-stroke' : 'bg-amber-100 border-2 border-amber-400 text-orange-400'}" id="reaction-box-${a.id}">${reactionBadge(a.reaction)}</span>  
                                     </div>
                                     
                                     <button class="btn-danger btn-sm btn-outline bg-primary-purple w-5/6 cursor-pointer rounded-xl py-1 shadow-md text-primary-pink-dark hover:bg-bg-purple" onclick="editAttempt(${a.id})">Edit Entry</button>
@@ -786,6 +788,8 @@
                     </td>
                 </tr>`;
         });
+
+        
 
         html += '</tbody></table>';
         container.innerHTML = html;
