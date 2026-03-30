@@ -252,17 +252,17 @@
                   </select>
               </div>
             </div>
-            <div class="checkboxes-row grid grid-cols-2 gap-2.5 w-full justify-items-center text-text-charcoal-light">
+            <!-- <div class="checkboxes-row grid grid-cols-2 gap-2.5 w-full justify-items-center text-text-charcoal-light">
               <label class="check-item">
-                  <input type="checkbox" id="cbLiked" /> Baby Liked
+                  <input type="radio" name="babyReaction" value="liked" id="cbLiked" /> Baby Liked
               </label>
               <label class="check-item">
-                  <input type="checkbox" id="cbDisliked" /> Baby Disliked
+                  <input type="radio" name="babyReaction" value="disliked" id="cbDisliked" /> Baby Disliked
               </label>
               <label class="check-item col-span-2">
-                  <input type="checkbox" id="cbAllergic" /> Allergic Reaction
+                  <input type="radio" name="babyReaction" value="allergic" id="cbAllergic" /> Allergic Reaction
               </label>
-            </div>
+            </div> -->
             <div class="form-group para flex flex-col w-full gap-2.5">
             <label for="foodNotes">Notes</label>
             <textarea
@@ -308,16 +308,16 @@
                   <legend class="text-sm font-medium text-gray-700 px-2">Baby's Reaction</legend>
                   <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
                     <label class="flex items-center p-4 border border-gray-200 rounded-xl hover:bg-emerald-50 cursor-pointer transition-all group">
-                      <input id="cbLikedEdit" type="checkbox" class="w-5 h-5 text-emerald-600 rounded focus:ring-emerald-500 mr-3" />
+                      <input id="cbLikedEdit" type="radio" class="w-5 h-5 text-emerald-600 rounded focus:ring-emerald-500 mr-3" />
                       <span class="text-lg">😊 Liked</span>
                     </label>
                     <label class="flex items-center p-4 border border-gray-200 rounded-xl hover:bg-amber-50 cursor-pointer transition-all group">
-                      <input id="cbDislikedEdit" type="checkbox" class="w-5 h-5 text-amber-600 rounded focus:ring-amber-500 mr-3" />
+                      <input id="cbDislikedEdit" type="radio" class="w-5 h-5 text-amber-600 rounded focus:ring-amber-500 mr-3" />
                       <span class="text-lg">😞 Disliked</span>
                     </label>
                   </div>
                   <label class="flex items-center p-4 bg-red-50 border-2 border-red-200 rounded-xl hover:bg-red-100 cursor-pointer transition-all group">
-                    <input id="cbAllergicEdit" type="checkbox" class="w-5 h-5 text-red-600 rounded focus:ring-red-500 mr-3" />
+                    <input id="cbAllergicEdit" type="radio" class="w-5 h-5 text-red-600 rounded focus:ring-red-500 mr-3" />
                     <span class="font-medium text-red-900 text-lg">⚠️ Allergic Reaction</span>
                   </label>
                 </fieldset>
@@ -475,10 +475,21 @@
         const category = document.getElementById('foodCategory').value;
         const form = document.getElementById('foodForm').value;
         const reaction = document.getElementById('foodReaction').value;
-        const liked = document.getElementById('cbLiked').checked;
-        const disliked = document.getElementById('cbDisliked').checked;
-        const allergic = document.getElementById('cbAllergic').checked;
+        // const liked = document.getElementById('cbLiked').checked;
+        // const disliked = document.getElementById('cbDisliked').checked;
+        // const allergic = document.getElementById('cbAllergic').checked;
         const notes = document.getElementById('foodNotes').value.trim();
+        let liked, disliked, allergic
+
+        if (reaction === "Good") {
+          liked = true;
+        } else if (reaction === "") {
+          liked = false;
+          disliked = true;
+        } else {
+          liked = false;
+          allergic = true;
+        }
 
         if (!date || !name || !form) {
           alert_('Please fill in Date, Food Item, and Food Form.', 'warning');
@@ -684,6 +695,12 @@
           '<p class="para text-center">Add foods to see category breakdown.</p>';
       }
 
+      function foodRowHTML(g, key) {
+        // Move your existing food row template here
+        return `<tr class="food-row ...">...</tr>`;
+      }
+
+
       function renderTable() {
         const container = document.getElementById('logContainer');
         const groups = groupByFood(foodLog);
@@ -724,6 +741,9 @@
           const likedCnt = g.attempts.filter((a) => a.liked).length;
           const pct = Math.round((likedCnt / count) * 100);
           const hasAllergy = g.attempts.some((a) => a.allergic);
+          const cat = [
+            ...new Set(g.attempts.map((a) => a.category).filter(Boolean)),
+          ].join(', ');
 
           html += `
                 <tr class="food-row rounded-xl bg-white p-2.5 w-full grid grid-cols-[2fr_2fr_2fr_1fr] grid-rows-1 place-items-center mt-2.5" id="ent_${key}">
@@ -752,6 +772,7 @@
                                     </div>
                                     <div class="flex justify-between px-5 w-full">
                                       <span>${a.form || '—'}</span>
+                                      <span>${a.category || '—'}</span>
                                       <span class="bg-bg-green border-primary-green-light border-2 text-primary-green-light py-1 px-5 rounded-2xl">${reactionBadge(a.reaction)}</span>  
                                     </div>
                                     
