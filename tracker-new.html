@@ -342,7 +342,7 @@
         <!-- Food Log -->
         <div class="section section-base bg-bg-purple">
             <h2 class="text-2xl font-bold"> Food Log</h2>
-            <div id="logContainer" class="w-full">
+            <div id="logContainer" class="w-full flex flex-col gap-2.5">
               <div class="empty-state">
                   <p>No foods logged yet. Add your first food above!</p>
               </div>
@@ -605,10 +605,12 @@
       function toggleHistory(key) {
         const row = document.getElementById('hist_' + key);
         const entry = document.getElementById('ent_' + key);
+        const tbody = document.querySelector('tbody')
         if (!row) return;
         row.classList.toggle('open');
         row.classList.toggle('hidden');
         entry.classList.toggle('rounded-b-none')
+        tbody.classList.toggle('flex flex-col gap-2.5')
         const btn = document.getElementById('btn_' + key);
         if (btn)
           btn.textContent = row.classList.contains('open')
@@ -703,7 +705,7 @@
                         <th>Actions</th>
                     </tr>
                 </thead>
-                <tbody>`;
+                <tbody class="flex flex-col gap-2.5">`;
 
         keys.forEach((key) => {
           const g = groups[key];
@@ -730,7 +732,7 @@
                         <button class="btn-secondary btn-sm btn-info" id="btn_${key}" onclick="toggleHistory('${key}')">▼</button>
                     </td>
                 </tr>
-                <tr class="history-row w-full" id="hist_${key}">
+                <tr class="history-row w-full hidden" id="hist_${key}">
                     <td class="w-full">
                         <div class="history-inner bg-white rounded-b-xl para py-5 flex flex-col gap-2.5 p-2.5">
                             <h4 class="hidden">Attempt History for ${g.name}</h4>
