@@ -190,7 +190,7 @@
               </div>
               <div class="stat-card">
                   <div class="stat-label">Foods Disliked</div>
-                  <div class="stat-value text-2xl text-primary-green" id="statAvg">0</div>
+                  <div class="stat-value text-2xl text-primary-green" id="statDisliked">0</div>
               </div>
               <div class="stat-card">
                   <div class="stat-label">Allergic Reactions</div>
@@ -198,7 +198,8 @@
               </div>
               
             </div>
-            <div id="catBreakdown" class="cat-grid"></div>
+            <h2 class="heading3">Categories Breakdown</h2>
+            <div id="catBreakdown" class="cat-grid w-full flex flex-col gap-2.5"></div>
         </div>
 
         <!-- Add Food -->
@@ -331,7 +332,7 @@
                 <button onclick="cancelEdit()" class="px-8 py-3 bg-gray-200 text-gray-800 rounded-2xl font-medium hover:bg-gray-300 transition-all shadow-sm">
                   Cancel
                 </button>
-                <button onclick="saveEdit()" class="px-8 py-3 bg-primary-purple text-white rounded-2xl font-bold hover:bg-primary-purple-dark transition-all shadow-lg hover:shadow-xl">
+                <button onclick="saveEdit()" class="px-8 py-3 rounded-2xl font-bold hover:bg-primary-purple-dark transition-all shadow-lg hover:shadow-xl bg-primary-purple cursor-pointer text-primary-pink-dark hover:bg-bg-purple">
                   Update Entry
                 </button>
               </div>
@@ -564,8 +565,9 @@
 
 
       function saveEdit() {
-        const attemptId = document.getElementById('editAttemptId').value;
+        const attemptId = parseInt(document.getElementById('editAttemptId').value);
         const attemptIndex = foodLog.findIndex(log => log.id === attemptId);
+        
         
         if (attemptIndex === -1) return alert('Attempt not found');
         
@@ -610,7 +612,7 @@
         row.classList.toggle('open');
         row.classList.toggle('hidden');
         entry.classList.toggle('rounded-b-none')
-        tbody.classList.toggle('flex flex-col gap-2.5')
+        // tbody.classList.toggle('flex')
         const btn = document.getElementById('btn_' + key);
         if (btn)
           btn.textContent = row.classList.contains('open')
@@ -632,6 +634,9 @@
         const liked = keys.filter((k) =>
           groups[k].attempts.some((a) => a.liked),
         ).length;
+        const disliked = keys.filter((k) =>
+          groups[k].attempts.some((a) => a.disliked),
+        ).length;
         const allergic = foodLog.filter((f) => f.allergic).length;
         const avg = unique ? (total / unique).toFixed(1) : '0';
 
@@ -639,7 +644,8 @@
         document.getElementById('statAttempts').textContent = total;
         document.getElementById('statLiked').textContent = liked;
         document.getElementById('statAllergic').textContent = allergic;
-        document.getElementById('statAvg').textContent = avg + 'x';
+        document.getElementById('statDisliked').textContent = disliked;
+        // document.getElementById('statAvg').textContent = avg + 'x';
 
         // Category breakdown
         const catDefs = {
@@ -664,10 +670,10 @@
           .map((cat) => {
             const d = catDefs[cat] || { icon: '🍽️' };
             return `
-                <div class="cat-card">
+                <div class="cat-card w-full grid grid-cols-4 grid-rows-1 bg-secondary-purple rounded-xl p-2.5 para place-items-center shadow-xl">
                     <div class="cat-icon">${d.icon}</div>
                     <div class="cat-name">${cat}</div>
-                    <div class="cat-count">${catData[cat].foods}</div>
+                    <div class="cat-count font-bold text-primary-green-light">${catData[cat].foods}</div>
                     <div class="cat-stats">${catData[cat].attempts} attempts</div>
                 </div>`;
           })
@@ -675,7 +681,7 @@
 
         document.getElementById('catBreakdown').innerHTML =
           catHTML ||
-          '<p style="color:var(--muted);font-size:13px;">Add foods to see category breakdown.</p>';
+          '<p class="para text-center">Add foods to see category breakdown.</p>';
       }
 
       function renderTable() {
@@ -705,7 +711,7 @@
                         <th>Actions</th>
                     </tr>
                 </thead>
-                <tbody class="flex flex-col gap-2.5">`;
+                <tbody class="">`;
 
         keys.forEach((key) => {
           const g = groups[key];
@@ -720,7 +726,7 @@
           const hasAllergy = g.attempts.some((a) => a.allergic);
 
           html += `
-                <tr class="food-row flex gap-2.5 rounded-xl bg-white p-2.5 justify-between items-center w-full" id="ent_${key}">
+                <tr class="food-row rounded-xl bg-white p-2.5 w-full grid grid-cols-[2fr_2fr_2fr_1fr] grid-rows-1 place-items-center mt-2.5" id="ent_${key}">
                     <td class="log-name para flex gap-2.5 items-center"><strong>${g.name}</strong><span class="attempt-badge ${badgeCls} py-0.5 px-2.5 bg-primary-purple rounded-full text-sm">${count}x</span></td>
                     <td class="log-cat hidden">${g.category || '—'}</td>
                     <td style="text-align:center;" class="log-count hidden">${count}</td>
@@ -732,14 +738,14 @@
                         <button class="btn-secondary btn-sm btn-info" id="btn_${key}" onclick="toggleHistory('${key}')">▼</button>
                     </td>
                 </tr>
-                <tr class="history-row w-full hidden" id="hist_${key}">
+                <tr class="history-row w-full hidden mb-2.5" id="hist_${key}">
                     <td class="w-full">
-                        <div class="history-inner bg-white rounded-b-xl para py-5 flex flex-col gap-2.5 p-2.5">
+                        <div class="history-inner rounded-b-xl para flex flex-col">
                             <h4 class="hidden">Attempt History for ${g.name}</h4>
                             ${g.attempts
                               .map(
                                 (a, i) => `
-                                <div class="attempt-item flex flex-col w-full px-0.5 gap-2.5 items-center">
+                                <div class="attempt-item bg-white flex flex-col w-full p-2.5 gap-2.5 items-center rounded-b-xl">
                                     <div class="flex justify-between px-5  w-full">
                                       <span class="attempt-num font-bold">Attempt ${i + 1}</span>
                                       <span class="attempt-date">${a.date}</span>
