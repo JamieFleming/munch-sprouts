@@ -350,7 +350,7 @@ function renderTable() {
     const hasAllergy = g.attempts.some((a) => a.allergic);
 
     html += `
-                <tr class="food-row rounded-xl bg-white p-2.5 w-full grid grid-cols-[2fr_2fr_2fr_1fr] grid-rows-1 place-items-center mt-2.5" id="ent_${key}">
+                <tr class="food-row  rounded-xl p-2.5 w-full grid grid-cols-[2fr_2fr_2fr_1fr] grid-rows-1 place-items-center mt-2.5 ${g.reaction === 'Allergic' ? 'bg-red-400 text-white' : 'bg-white'}" id="ent_${key}">
                     <td class="log-name para flex gap-2.5 items-center"><strong>${g.name}</strong><span class="attempt-badge ${badgeCls} py-0.5 px-2.5 bg-primary-purple rounded-full text-sm">${count}x</span></td>
                     <td class="log-cat hidden">${g.category || '—'}</td>
                     <td style="text-align:center;" class="log-count hidden">${count}</td>
@@ -363,21 +363,20 @@ function renderTable() {
                     </td>
                 </tr>
                 <tr class="history-row w-full hidden mb-2.5" id="hist_${key}">
-                    <td class="w-full">
-                        <div class="history-inner rounded-b-xl para flex flex-col">
-                            <h4 class="hidden">Attempt History for ${g.name}</h4>
+                    <td class="w-full ">
+                        <div class="history-inner para flex flex-col">
                             ${g.attempts
                               .map(
                                 (a, i) => `
-                                <div class="attempt-item bg-white flex flex-col w-full p-2.5 gap-2.5 items-center rounded-b-xl">
-                                    <div class="flex justify-between px-5  w-full">
+                                <div class="attempt-item rounded-b-xl ${a.reaction === 'Allergic' ? 'bg-red-400 text-white' : 'bg-white'} flex flex-col w-full p-2.5 gap-2.5 items-center">
+                                    <div class="flex justify-between px-5 w-full ">
                                       <span class="attempt-num font-bold">Attempt ${i + 1}</span>
                                       <span class="attempt-date">${a.date}</span>
                                     </div>
-                                    <div class="flex justify-between px-5 w-full">
+                                    <div class="flex justify-between px-5 w-full ">
                                       <span>${a.form || '—'}</span>
                                       <span>${a.category || '—'}</span>
-                                      <span class="py-1 px-5 rounded-2xl ${a.reaction === 'Good' ? 'bg-bg-green border-primary-green-light border-2 text-primary-green-light' : a.reaction === 'Rejected' ? 'border-warning-stroke border-2 bg-bg-warning text-warning-stroke' : 'bg-amber-100 border-2 border-amber-400 text-orange-400'}" id="reaction-box-${a.id}-${a.reaction}">${reactionBadge(a.reaction)}</span>
+                                      <span class="py-1 px-5 rounded-2xl ${a.reaction === 'Good' ? 'bg-bg-green border-primary-green-light border-2 text-primary-green-light' : a.reaction === 'Rejected' || a.reaction === 'Allergic' ? 'border-warning-stroke border-2 bg-bg-warning text-warning-stroke' : 'bg-amber-100 border-2 border-amber-400 text-orange-400'}" id="reaction-box-${a.id}-${a.reaction}">${reactionBadge(a.reaction)}</span>
                                     </div>
                                     
                                     <button class="btn-danger btn-sm btn-outline bg-primary-purple w-5/6 cursor-pointer rounded-xl py-1 shadow-md text-primary-pink-dark hover:bg-bg-purple" onclick="editAttempt(${a.id})">Edit Entry</button>

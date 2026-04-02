@@ -7,7 +7,7 @@
     <!-- SEO -->
     <meta
       name="description"
-      content="Baby led weaning recipes, safety tips, and UK-focused BLW guides to help you start solids with confidence. Discover baby-friendly meals today."
+      content="Track your baby's first foods, reactions, and progress with this simple baby led weaning tracker for UK parents."
     />
     <meta name="author" content="MunchSprouts" />
     <meta name="robots" content="index, follow" />
@@ -23,6 +23,10 @@
       name="twitter:image"
       content="https://munchsprouts.co.uk/images/logo.png"
     />
+    <meta
+      name="twitter:image:alt"
+      content="Munch Sprouts baby led weaning tracker"
+    />
 
     <!-- Open Graph -->
     <meta property="og:title" content="MunchSprouts - Fun Baby Led Weaning" />
@@ -34,6 +38,12 @@
       property="og:image"
       content="https://munchsprouts.co.uk/images/logo.png"
     />
+    <meta
+      property="og:image:alt"
+      content="Munch Sprouts baby led weaning tracker"
+    />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
     <meta property="og:url" content="https://munchsprouts.co.uk/" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="MunchSprouts" />
@@ -44,13 +54,14 @@
       @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
     </style>
 
-    <title>Baby Led Weaning Recipes & Guides (UK) | Tracker</title>
+    <link rel="canonical" href="https://munchsprouts.co.uk/tracker-new" />
+    <title>Food Tracker for Baby Led Weaning | Munch Sprouts</title>
   </head>
   <body>
     <div class="body bg-bg-main flex flex-col gap-5">
       <!-- Header -->
       <header
-        class="fixed flex w-screen items-center justify-between bg-white p-2.5 shadow-md"
+        class="fixed flex w-full items-center justify-between rounded-2xl bg-white p-2.5 shadow-md"
       >
         <div
           class="flex w-full items-center justify-between lg:justify-start lg:gap-5"
@@ -103,7 +114,7 @@
 
       <!-- navigation -->
       <nav class="primary-nav bg-bg-main nav-hidden fixed mt-14 lg:hidden">
-        <ul class="flex flex-col items-center gap-2.5 p-2.5">
+        <ul class="flex w-full flex-col items-center gap-2.5 p-2.5">
           <li class="nav-elems">
             <a href="index.html">Home</a>
           </li>
@@ -146,7 +157,7 @@
         >
           <h2 class="text-2xl font-bold">Baby Information</h2>
           <div class="flex w-full flex-col gap-5 p-2.5">
-            <div class="form-group para flex w-full flex-col gap-2.5">
+            <div class="form-group">
               <label for="babyName" class="=">Baby's Name</label>
               <input
                 type="text"
@@ -155,7 +166,7 @@
                 class="input-box"
               />
             </div>
-            <div class="form-group para flex w-full flex-col gap-2.5">
+            <div class="form-group">
               <label for="birthDate">Date of Birth</label>
               <input
                 type="date"
@@ -164,7 +175,7 @@
                 class="input-box text-text-charcoal-light"
               />
             </div>
-            <div class="form-group para flex w-full flex-col gap-2.5">
+            <div class="form-group">
               <label for="weaningStart">Weaning Start Date</label>
               <input
                 type="date"
@@ -172,7 +183,7 @@
                 class="input-box text-text-charcoal-light"
               />
             </div>
-            <div class="form-group para flex w-full flex-col gap-2.5">
+            <div class="form-group">
               <label for="ageWeeks">Current Age (weeks)</label>
               <input
                 type="text"
@@ -308,7 +319,7 @@
           </div>
           <div class="btn-group flex w-full flex-col items-center gap-2.5">
             <button
-              class="btn-primary bg-primary-green-dark hover:bg-primary-green-light w-5/6 cursor-pointer rounded-xl py-1 text-white shadow-md"
+              class="btn-primary bg-primary-green hover:bg-primary-green-light w-5/6 cursor-pointer rounded-xl py-1 text-white shadow-md"
               onclick="addFood()"
             >
               Add to Log

@@ -86,6 +86,6 @@
   }
 
   .form-group {
-    @apply flex w-full flex-col gap-2.5;
+    @apply text-text-charcoal-light flex w-full flex-col gap-2.5 text-base;
   }
 }
