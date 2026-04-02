@@ -9,7 +9,7 @@ document.querySelectorAll('[data-load]').forEach(link => {
     
     document.getElementById('recipes-container').innerHTML = html;
     
-    document.querySelectorAll('.recipe-nav li').forEach(li => li.classList.remove('active'));
+    document.querySelectorAll('.recipe-nav li').forEach(li => {return li.classList.remove('active')});
     link.parentElement.classList.add('active');
     
     document.querySelector('.recipes-main').scrollIntoView();
@@ -69,11 +69,11 @@ async function loadRecipeIndex() {
   }
 });
 
-  const listHTML = recipes.map(r => `
+  const listHTML = recipes.map(r => {return `
     <a href="#${r.id}" class="recipe-link" data-month="${r.month}">
       ${r.name}
     </a>
-  `).join('');
+  `}).join('');
   
   document.querySelector('.recipe-list').innerHTML = listHTML;
 }

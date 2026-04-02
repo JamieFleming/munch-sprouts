@@ -38,8 +38,6 @@
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="MunchSprouts" />
 
-
-
     <!-- Styles -->
     <link href="output.css" rel="stylesheet" />
     <style>
@@ -107,10 +105,7 @@
       <nav class="primary-nav bg-bg-main nav-hidden fixed mt-14 lg:hidden">
         <ul class="flex flex-col items-center gap-2.5 p-2.5">
           <li class="nav-elems">
-            <a
-              href="index.html"
-              >Home</a
-            >
+            <a href="index.html">Home</a>
           </li>
           <li class="nav-elems">
             <a href="./getting-started.html" class="block h-full w-full"
@@ -127,12 +122,16 @@
             <a href="./resources.html" class="block h-full w-full">Resources</a>
           </li>
           <li class="nav-elems this-page">
-            <a href="./tracker-new.html" class="text-primary-pink-dark block h-full w-full">Tracker</a>
+            <a
+              href="./tracker-new.html"
+              class="text-primary-pink-dark block h-full w-full"
+              >Tracker</a
+            >
           </li>
         </ul>
       </nav>
 
-      <main class="body bg-bg-main flex flex-col gap-5 mt-14">
+      <main class="body bg-bg-main mt-14 flex flex-col gap-5">
         <div id="alertBox"></div>
 
         <!-- Intro Section -->
@@ -142,254 +141,334 @@
         </section>
 
         <!-- Baby Info -->
-        <div class="intro flex flex-col items-center gap-5 p-2.5 shadow-md; bg-bg-purple">
-            <h2 class="text-2xl font-bold">Baby Information</h2>
-            <div class="p-2.5 w-full flex flex-col gap-5">
-                <div class="form-group para flex flex-col w-full gap-2.5">
-                    <label for="babyName" class="=">Baby's Name</label>
-                    <input type="text" id="babyName" placeholder="e.g. Eleia" 
-                    class="input-box"
-                    />
-                </div>
-                <div class="form-group para flex flex-col w-full gap-2.5">
-                    <label for="birthDate">Date of Birth</label>
-                    <input type="date" id="birthDate" onchange="calcAge()"
-                    class="input-box text-text-charcoal-light" />
-                </div>
-                <div class="form-group para flex flex-col w-full gap-2.5">
-                    <label for="weaningStart">Weaning Start Date</label>
-                    <input type="date" id="weaningStart" 
-                    class="input-box text-text-charcoal-light"/>
-                </div>
-                <div class="form-group para flex flex-col w-full gap-2.5 >
-                    <label for="ageWeeks">Current Age (weeks)</label>
-                    <input
-                    type="text"
-                    id="ageWeeks"
-                    placeholder="Auto-calculated"
-                    readonly
-                    class="input-box"
-                    />
-                </div>
+        <div
+          class="intro shadow-md; bg-bg-purple flex flex-col items-center gap-5 p-2.5"
+        >
+          <h2 class="text-2xl font-bold">Baby Information</h2>
+          <div class="flex w-full flex-col gap-5 p-2.5">
+            <div class="form-group para flex w-full flex-col gap-2.5">
+              <label for="babyName" class="=">Baby's Name</label>
+              <input
+                type="text"
+                id="babyName"
+                placeholder="e.g. Eleia"
+                class="input-box"
+              />
             </div>
+            <div class="form-group para flex w-full flex-col gap-2.5">
+              <label for="birthDate">Date of Birth</label>
+              <input
+                type="date"
+                id="birthDate"
+                onchange="calcAge()"
+                class="input-box text-text-charcoal-light"
+              />
+            </div>
+            <div class="form-group para flex w-full flex-col gap-2.5">
+              <label for="weaningStart">Weaning Start Date</label>
+              <input
+                type="date"
+                id="weaningStart"
+                class="input-box text-text-charcoal-light"
+              />
+            </div>
+            <div class="form-group para flex w-full flex-col gap-2.5">
+              <label for="ageWeeks">Current Age (weeks)</label>
+              <input
+                type="text"
+                id="ageWeeks"
+                placeholder="Auto-calculated"
+                readonly
+                class="input-box"
+              />
+            </div>
+          </div>
         </div>
 
         <!-- Stats -->
         <div class="section section-base bg-bg-purple">
-            <h2 class="text-2xl font-bold">Statistics Dashboard</h2>
-            <div class="stats-grid flex flex-col gap-5 w-full">
-              <div class="stat-card ">
-                  <div class="stat-label ">Unique Foods Tried:</div>
-                  <div class="stat-value text-2xl text-primary-green" id="statUnique">0</div>
-              </div>
-              <div class="stat-card">
-                  <div class="stat-label">Total Attempts</div>
-                  <div class="stat-value text-2xl text-primary-green" id="statAttempts">0</div>
-              </div>
-              <div class="stat-card">
-                  <div class="stat-label">Foods Liked</div>
-                  <div class="stat-value text-2xl text-primary-green" id="statLiked">0</div>
-              </div>
-              <div class="stat-card">
-                  <div class="stat-label">Foods Disliked</div>
-                  <div class="stat-value text-2xl text-primary-green" id="statDisliked">0</div>
-              </div>
-              <div class="stat-card">
-                  <div class="stat-label">Allergic Reactions</div>
-                  <div class="stat-value text-2xl text-primary-green" id="statAllergic">0</div>
-              </div>
-              
-            </div>
-            <h2 class="heading3">Categories Breakdown</h2>
-            <div id="catBreakdown" class="cat-grid w-full flex flex-col gap-2.5"></div>
-        </div>
-
-        <!-- Add Food -->
-        <div class="section section-base bg-bg-purple">
-            <h2 class="text-2xl font-bold">Log a Food</h2>
-            <div class="form-grid p-2.5 w-full flex flex-col gap-5">
-              <div class="form-group para flex flex-col w-full gap-2.5">
-                  <label for="foodDate">Date</label>
-                  <input type="date" id="foodDate" 
-                  class="input-box"/>
-              </div>
-              <div class="form-group  para flex flex-col w-full gap-2.5>
-                  <label for="foodName">Food Item</label>
-                  <input type="text" id="foodName" placeholder="e.g. Sweet Potato"
-                  class="input-box" />
-              </div>
-              <div class="form-group para flex flex-col w-full gap-2.5">
-                  <label for="foodCategory">Category</label>
-                  <select id="foodCategory" class="input-box">
-                  <option value="">Select category...</option>
-                  <option value="Vegetables">Vegetables</option>
-                  <option value="Fruits">Fruits</option>
-                  <option value="Grains">Grains & Cereals</option>
-                  <option value="Proteins">Proteins</option>
-                  <option value="Dairy">Dairy</option>
-                  <option value="Legumes">Legumes & Pulses</option>
-                  <option value="Other">Other</option>
-                  </select>
-              </div>
-              <div class="form-group para flex flex-col w-full gap-2.5">
-                  <label for="foodForm">Food Form</label>
-                  <select id="foodForm" class="input-box">
-                  <option value="">Select form...</option>
-                  <option value="Purée">Purée</option>
-                  <option value="Mashed">Mashed</option>
-                  <option value="Soft/Cut">Soft/Cut</option>
-                  <option value="Finger Food">Finger Food</option>
-                  <option value="Mixed Texture">Mixed Texture</option>
-                  </select>
-              </div>
-              <div class="form-group para flex flex-col w-full gap-2.5">
-                  <label for="foodReaction" >Reaction</label>
-                  <select id="foodReaction" class="input-box">
-                  <option value="">Select reaction...</option>
-                  <option value="Good">Good — Ate well</option>
-                  <option value="Neutral" id="liked">Neutral — Tried, not keen</option>
-                  <option value="Rejected" id="disliked">Rejected — Spat out</option>
-                  <!-- <option value="Gagged">Gagged</option> -->
-                  <option value="Allergic" id=allergic">Allergic Reaction</option>
-                  </select>
+          <h2 class="text-2xl font-bold">Statistics Dashboard</h2>
+          <div class="stats-grid flex w-full flex-col gap-2.5">
+            <div class="stat-card">
+              <div class="stat-label">Unique Foods Tried:</div>
+              <div
+                class="stat-value text-primary-green text-2xl"
+                id="statUnique"
+              >
+                0
               </div>
             </div>
-            <!-- <div class="checkboxes-row grid grid-cols-2 gap-2.5 w-full justify-items-center text-text-charcoal-light">
-              <label class="check-item">
-                  <input type="radio" name="babyReaction" value="liked" id="cbLiked" /> Baby Liked
-              </label>
-              <label class="check-item">
-                  <input type="radio" name="babyReaction" value="disliked" id="cbDisliked" /> Baby Disliked
-              </label>
-              <label class="check-item col-span-2">
-                  <input type="radio" name="babyReaction" value="allergic" id="cbAllergic" /> Allergic Reaction
-              </label>
-            </div> -->
-            <div class="form-group para flex flex-col w-full gap-2.5">
-            <label for="foodNotes">Notes</label>
-            <textarea
-                id="foodNotes"
-                placeholder="Texture feedback, observations, concerns..." class="input-box"
-            ></textarea>
+            <div class="stat-card">
+              <div class="stat-label">Total Attempts</div>
+              <div
+                class="stat-value text-primary-green text-2xl"
+                id="statAttempts"
+              >
+                0
+              </div>
             </div>
-            <div class="btn-group flex flex-col gap-2.5 w-full items-center">
-              <button class="btn-primary bg-primary-green-dark w-5/6 cursor-pointer rounded-xl py-1 text-white shadow-md hover:bg-primary-green-light" onclick="addFood()">Add to Log</button>
-              <button class="btn-outline bg-warning-stroke w-5/6 cursor-pointer rounded-xl py-1 text-white shadow-md hover:bg-red-400" onclick="clearForm()">
-                  Clear Form
-              </button>
+            <div class="stat-card">
+              <div class="stat-label">Foods Liked</div>
+              <div
+                class="stat-value text-primary-green text-2xl"
+                id="statLiked"
+              >
+                0
+              </div>
             </div>
-        </div>
-
-        <!-- Edit Log -->
-          <div id="editModal" class="fixed inset-0 bg-black/75 hidden flex items-center justify-center z-50 p-4 md:p-8">
-            <div class="bg-bg-purple rounded-3xl p-8 w-full max-w-lg max-h-[90vh] overflow-y-auto shadow-2xl border border-gray-200">
-              <div class="flex items-center justify-between mb-8">
-                <h3 class="text-3xl font-bold text-gray-900">Edit Food Entry</h3>
-                <button onclick="cancelEdit()" class="text-gray-500 hover:text-gray-700 text-2xl">&times;</button>
+            <div class="stat-card">
+              <div class="stat-label">Foods Disliked</div>
+              <div
+                class="stat-value text-primary-green text-2xl"
+                id="statDisliked"
+              >
+                0
               </div>
-              
-              <input type="hidden" id="editAttemptId" />
-              
-              <div class="space-y-6">
-                <div>
-                  <label class="block text-sm font-medium text-gray-700 mb-2">Food Name</label>
-                  <input id="foodNameEdit" type="text" class="bg-white w-full p-4 border border-gray-300 rounded-2xl focus:ring-2 focus:ring-primary-purple focus:border-primary-purple transition-all" placeholder="e.g. Banana" />
-                </div>
-
-                <div class="form-group para flex flex-col w-full gap-2.5">
-                  <label for="foodCatEdit">Category</label>
-                  <select id="foodCatEdit" class="input-box bg-white w-full p-4 border border-gray-300 rounded-2xl focus:ring-2 focus:ring-primary-purple focus:border-primary-purple transition-all">
-                  <option value="">Select category...</option>
-                  <option value="Vegetables">Vegetables</option>
-                  <option value="Fruits">Fruits</option>
-                  <option value="Grains">Grains & Cereals</option>
-                  <option value="Proteins">Proteins</option>
-                  <option value="Dairy">Dairy</option>
-                  <option value="Legumes">Legumes & Pulses</option>
-                  <option value="Other">Other</option>
-                  </select>
-              </div>
-                
-                <div class="form-group para flex flex-col w-full gap-2.5">
-                  <label for="foodFormEdit">Food Form</label>
-                  <select id="foodFormEdit" class="input-box bg-white w-full p-4 border border-gray-300 rounded-2xl focus:ring-2 focus:ring-primary-purple focus:border-primary-purple transition-all">
-                  <option value="">Select form...</option>
-                  <option value="Purée">Purée</option>
-                  <option value="Mashed">Mashed</option>
-                  <option value="Soft/Cut">Soft/Cut</option>
-                  <option value="Finger Food">Finger Food</option>
-                  <option value="Mixed Texture">Mixed Texture</option>
-                  </select>
-              </div>
-                
-                <div>
-                  <label class="block text-sm font-medium text-gray-700 mb-2">Date</label>
-                  <input id="foodDateEdit" type="date" class="bg-white w-full p-4 border border-gray-300 rounded-2xl focus:ring-2 focus:ring-primary-purple focus:border-primary-purple transition-all" />
-                </div>
-
-                <div class="form-group  para flex flex-col w-full gap-2.5">
-                  <label for="foodReactionEdit" >Baby's Reaction</label>
-                  <select id="foodReactionEdit" class="input-box bg-white w-full p-4 border border-gray-300 rounded-2xl focus:ring-2 focus:ring-primary-purple focus:border-primary-purple transition-all">
-                  <option value="">Select reaction...</option>
-                  <option value="Good">Good — Ate well</option>
-                  <option value="Neutral" id="liked">Neutral — Tried, not keen</option>
-                  <option value="Rejected" id="disliked">Rejected — Spat out</option>
-                  <!-- <option value="Gagged">Gagged</option> -->
-                  <option value="Allergic" id=allergic">Allergic Reaction</option>
-                  </select>
-                </div>
-                
-                <!-- <fieldset class="space-y-3 p-4 bg-gray-50 rounded-2xl border border-gray-200">
-                  <legend class="text-sm font-medium text-gray-700 px-2">Baby's Reaction</legend>
-                  <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
-                    <label class="flex items-center p-4 border border-gray-200 rounded-xl hover:bg-emerald-50 cursor-pointer transition-all group">
-                      <input id="cbLikedEdit" type="radio" class="w-5 h-5 text-emerald-600 rounded focus:ring-emerald-500 mr-3" />
-                      <span class="text-lg">😊 Liked</span>
-                    </label>
-                    <label class="flex items-center p-4 border border-gray-200 rounded-xl hover:bg-amber-50 cursor-pointer transition-all group">
-                      <input id="cbDislikedEdit" type="radio" class="w-5 h-5 text-amber-600 rounded focus:ring-amber-500 mr-3" />
-                      <span class="text-lg">😞 Disliked</span>
-                    </label>
-                  </div>
-                  <label class="flex items-center p-4 bg-red-50 border-2 border-red-200 rounded-xl hover:bg-red-100 cursor-pointer transition-all group">
-                    <input id="cbAllergicEdit" type="radio" class="w-5 h-5 text-red-600 rounded focus:ring-red-500 mr-3" />
-                    <span class="font-medium text-red-900 text-lg">⚠️ Allergic Reaction</span>
-                  </label>
-                </fieldset> -->
-                
-                <div>
-                  <label class="block text-sm font-medium text-gray-700 mb-2">Notes (optional)</label>
-                  <textarea id="notesEdit" rows="3" class="w-full p-4 border border-gray-300 rounded-2xl focus:ring-2 focus:ring-primary-purple focus:border-primary-purple transition-all resize-vertical" placeholder="Any observations..."></textarea>
-                </div>
-              </div>
-              
-              <div class="flex gap-4 justify-end mt-10 pt-8 border-t border-gray-200">
-                <button onclick="cancelEdit()" class="px-8 py-3 bg-gray-200 text-gray-800 rounded-2xl font-medium hover:bg-gray-300 transition-all shadow-sm">
-                  Cancel
-                </button>
-                <button onclick="saveEdit()" class="px-8 py-3 rounded-2xl font-bold hover:bg-primary-purple-dark transition-all shadow-lg hover:shadow-xl bg-primary-purple cursor-pointer text-primary-pink-dark hover:bg-bg-purple">
-                  Update Entry
-                </button>
+            </div>
+            <div class="stat-card">
+              <div class="stat-label">Allergic Reactions</div>
+              <div
+                class="stat-value text-primary-green text-2xl"
+                id="statAllergic"
+              >
+                0
               </div>
             </div>
           </div>
+          <h2 class="heading3">Categories Breakdown</h2>
+          <div
+            id="catBreakdown"
+            class="cat-grid flex w-full flex-col gap-2.5"
+          ></div>
+        </div>
 
+        <!-- Add Food -->
+        <div class="section section-base bg-bg-purple para">
+          <h2 class="text-2xl font-bold">Log a Food</h2>
+          <div class="form-grid flex w-full flex-col gap-5 p-2.5">
+            <div class="form-group para">
+              <label for="foodDate">Date</label>
+              <input type="date" id="foodDate" class="input-box" />
+            </div>
+            <div class="form-group para">
+              <label for="foodName">Food Item</label>
+              <input
+                type="text"
+                id="foodName"
+                placeholder="e.g. Sweet Potato"
+                class="input-box"
+              />
+            </div>
+            <div class="form-group para">
+              <label for="foodCategory">Category</label>
+              <select id="foodCategory" class="input-box">
+                <option value="">Select category...</option>
+                <option value="Vegetables">Vegetables</option>
+                <option value="Fruits">Fruits</option>
+                <option value="Grains">Grains & Cereals</option>
+                <option value="Proteins">Proteins</option>
+                <option value="Dairy">Dairy</option>
+                <option value="Legumes">Legumes & Pulses</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+            <div class="form-group para">
+              <label for="foodForm">Food Form</label>
+              <select id="foodForm" class="input-box">
+                <option value="">Select form...</option>
+                <option value="Purée">Purée</option>
+                <option value="Mashed">Mashed</option>
+                <option value="Soft/Cut">Soft/Cut</option>
+                <option value="Finger Food">Finger Food</option>
+                <option value="Mixed Texture">Mixed Texture</option>
+              </select>
+            </div>
+            <div class="form-group para">
+              <label for="foodReaction">Reaction</label>
+              <select id="foodReaction" class="input-box">
+                <option value="">Select reaction...</option>
+                <option value="Good">Good — Ate well</option>
+                <option value="Neutral" id="liked">
+                  Neutral — Tried, not keen
+                </option>
+                <option value="Rejected" id="disliked">
+                  Rejected — Spat out
+                </option>
+                <option value="Allergic" id="allergic">
+                  Allergic Reaction
+                </option>
+              </select>
+            </div>
+            <label for="foodNotes">Notes</label>
+            <textarea
+              id="foodNotes"
+              placeholder="Texture feedback, observations, concerns..."
+              class="input-box w-full"
+            ></textarea>
+          </div>
+          <div class="btn-group flex w-full flex-col items-center gap-2.5">
+            <button
+              class="btn-primary bg-primary-green-dark hover:bg-primary-green-light w-5/6 cursor-pointer rounded-xl py-1 text-white shadow-md"
+              onclick="addFood()"
+            >
+              Add to Log
+            </button>
+            <button
+              class="btn-outline bg-warning-stroke w-5/6 cursor-pointer rounded-xl py-1 text-white shadow-md hover:bg-red-400"
+              onclick="clearForm()"
+            >
+              Clear Form
+            </button>
+          </div>
+        </div>
+
+        <!-- Edit Log -->
+        <div
+          id="editModal"
+          class="fixed inset-0 z-50 flex hidden items-center justify-center bg-black/75 p-4 md:p-8"
+        >
+          <div
+            class="bg-bg-purple max-h-[90vh] w-full max-w-lg overflow-y-auto rounded-3xl border border-gray-200 p-8 shadow-2xl"
+          >
+            <div class="mb-8 flex items-center justify-between">
+              <h3 class="text-3xl font-bold text-gray-900">Edit Food Entry</h3>
+              <button
+                onclick="cancelEdit()"
+                class="text-2xl text-gray-500 hover:text-gray-700"
+              >
+                &times;
+              </button>
+            </div>
+
+            <input type="hidden" id="editAttemptId" />
+
+            <div class="para space-y-6">
+              <div>
+                <label class="mb-2 block">Food Name</label>
+                <input
+                  id="foodNameEdit"
+                  type="text"
+                  class="focus:ring-primary-purple focus:border-primary-purple w-full rounded-2xl border border-gray-300 bg-white p-4 transition-all focus:ring-2"
+                  placeholder="e.g. Banana"
+                />
+              </div>
+
+              <div class="form-group para flex w-full flex-col gap-2.5">
+                <label for="foodCatEdit">Category</label>
+                <select
+                  id="foodCatEdit"
+                  class="input-box focus:ring-primary-purple focus:border-primary-purple w-full rounded-2xl border border-gray-300 bg-white p-4 transition-all focus:ring-2"
+                >
+                  <option value="">Select category...</option>
+                  <option value="Vegetables">Vegetables</option>
+                  <option value="Fruits">Fruits</option>
+                  <option value="Grains">Grains & Cereals</option>
+                  <option value="Proteins">Proteins</option>
+                  <option value="Dairy">Dairy</option>
+                  <option value="Legumes">Legumes & Pulses</option>
+                  <option value="Other">Other</option>
+                </select>
+              </div>
+
+              <div class="form-group para flex w-full flex-col gap-2.5">
+                <label for="foodFormEdit">Food Form</label>
+                <select
+                  id="foodFormEdit"
+                  class="input-box focus:ring-primary-purple focus:border-primary-purple w-full rounded-2xl border border-gray-300 bg-white p-4 transition-all focus:ring-2"
+                >
+                  <option value="">Select form...</option>
+                  <option value="Purée">Purée</option>
+                  <option value="Mashed">Mashed</option>
+                  <option value="Soft/Cut">Soft/Cut</option>
+                  <option value="Finger Food">Finger Food</option>
+                  <option value="Mixed Texture">Mixed Texture</option>
+                </select>
+              </div>
+
+              <div class="para">
+                <label class="mb-2 block">Date</label>
+                <input
+                  id="foodDateEdit"
+                  type="date"
+                  class="focus:ring-primary-purple focus:border-primary-purple w-full rounded-2xl border border-gray-300 bg-white p-4 transition-all focus:ring-2"
+                />
+              </div>
+
+              <div class="form-group para flex w-full flex-col gap-2.5">
+                <label for="foodReactionEdit">Baby's Reaction</label>
+                <select
+                  id="foodReactionEdit"
+                  class="input-box focus:ring-primary-purple focus:border-primary-purple w-full rounded-2xl border border-gray-300 bg-white p-4 transition-all focus:ring-2"
+                >
+                  <option value="">Select reaction...</option>
+                  <option value="Good">Good — Ate well</option>
+                  <option value="Neutral" id="liked">
+                    Neutral — Tried, not keen
+                  </option>
+                  <option value="Rejected" id="disliked">
+                    Rejected — Spat out
+                  </option>
+                  <!-- <option value="Gagged">Gagged</option> -->
+                  <option value="Allergic" id="allergic">
+                    Allergic Reaction
+                  </option>
+                </select>
+              </div>
+
+              <div>
+                <label class="para mb-2 block text-sm font-medium"
+                  >Notes (optional)</label
+                >
+                <textarea
+                  id="notesEdit"
+                  rows="3"
+                  class="focus:ring-primary-purple focus:border-primary-purple resize-vertical w-full rounded-2xl border border-gray-300 p-4 transition-all focus:ring-2"
+                  placeholder="Any observations..."
+                ></textarea>
+              </div>
+            </div>
+
+            <div
+              class="mt-10 flex justify-end gap-4 border-t border-gray-200 pt-8"
+            >
+              <button
+                onclick="cancelEdit()"
+                class="rounded-2xl bg-gray-200 px-8 py-3 font-medium text-gray-800 shadow-sm transition-all hover:bg-gray-300"
+              >
+                Cancel
+              </button>
+              <button
+                onclick="saveEdit()"
+                class="hover:bg-primary-purple-dark bg-primary-purple text-primary-pink-dark hover:bg-bg-purple cursor-pointer rounded-2xl px-8 py-3 font-bold shadow-lg transition-all hover:shadow-xl"
+              >
+                Update Entry
+              </button>
+            </div>
+          </div>
+        </div>
 
         <!-- Food Log -->
         <div class="section section-base bg-bg-purple">
-            <h2 class="text-2xl font-bold"> Food Log</h2>
-            <div id="logContainer" class="w-full flex flex-col gap-2.5">
-              <div class="empty-state">
-                  <p>No foods logged yet. Add your first food above!</p>
-              </div>
+          <h2 class="text-2xl font-bold">Food Log</h2>
+          <div id="logContainer" class="flex w-full flex-col gap-2.5">
+            <div class="empty-state">
+              <p>No foods logged yet. Add your first food above!</p>
             </div>
-            <div class="btn-group w-full flex  flex-col gap-2.5 items-center">
-              <button class="btn-secondary btn-primary bg-primary-purple text-primary-pink-dark w-5/6 cursor-pointer rounded-xl py-1 shadow-md hover:bg-secondary-purple" onclick="exportCSV()">Export CSV
-              </button>
-              <button class="btn-danger btn-outline bg-warning-stroke w-5/6 cursor-pointer rounded-xl py-1 text-white shadow-md hover:bg-red-400" onclick="clearAll()">Clear All Data
-              </button>
-            </div>
-        </div>
+          </div>
+          <div class="btn-group flex w-full flex-col items-center gap-2.5">
+            <button
+              class="btn-secondary btn-primary bg-bg-green text-primary-green border-primary-green hover:bg-primary-green w-5/6 cursor-pointer rounded-xl border py-1 shadow-md hover:text-white"
+              onclick="exportCSV()"
+            >
+              Export CSV
+            </button>
+            <button
+              class="btn-danger btn-outline bg-warning-stroke w-5/6 cursor-pointer rounded-xl py-1 text-white shadow-md hover:bg-red-400"
+              onclick="clearAll()"
+            >
+              Clear All Data
+            </button>
+          </div>
         </div>
       </main>
 
@@ -423,4 +502,5 @@
 
     <script src="./js/main.js"></script>
     <script src="./tracker.js"></script>
+  </body>
 </html>

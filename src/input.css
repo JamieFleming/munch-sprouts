@@ -78,18 +78,14 @@
   }
 
   .stat-card {
-    @apply border-primary-green-light text-text-charcoal-light bg-bg-green flex h-20 w-full items-center justify-center gap-5 rounded-2xl border-2 text-xl;
+    @apply border-primary-green-light text-text-charcoal-light bg-bg-green flex h-14 w-full items-center justify-center gap-5 rounded-2xl border-2 text-xl;
   }
 
   .log-table thead {
     @apply hidden;
   }
 
-  /* .history-row {
-    @apply sm:hidden;
-  } */
-
-  /* .form-group {
-    @apply para flex w-full flex-col gap-2.5;
-  } */
+  .form-group {
+    @apply flex w-full flex-col gap-2.5;
+  }
 }

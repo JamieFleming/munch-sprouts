@@ -28,6 +28,7 @@ function normalize(name) {
 
 function groupByFood(log) {
   const groups = {};
+
   log.forEach((entry) => {
     const key = normalize(entry.name);
     if (!groups[key]) {
@@ -86,6 +87,7 @@ function addFood() {
   const form = document.getElementById('foodForm').value;
   const reaction = document.getElementById('foodReaction').value;
   const notes = document.getElementById('foodNotes').value.trim();
+
   let liked, disliked, allergic;
 
   if (reaction === 'Good') {
@@ -181,8 +183,11 @@ function cancelEdit() {
 function saveEdit() {
   const attemptId = parseInt(document.getElementById('editAttemptId').value);
   const attemptIndex = foodLog.findIndex((log) => log.id === attemptId);
-  let liked, disliked, allergic;
   const reaction = document.getElementById('foodReactionEdit').value;
+
+  let liked, disliked, allergic;
+
+  // Check reaction - log to console
   console.log(reaction);
 
   if (reaction === 'Good') {
@@ -192,6 +197,8 @@ function saveEdit() {
   } else {
     allergic = true;
   }
+
+  // Check status of liked/disliked/allergic
   console.log(liked);
   console.log(disliked);
   console.log(allergic);
@@ -217,17 +224,6 @@ function saveEdit() {
   cancelEdit(); // Close form
 }
 
-function cancelEdit() {
-  // Clear form
-  document
-    .querySelectorAll('#editModal input, #editModal textarea')
-    .forEach((el) => (el.value = ''));
-  document
-    .querySelectorAll('#editModal input[type="checkbox"]')
-    .forEach((el) => (el.checked = false));
-  document.getElementById('editModal').classList.add('hidden');
-}
-
 function clearAll() {
   if (!confirm('⚠️ Clear ALL data? This cannot be undone.')) return;
   foodLog = [];
@@ -240,12 +236,10 @@ function clearAll() {
 function toggleHistory(key) {
   const row = document.getElementById('hist_' + key);
   const entry = document.getElementById('ent_' + key);
-  const tbody = document.querySelector('tbody');
   if (!row) return;
   row.classList.toggle('open');
   row.classList.toggle('hidden');
   entry.classList.toggle('rounded-b-none');
-  // tbody.classList.toggle('flex')
   const btn = document.getElementById('btn_' + key);
   if (btn) btn.textContent = row.classList.contains('open') ? '▲' : '▼';
 }
@@ -268,14 +262,12 @@ function renderStats() {
     groups[k].attempts.some((a) => a.disliked),
   ).length;
   const allergic = foodLog.filter((f) => f.allergic).length;
-  const avg = unique ? (total / unique).toFixed(1) : '0';
 
   document.getElementById('statUnique').textContent = unique;
   document.getElementById('statAttempts').textContent = total;
   document.getElementById('statLiked').textContent = liked;
   document.getElementById('statAllergic').textContent = allergic;
   document.getElementById('statDisliked').textContent = disliked;
-  // document.getElementById('statAvg').textContent = avg + 'x';
 
   // Category breakdown
   const catDefs = {
@@ -287,10 +279,12 @@ function renderStats() {
     Legumes: { icon: '🫘' },
     Other: { icon: '🍽️' },
   };
+
   const catData = {};
   keys.forEach((k) => {
     const g = groups[k];
     const cat = g.category || 'Other';
+
     if (!catData[cat]) catData[cat] = { foods: 0, attempts: 0 };
     catData[cat].foods++;
     catData[cat].attempts += g.attempts.length;
@@ -312,11 +306,6 @@ function renderStats() {
   document.getElementById('catBreakdown').innerHTML =
     catHTML ||
     '<p class="para text-center">Add foods to see category breakdown.</p>';
-}
-
-function foodRowHTML(g, key) {
-  // Move your existing food row template here
-  return `<tr class="food-row ...">...</tr>`;
 }
 
 function renderTable() {
@@ -359,10 +348,6 @@ function renderTable() {
     const likedCnt = g.attempts.filter((a) => a.liked).length;
     const pct = Math.round((likedCnt / count) * 100);
     const hasAllergy = g.attempts.some((a) => a.allergic);
-    // const cat = [
-    //   ...new Set(g.attempts.map((a) => a.category).filter(Boolean)),
-    // ].join(', ');
-    const reactionBox = document.getElementById('reaction-box');
 
     html += `
                 <tr class="food-row rounded-xl bg-white p-2.5 w-full grid grid-cols-[2fr_2fr_2fr_1fr] grid-rows-1 place-items-center mt-2.5" id="ent_${key}">
@@ -392,7 +377,7 @@ function renderTable() {
                                     <div class="flex justify-between px-5 w-full">
                                       <span>${a.form || '—'}</span>
                                       <span>${a.category || '—'}</span>
-                                      <span class="py-1 px-5 rounded-2xl ${g.reaction === 'Good' ? 'bg-bg-green border-primary-green-light border-2 text-primary-green-light' : g.reaction === 'Rejected' ? 'border-warning-stroke border-2 bg-bg-warning text-warning-stroke' : 'bg-amber-100 border-2 border-amber-400 text-orange-400'}" id="reaction-box-${a.id}">${reactionBadge(a.reaction)}</span>  
+                                      <span class="py-1 px-5 rounded-2xl ${a.reaction === 'Good' ? 'bg-bg-green border-primary-green-light border-2 text-primary-green-light' : a.reaction === 'Rejected' ? 'border-warning-stroke border-2 bg-bg-warning text-warning-stroke' : 'bg-amber-100 border-2 border-amber-400 text-orange-400'}" id="reaction-box-${a.id}-${a.reaction}">${reactionBadge(a.reaction)}</span>
                                     </div>
                                     
                                     <button class="btn-danger btn-sm btn-outline bg-primary-purple w-5/6 cursor-pointer rounded-xl py-1 shadow-md text-primary-pink-dark hover:bg-bg-purple" onclick="editAttempt(${a.id})">Edit Entry</button>

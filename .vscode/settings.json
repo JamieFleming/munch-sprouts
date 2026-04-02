@@ -1,21 +1,33 @@
 {
-    "cSpell.words": [
-        "airfry",
-        "airfryer",
-        "Bubba",
-        "Colourful",
-        "frylight",
-        "gradaully",
-        "Ickle",
-        "Leakproof",
-        "lengthways",
-        "Minimise",
-        "Munchkin",
-        "olds",
-        "Practiced",
-        "Rapley",
-        "sippy",
-        "Squishable",
-        "tbsp"
-    ]
+  "cSpell.words": [
+    "airfry",
+    "airfryer",
+    "Bubba",
+    "Colourful",
+    "frylight",
+    "gradaully",
+    "Ickle",
+    "Leakproof",
+    "lengthways",
+    "Minimise",
+    "Munchkin",
+    "olds",
+    "Practiced",
+    "Rapley",
+    "sippy",
+    "Squishable",
+    "tbsp"
+  ],
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit"
+  },
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "tailwindCSS.experimental.classRegex": ["class[:\\s]*['\"`]([^'\"`]*?)['\"`]"]
 }
