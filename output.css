@@ -364,6 +364,9 @@
   .grow {
     flex-grow: 1;
   }
+  .table-fixed {
+    table-layout: fixed;
+  }
   .border-collapse {
     border-collapse: collapse;
   }
@@ -396,6 +399,9 @@
   }
   .grid-cols-4 {
     grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+  .grid-cols-\[2fr_1fr_0\.5fr_1fr_1fr_1fr_0\.5fr_0\.5fr\] {
+    grid-template-columns: 2fr 1fr 0.5fr 1fr 1fr 1fr 0.5fr 0.5fr;
   }
   .grid-cols-\[2fr_2fr_2fr_1fr\] {
     grid-template-columns: 2fr 2fr 2fr 1fr;
