@@ -352,7 +352,7 @@ function updateStatsTitle() {
   const firstChild = babyInfo[0];
 
   if (firstChild) {
-    document.getElementById('statsTitle').textContent = firstChild
+    document.getElementById('stats-title').textContent = firstChild
       ? `${firstChild.name} statistics dashboard`
       : 'Statistics Dashboard';
   }
