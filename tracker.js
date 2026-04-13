@@ -353,7 +353,7 @@ function updateStatsTitle() {
 
   if (firstChild) {
     document.getElementById('stats-title').textContent = firstChild
-      ? `${firstChild.name} statistics dashboard`
+      ? `${firstChild.name}'s Statistics Dashboard`
       : 'Statistics Dashboard';
   }
 }
