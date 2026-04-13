@@ -1,5 +1,8 @@
 // ─── STATE ───────────────────────────────────────────────────────────────
 let foodLog = JSON.parse(localStorage.getItem('munchsprouts_log') || '[]');
+let babyInfo = JSON.parse(
+  localStorage.getItem('munchsprouts_babyInfo') || '[]',
+);
 
 // ─── INIT ────────────────────────────────────────────────────────────────
 (function init() {
@@ -70,6 +73,10 @@ function save() {
   localStorage.setItem('munchsprouts_log', JSON.stringify(foodLog));
 }
 
+function saveBaby() {
+  localStorage.setItem('munchsprouts_babyInfo', JSON.stringify(babyInfo));
+}
+
 function alert_(msg, type = 'success') {
   const box = document.getElementById('alertBox');
   const el = document.createElement('div');
@@ -77,6 +84,23 @@ function alert_(msg, type = 'success') {
   el.textContent = msg;
   box.appendChild(el);
   setTimeout(() => el.remove(), 4000);
+}
+
+function addChild() {
+  const childName = document.getElementById('babyName').value.trim();
+  const childDob = document.getElementById('birthDate').value;
+  const startDate = document.getElementById('weaningStart').value;
+
+  const entry = {
+    id: Date.now(),
+    name: childName,
+    DOB: childDob,
+    startDate: startDate,
+  };
+
+  babyInfo.push(entry);
+
+  saveBaby();
 }
 
 // ─── ADD FOOD ─────────────────────────────────────────────────────────────
@@ -88,12 +112,14 @@ function addFood() {
   const reaction = document.getElementById('foodReaction').value;
   const notes = document.getElementById('foodNotes').value.trim();
 
-  let liked, disliked, allergic;
+  let liked, disliked, allergic, neutral;
 
   if (reaction === 'Good') {
     liked = true;
   } else if (reaction === 'Rejected') {
     disliked = true;
+  } else if (reaction === 'Neutral') {
+    neutral = true;
   } else {
     allergic = true;
   }
@@ -116,6 +142,7 @@ function addFood() {
     reaction,
     liked,
     disliked,
+    neutral,
     allergic,
     notes,
     attemptNum,
@@ -185,7 +212,7 @@ function saveEdit() {
   const attemptIndex = foodLog.findIndex((log) => log.id === attemptId);
   const reaction = document.getElementById('foodReactionEdit').value;
 
-  let liked, disliked, allergic;
+  let liked, disliked, allergic, neutral;
 
   // Check reaction - log to console
   console.log(reaction);
@@ -194,6 +221,8 @@ function saveEdit() {
     liked = true;
   } else if (reaction === 'Rejected') {
     disliked = true;
+  } else if (reaction === 'Neutral') {
+    neutral = true;
   } else {
     allergic = true;
   }
@@ -201,6 +230,7 @@ function saveEdit() {
   // Check status of liked/disliked/allergic
   console.log(liked);
   console.log(disliked);
+  console.log(neutral);
   console.log(allergic);
 
   if (attemptIndex === -1) return alert('Attempt not found');
@@ -215,6 +245,7 @@ function saveEdit() {
     reaction: document.getElementById('foodReactionEdit').value,
     liked: liked,
     disliked: disliked,
+    neutral: neutral,
     allergic: allergic,
     notes: document.getElementById('notesEdit').value,
   };
@@ -228,6 +259,14 @@ function clearAll() {
   if (!confirm('⚠️ Clear ALL data? This cannot be undone.')) return;
   foodLog = [];
   save();
+  render();
+  alert_('All data cleared.');
+}
+
+function clearBaby() {
+  if (!confirm('⚠️ Clear ALL data? This cannot be undone.')) return;
+  babyInfo = [];
+  saveBaby();
   render();
   alert_('All data cleared.');
 }
@@ -248,6 +287,7 @@ function toggleHistory(key) {
 function render() {
   renderStats();
   renderTable();
+  updateStatsTitle();
 }
 
 function renderStats() {
@@ -306,6 +346,15 @@ function renderStats() {
   document.getElementById('catBreakdown').innerHTML =
     catHTML ||
     '<p class="para text-center">Add foods to see category breakdown.</p>';
+}
+
+function updateStatsTitle() {
+  const firstChild = babyInfo[0];
+
+  if (firstChild) {
+    document.getElementById('stats-title').textContent =
+      `${firstChild.name}'s Statistics Dashboard`;
+  }
 }
 
 function renderTable() {
@@ -378,6 +427,17 @@ function renderTable() {
                                       <span>${a.category || '—'}</span>
                                       <span class="py-1 px-5 rounded-2xl ${a.reaction === 'Good' ? 'bg-bg-green border-primary-green-light border-2 text-primary-green-light' : a.reaction === 'Rejected' || a.reaction === 'Allergic' ? 'border-warning-stroke border-2 bg-bg-warning text-warning-stroke' : 'bg-amber-100 border-2 border-amber-400 text-orange-400'}" id="reaction-box-${a.id}-${a.reaction}">${reactionBadge(a.reaction)}</span>
                                     </div>
+                                    ${
+                                      a.notes
+                                        ? `
+                                      <div class="notes-disp flex flex-col  ">
+                                        <span class=" font-bold">Notes</span>
+                                        <span>${a.notes || ''}</span>
+                                      </div>
+                                    `
+                                        : ''
+                                    }
+                                    
                                     
                                     <button class="btn-danger btn-sm btn-outline bg-primary-purple w-5/6 cursor-pointer rounded-xl py-1 shadow-md text-primary-pink-dark hover:bg-bg-purple" onclick="editAttempt(${a.id})">Edit Entry</button>
 
@@ -403,7 +463,7 @@ function exportCSV() {
   let csv =
     'Date,Food,Category,Attempt #,Form,Reaction,Liked,Disliked,Allergic Reaction,Notes\n';
   foodLog.forEach((f) => {
-    csv += `"${f.date}","${f.name}","${f.category || ''}","${f.attemptNum || 1}","${f.form}","${f.reaction}","${f.liked ? 'Yes' : 'No'}","${f.disliked ? 'Yes' : 'No'}","${f.allergic ? 'Yes' : 'No'}","${f.notes}"\n`;
+    csv += `"${f.date}","${f.name}","${f.category || ''}","${f.attemptNum || 1}","${f.form}","${f.reaction}","${f.liked ? 'Yes' : 'No'}","${f.disliked ? 'Yes' : 'No'}", "${f.allergic ? 'Yes' : 'No'}","${f.notes}"\n`;
   });
   const a = document.createElement('a');
   a.href = 'data:text/csv;charset=utf-8,' + encodeURIComponent(csv);

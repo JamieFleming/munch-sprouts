@@ -61,7 +61,7 @@
     <div class="body bg-bg-main flex flex-col gap-5">
       <!-- Header -->
       <header
-        class="fixed flex w-full items-center justify-between rounded-2xl bg-white p-2.5 shadow-md"
+        class="fixed flex w-screen items-center justify-between bg-white p-2.5 shadow-md"
       >
         <div
           class="flex w-full items-center justify-between lg:justify-start lg:gap-5"
@@ -193,12 +193,29 @@
                 class="input-box"
               />
             </div>
+            <div class="btn-group flex w-full flex-col items-center gap-2.5">
+              <button
+                class="btn-primary bg-primary-purple hover:bg-secondary-purple text-primary-pink-dark w-5/6 cursor-pointer rounded-xl py-1 shadow-md"
+                onclick="addChild()"
+              >
+                Save Information
+              </button>
+              <!-- Clear Local Storage Information -->
+              <!-- <button
+                class="btn-primary bg-warning-stroke w-5/6 cursor-pointer rounded-xl py-1 text-white shadow-md hover:bg-red-400"
+                onclick="clearBaby()"
+              >
+                Save Information
+              </button> -->
+            </div>
           </div>
         </div>
 
         <!-- Stats -->
         <div class="section section-base bg-bg-purple">
-          <h2 class="text-2xl font-bold">Statistics Dashboard</h2>
+          <h2 class="text-2xl font-bold" id="stats-title">
+            Statistics Dashboard
+          </h2>
           <div class="stats-grid flex w-full flex-col gap-2.5">
             <div class="stat-card">
               <div class="stat-label">Unique Foods Tried:</div>
