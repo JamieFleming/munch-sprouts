@@ -1,0 +1,9 @@
+[build]
+  base = "."              # Root (pages/)
+  publish = "."           # Publishes root + tracker/dist
+  command = ""            # No global build—use local dist
+
+[[redirects]]
+  from = "/tracker/*"
+  to = "/tracker/index.html"
+  status = 200
