@@ -1,8 +1,8 @@
 [build]
-  command = "cd tracker && npm ci && npm run build"
   publish = "."
+  command = "cd tracker && npm ci && npm run build"
 
 [[redirects]]
   from = "/tracker/*"
-  to = "/tracker/index.html"
+  to = "/tracker/dist/index.html"  # Direct to built!
   status = 200
