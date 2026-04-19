@@ -1,7 +1,5 @@
 [build]
-  base = "."              # Root (pages/)
-  publish = "."           # Publishes root + tracker/dist
-  command = ""            # No global build—use local dist
+  publish = "."
 
 [[redirects]]
   from = "/tracker/*"
