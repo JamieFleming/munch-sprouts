@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="output.css" rel="stylesheet" />
+    <title>Document</title>
+  </head>
+
+  <body class="">
+    <section class="tab-section section-base">
+      <!-- Tab links -->
+      <div class="tab">
+        <button
+          class="tablinks active"
+          onclick="openCity(event, 'core-principles')"
+          id="defaultOpen"
+        >
+          Core Principles
+        </button>
+        <button class="tablinks" onclick="openCity(event, 'techniques')">
+          Techniques
+        </button>
+        <button class="tablinks" onclick="openCity(event, 'Tokyo')">
+          First Foods
+        </button>
+        <button class="tablinks" onclick="openCity(event, 'Tokyo')">
+          Setup Tips
+        </button>
+      </div>
+
+      <!-- Tab content -->
+      <div id="core-principles" class="tabcontent">
+        <div class="tab-title">
+          <h3 class="heading3">Core Principles of BLW</h3>
+          <p class="para">The foundation of successful baby led weaning.</p>
+        </div>
+        <div class="core-prin-card">
+          <h3 class="heading3">1. Baby is in Control</h3>
+          <p class="para">
+            Let your baby decide what, how much, and how fast they eat. Never
+            force or pressure them to eat. They'll eat when they are hungry and
+            stop when they're full.
+          </p>
+          <p class="bordered-tip">Self-Regulation</p>
+        </div>
+        <div class="core-prin-card">
+          <h3 class="heading3">2. Food Before One is Just for Fun</h3>
+          <p class="para">
+            Breast milk or formula remains the primary source of nutrition in
+            the first year. Solid foods are for exploration, practice and fun.
+          </p>
+          <p class="bordered-tip">Low Pressure</p>
+        </div>
+        <div class="core-prin-card">
+          <h3 class="heading3">3. Include Baby in Family Meals</h3>
+          <p class="para">
+            Whenever it is possible, let baby join family mealtimes. They learn
+            by watching and being a part of the social experience of eating
+            together.
+          </p>
+          <p class="bordered-tip">Social Learning</p>
+        </div>
+        <div class="core-prin-card">
+          <h3 class="heading3">Offer a Variety of Foods</h3>
+          <p class="para">
+            Expose your baby to different flavours, textures, and colours. This
+            will help them to develop a well-rounded palate and reduce picky
+            eating later.
+          </p>
+          <p class="bordered-tip">Variety</p>
+        </div>
+      </div>
+
+      <div id="techniques" class="tabcontent">
+        <div class="tab-title">
+          <h3 class="heading3">Feeding Techniques & Methods</h3>
+          <p class="para">How to prepare and serve food for baby led weaning</p>
+        </div>
+        <div class="techniques-card">
+          <h3 class="heading3">Food Size & Shape</h3>
+          <p class="para">
+            Cut foods into pieces no larger than an adult sized finger. This
+            makes it easy for babies to grasp foods with their whole fist and
+            leave some sticking out the top to bit
+          </p>
+          <ul>
+            <li>Stick-shaped pieces about 2 inches long and 0.5 inches wide</li>
+            <li>
+              As pincer grasp develops (~8-10 months), offer smaller pieces
+            </li>
+            <li>Avoid round, hard shapes that could block babies airway</li>
+          </ul>
+        </div>
+        <div class="techniques-card">
+          <h3 class="heading3">Texture Guidelines</h3>
+          <p class="para">
+            Foods should be soft enough to squish between your fingers, but not
+            so mushy they fall apart. Think of the consistency:
+          </p>
+          <ul>
+            <li>Ripe avocado, banana, or well-cooked sweet potato</li>
+            <li>Steamed until fork-tender for harder vegetables</li>
+            <li>Meat should be moist and tender, cooked slowly or ground</li>
+          </ul>
+        </div>
+        <div class="techniques-card">
+          <h3 class="heading3">Meal Structure</h3>
+          <p class="para">
+            Offer 2-3 foods at each meal, including different food groups:
+          </p>
+          <ul>
+            <li>A protein (meat, fish, eggs, beans, tofu)</li>
+            <li>A fruit or vegetable</li>
+            <li>A carbohydrate (bread, pasta, rice, potato)</li>
+          </ul>
+        </div>
+        <div class="warning">
+          <img
+            src="./images/icons/warning.svg"
+            alt="Exclamation mark"
+            class="icon"
+          />
+          <div class="warning-content">
+            <h3 class="heading3">Important Note</h3>
+            <p class="para">
+              Always supervise your baby during meals. Never leave them alone
+              while eating
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div id="Tokyo" class="tabcontent">
+        <h3>Tokyo</h3>
+        <p>Tokyo is the capital of Japan.</p>
+      </div>
+    </section>
+
+    <script>
+      function openCity(evt, cityName) {
+        let i, tabContent, tabLinks;
+
+        tabContent = document.getElementsByClassName('tabcontent');
+        for (i = 0; i < tabContent.length; i++) {
+          tabContent[i].style.display = 'none';
+        }
+
+        tabLinks = document.getElementsByClassName('tablinks');
+        for (i = 0; i < tabLinks.length; i++) {
+          tabLinks[i].className.replace(' active', '');
+        }
+
+        document.getElementById(cityName).style.display = 'block';
+        evy.currentTarget.className += ' active';
+      }
+
+      document.getElementById('defaultOpen').click();
+    </script>
+  </body>
+</html>
