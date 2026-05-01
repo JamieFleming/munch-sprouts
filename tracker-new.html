@@ -58,6 +58,47 @@
     <title>Food Tracker for Baby Led Weaning | Munch Sprouts</title>
   </head>
   <body>
+    <!-- iOS App Banner -->
+    <div
+      id="iosAppBanner"
+      class="fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-4"
+    >
+      <div class="relative flex max-w-sm flex-col items-center gap-4 rounded-2xl bg-white p-6 shadow-2xl text-center">
+        <button
+          onclick="document.getElementById('iosAppBanner').remove()"
+          class="absolute right-3 top-3 text-gray-400 hover:text-gray-600"
+          aria-label="Close"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+        <img src="./images/logo.png" alt="Munch Sprouts logo" class="w-16" />
+        <h2 class="text-xl font-bold">Get the App!</h2>
+        <p class="text-sm text-gray-600">
+          For the best experience, download the <strong>Munch Sprouts</strong> app on your iPhone — track foods, log reactions, and more, all in one place.
+        </p>
+        <a
+          href="https://apps.apple.com/gb/app/munch-sprouts-weaning-tracker/id6763142582"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="mt-1"
+        >
+          <img
+            src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"
+            alt="Download on the App Store"
+            class="h-12"
+          />
+        </a>
+        <button
+          onclick="document.getElementById('iosAppBanner').remove()"
+          class="text-sm text-gray-400 underline hover:text-gray-600"
+        >
+          Continue to web tracker
+        </button>
+      </div>
+    </div>
+
     <div class="body bg-bg-main flex flex-col gap-5">
       <!-- Header -->
       <header
