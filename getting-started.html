@@ -63,7 +63,7 @@
     <div class="body bg-bg-main flex flex-col gap-5">
       <!-- Header -->
       <header
-        class="fixed flex w-screen items-center justify-between bg-white p-2.5 shadow-md"
+        class="fixed flex w-screen items-center justify-between bg-white px-2.5 pt-2.5 pb-0 shadow-md"
       >
         <div
           class="flex w-full items-center justify-between lg:justify-start lg:gap-5"
@@ -91,29 +91,29 @@
         </div>
 
         <!-- Lg navigation -->
-        <div class="hidden lg:flex">
+        <div class="hidden h-full self-stretch items-stretch lg:flex">
           <nav class="h-full">
-            <ul class="flex h-full items-center gap-5 p-2.5">
+            <ul class="flex h-full items-stretch gap-1 px-2.5 pt-2.5">
+              <li class="lg-nav-elems">
+                <a href="index.html">Home</a>
+              </li>
               <li class="lg-nav-elems lg-this-page">
-                <a href="index.html" class="text-primary-pink-dark">Home</a>
+                <a href="./getting-started.html">Getting Started</a>
               </li>
               <li class="lg-nav-elems">
-                <a href="./getting-started.html" class="">Getting Started</a>
+                <a href="./recipes.html">Recipes</a>
               </li>
               <li class="lg-nav-elems">
-                <a href="./recipes.html" class="">Recipes</a>
+                <a href="./safety.html">Safety</a>
               </li>
               <li class="lg-nav-elems">
-                <a href="./safety.html" class="">Safety</a>
+                <a href="./resources.html">Resources</a>
               </li>
               <li class="lg-nav-elems">
-                <a href="./resources.html" class="">Resources</a>
+                <a href="./tracker-new.html">Tracker</a>
               </li>
               <li class="lg-nav-elems">
-                <a href="./tracker-new.html" class="">Tracker</a>
-              </li>
-              <li class="lg-nav-elems">
-                <a href="./build/" class="">Tracker App New</a>
+                <a href="./build/">Tracker App</a>
               </li>
             </ul>
           </nav>
@@ -587,88 +587,107 @@
           </div>
         </section>
 
-        <!-- Timeline & Proression section -->
-        <section class="timeline section-base bg-bg-purple mt-14">
-          <!-- Timeline title -->
-          <div class="timeline-info">
-            <h3 class="heading3">BLW Timeline & Progression</h3>
-            <p class="para">What to expect as your baby grows</p>
+        <!-- Timeline & Progression section -->
+        <section class="section-base bg-bg-purple">
+          <div class="flex flex-col items-center gap-1">
+            <h3 class="heading3">BLW Timeline &amp; Progression</h3>
+            <p class="para text-center">What to expect as your baby grows</p>
           </div>
 
-          <!-- 6 Months -->
-          <div class="timeline-info-card" id="six-months-info">
-            <div class="timeline-date">
-              <h3 class="heading3">6M</h3>
-              <div class="vr"></div>
-            </div>
-            <div class="timeline-card-content">
-              <h3 class="heading3">6 Months: Starting Out</h3>
-              <p class="para">
-                Begin with simple, single-ingredient foods. Baby uses palmar
-                grasp (whole hand). Most foods end up on the floor - this is
-                normal! Focus on exploration, not nutrition.
-              </p>
-              <div class="bordered-tip">
-                <p class="para">1-2 meals per day</p>
-              </div>
-            </div>
-          </div>
+          <div class="flex w-full flex-col">
 
-          <!-- 7-8 Months -->
-          <div class="timeline-info-card" id="seven-months-info">
-            <div class="timeline-date">
-              <h3 class="heading3">7-8M</h3>
-              <div class="vr"></div>
-            </div>
-            <div class="timeline-card-content">
-              <h3 class="heading3">7-8 Months: Building Skills</h3>
-              <p class="para">
-                More foods makes it to the mouth. Start introducing more variety
-                and combination meals. Begin offering water with meals in an
-                open cup.
-              </p>
-              <div class="bordered-tip">
-                <p class="para">2-3 meals per day</p>
+            <!-- 6 Months -->
+            <div class="flex w-full gap-4">
+              <div class="flex flex-col items-center">
+                <div
+                  class="bg-primary-pink-dark z-10 flex h-12 w-12 shrink-0 items-center justify-center rounded-full font-bold text-white"
+                >
+                  6M
+                </div>
+                <div class="bg-primary-purple mt-1 w-0.5 flex-1"></div>
+              </div>
+              <div class="mb-6 flex-1 rounded-xl bg-white p-4 shadow-sm">
+                <h3 class="mb-2 font-semibold">6 Months: Starting Out</h3>
+                <p class="para mb-3">
+                  Begin with simple, single-ingredient foods. Baby uses palmar
+                  grasp (whole hand). Most foods end up on the floor — this is
+                  normal! Focus on exploration, not nutrition.
+                </p>
+                <div class="bordered-tip">
+                  <p class="para">1–2 meals per day</p>
+                </div>
               </div>
             </div>
-          </div>
 
-          <!-- 9-11 Months -->
-          <div class="timeline-info-card" id="nine-months-info">
-            <div class="timeline-date">
-              <h3 class="heading3">9-11M</h3>
-              <div class="vr"></div>
-            </div>
-            <div class="timeline-card-content">
-              <h3 class="heading3">9-11 Months: Pincer Grasp</h3>
-              <p class="para">
-                Pincer grasp develops (thumb and index finger). They can now
-                handle smaller pieces. Eating becomes more efficient. Your baby
-                will start eating more substantial amounts.
-              </p>
-              <div class="bordered-tip">
-                <p class="para">3 Meals + 1-2 snacks</p>
+            <!-- 7-8 Months -->
+            <div class="flex w-full gap-4">
+              <div class="flex flex-col items-center">
+                <div
+                  class="bg-primary-pink-dark z-10 flex h-12 w-12 shrink-0 items-center justify-center rounded-full font-bold text-white text-sm"
+                >
+                  7–8M
+                </div>
+                <div class="bg-primary-purple mt-1 w-0.5 flex-1"></div>
+              </div>
+              <div class="mb-6 flex-1 rounded-xl bg-white p-4 shadow-sm">
+                <h3 class="mb-2 font-semibold">7–8 Months: Building Skills</h3>
+                <p class="para mb-3">
+                  More food makes it to the mouth. Start introducing more
+                  variety and combination meals. Begin offering water with meals
+                  in an open cup.
+                </p>
+                <div class="bordered-tip">
+                  <p class="para">2–3 meals per day</p>
+                </div>
               </div>
             </div>
-          </div>
 
-          <!-- 12+ Months -->
-          <div class="timeline-info-card" id="twelve-months-info">
-            <div class="timeline-date">
-              <h3 class="heading3">12M+</h3>
-              <div class="vr"></div>
-            </div>
-            <div class="timeline-card-content">
-              <h3 class="heading3">12 Months+: Family Foods</h3>
-              <p class="para">
-                Baby should be fully integrated into family meals. They can
-                handle most textures and foods. Solid foods become primary
-                nutrition source. They may show preferences and dislikes.
-              </p>
-              <div class="bordered-tip">
-                <p class="para">3 meals + 2 snacks</p>
+            <!-- 9-11 Months -->
+            <div class="flex w-full gap-4">
+              <div class="flex flex-col items-center">
+                <div
+                  class="bg-primary-pink-dark z-10 flex h-12 w-12 shrink-0 items-center justify-center rounded-full font-bold text-white text-sm"
+                >
+                  9–11M
+                </div>
+                <div class="bg-primary-purple mt-1 w-0.5 flex-1"></div>
+              </div>
+              <div class="mb-6 flex-1 rounded-xl bg-white p-4 shadow-sm">
+                <h3 class="mb-2 font-semibold">9–11 Months: Pincer Grasp</h3>
+                <p class="para mb-3">
+                  Pincer grasp develops (thumb and index finger). They can now
+                  handle smaller pieces. Eating becomes more efficient. Your
+                  baby will start eating more substantial amounts.
+                </p>
+                <div class="bordered-tip">
+                  <p class="para">3 meals + 1–2 snacks</p>
+                </div>
               </div>
             </div>
+
+            <!-- 12+ Months (no line below) -->
+            <div class="flex w-full gap-4">
+              <div class="flex flex-col items-center">
+                <div
+                  class="bg-primary-pink-dark z-10 flex h-12 w-12 shrink-0 items-center justify-center rounded-full font-bold text-white text-sm"
+                >
+                  12M+
+                </div>
+              </div>
+              <div class="flex-1 rounded-xl bg-white p-4 shadow-sm">
+                <h3 class="mb-2 font-semibold">12 Months+: Family Foods</h3>
+                <p class="para mb-3">
+                  Baby should be fully integrated into family meals. They can
+                  handle most textures and foods. Solid foods become the primary
+                  nutrition source. They may start showing preferences and
+                  dislikes.
+                </p>
+                <div class="bordered-tip">
+                  <p class="para">3 meals + 2 snacks</p>
+                </div>
+              </div>
+            </div>
+
           </div>
         </section>
       </main>
@@ -703,6 +722,7 @@
     </div>
 
     <script src="./js/main.js"></script>
+    <script src="./js/app-banner.js"></script>
     <script>
       function openTab(evt, cityName) {
         let i, tabContent, tabLinks;

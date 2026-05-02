@@ -130,23 +130,29 @@
         </div>
 
         <!-- Lg navigation -->
-        <div class="hidden lg:flex">
+        <div class="hidden h-full self-stretch items-stretch lg:flex">
           <nav class="h-full">
-            <ul class="flex h-full items-center gap-5 p-2.5">
+            <ul class="flex h-full items-stretch gap-1 px-2.5 pt-2.5">
+              <li class="lg-nav-elems">
+                <a href="index.html">Home</a>
+              </li>
+              <li class="lg-nav-elems">
+                <a href="./getting-started.html">Getting Started</a>
+              </li>
+              <li class="lg-nav-elems">
+                <a href="./recipes.html">Recipes</a>
+              </li>
+              <li class="lg-nav-elems">
+                <a href="./safety.html">Safety</a>
+              </li>
+              <li class="lg-nav-elems">
+                <a href="./resources.html">Resources</a>
+              </li>
               <li class="lg-nav-elems lg-this-page">
-                <a href="index.html" class="text-primary-pink-dark">Home</a>
+                <a href="./tracker-new.html">Tracker</a>
               </li>
               <li class="lg-nav-elems">
-                <a href="./getting-started.html" class="">Getting Started</a>
-              </li>
-              <li class="lg-nav-elems">
-                <a href="./recipes.html" class="">Recipes</a>
-              </li>
-              <li class="lg-nav-elems">
-                <a href="./safety.html" class="">Safety</a>
-              </li>
-              <li class="lg-nav-elems">
-                <a href="./resources.html" class="">Resources</a>
+                <a href="./build/">Tracker App</a>
               </li>
             </ul>
           </nav>
@@ -570,6 +576,7 @@
     </div>
 
     <script src="./js/main.js"></script>
+    <script src="./js/app-banner.js"></script>
     <script src="./tracker.js"></script>
   </body>
 </html>

@@ -61,7 +61,7 @@
   }
 
   .section-base {
-    @apply flex flex-col items-center gap-5 p-5 shadow-md;
+    @apply flex flex-col items-center gap-5 rounded-xl p-5 shadow-md;
   }
 
   .why-card {
@@ -76,12 +76,20 @@
     @apply text-primary-pink-dark size-10;
   }
 
+  .home-icon {
+    @apply text-primary-green-dark;
+  }
+
   .nav-elems {
     @apply bg-bg-purple hover:bg-secondary-purple w-screen cursor-pointer py-3 text-center ease-linear;
   }
 
   .lg-nav-elems {
-    @apply hover:text-primary-purple cursor-pointer px-2.5 text-center text-nowrap;
+    @apply hover:bg-secondary-purple flex cursor-pointer items-center rounded-t-xl px-3 text-center text-nowrap;
+  }
+
+  .lg-this-page {
+    @apply bg-primary-purple self-stretch;
   }
 
   .this-page {

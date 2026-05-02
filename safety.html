@@ -48,440 +48,613 @@
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
     <link rel="manifest" href="site.webmanifest" />
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="./css/styles.css" />
+    <!-- Styles -->
     <link href="output.css" rel="stylesheet" />
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+    </style>
 
-    <title>MunchSprouts - Safety</title>
+    <link rel="canonical" href="https://munchsprouts.co.uk/safety" />
+    <title>Safety Guidelines for Baby Led Weaning | Munch Sprouts</title>
   </head>
-
-  <script src="./js/main.js"></script>
-
   <body>
-    <!-- Site header -->
-    <header class="site-header">
-      <div class="header-container">
-        <a
-          href="https://munchsprouts.co.uk"
-          class="logo-title-link"
-          aria-label="Go to homepage"
+    <div class="body bg-bg-main flex flex-col gap-5 px-2">
+      <!-- Header -->
+      <header
+        class="fixed flex w-screen items-center justify-between bg-white px-2.5 pt-2.5 pb-0 shadow-md"
+      >
+        <div
+          class="flex w-full items-center justify-between lg:justify-start lg:gap-5"
         >
-          <div class="title-container">
-            <div class="logo-title-container">
-              <img
-                src="./images/logo.png"
-                alt="MunchSprouts Logo"
-                class="logo"
-              />
-            </div>
-            <h1 class="site-title">Munch Sprouts</h1>
-          </div>
-        </a>
-
-        <!-- Button for mobile -->
-        <button
-          class="mobile-menu-toggle"
-          aria-label="Open menu"
-          aria-expanded="false"
-        >
-          <span class="hamburger-line"></span>
-          <span class="hamburger-line"></span>
-          <span class="hamburger-line"></span>
-        </button>
-
-        <nav class="primary-nav">
-          <ul>
-            <li><a href="./index.html">Home</a></li>
-            <li><a href="./getting-started.html">Getting Started</a></li>
-            <li><a href="./recipes.html">Recipes</a></li>
-            <li class="active"><a href="./safety.html">Safety</a></li>
-            <li><a href="./resources.html">Resources</a></li>
-          </ul>
-        </nav>
-      </div>
-    </header>
-
-    <!-- Main section -->
-    <main class="safety-main">
-      <!-- Safety guidelines Title -->
-      <section class="safety-title">
-        <div class="title-and-image">
-          <img src="./images/icons/shield.svg" alt="shield" class="icon" />
-          <h2>Safety Guidelines</h2>
-        </div>
-        <p>
-          Understand choking risks and creating a safe feeding environment for
-          your baby
-        </p>
-      </section>
-
-      <!-- Red Box - Know what to do in an emergency -->
-      <section class="emergency-box">
-        <img
-          src="./images/icons/warning-tri.svg"
-          alt="Exclamation mark in triangle"
-          class="icon"
-        />
-        <div class="warning-info">
-          <h3>Know What to Do in an Emergency</h3>
-          <p>
-            Before starting BLW, it is recommended to take an infant CPR and
-            choking course. It is important to know the difference between
-            gagging (normal and protective) and choking (rare but serious).
-            Remember - if you suspect choking call 999 immediately!
-          </p>
-        </div>
-      </section>
-
-      <!-- Gagging vs Choking -->
-      <section class="gagging-vs-choking">
-        <div class="gagging-vs-choking-title">
-          <h3>Gagging vs. Choking: Knowing the Difference</h3>
-          <p>
-            Gagging is a normal, protective reflex. Choking is a medical
-            emergency
-          </p>
+          <img src="./images/logo.png" alt="munch sprouts logo" class="w-10" />
+          <h1 class="text-3xl font-bold">Munch Sprouts</h1>
+          <div></div>
         </div>
 
-        <div class="gagging-vs-choking-info">
-          <div class="gagging-box">
-            <div class="gagging-box-title">
-              <img src="./images/icons/heart.svg" alt="Heart" class="icon" />
-              <h3>Gagging (Normal)</h3>
-            </div>
-            <div class="gagging-box-signs">
-              <h4>Signs:</h4>
-              <ul>
-                <li>Baby is making noises (coughing or sputtering)</li>
-                <li>Their face may turn red</li>
-                <li>Their eyes may water</li>
-                <li>Their tongue may thrust forward</li>
-                <li>They may vomit or spit up food</li>
-              </ul>
-            </div>
-            <div class="gagging-box-what-to-do">
-              <h4>What to Do:</h4>
-              <ul>
-                <li>Stay calm and don't intervene</li>
-                <li>Let your baby work it out themselves</li>
-                <li>Offer reassurance with a calm voice</li>
-                <li>Continue with their meal once resolved</li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="choking-box">
-            <div class="choking-box-title">
-              <img
-                src="./images/icons/warning-tri.svg"
-                alt="Exclamation mark"
-                class="icon"
-              />
-              <h3>Choking (Emergency)</h3>
-            </div>
-            <div class="choking-box-signs">
-              <h4>Signs:</h4>
-              <ul>
-                <li>Silent or no crying</li>
-                <li>Cannot cough or make sounds</li>
-                <li>Face turns blue or purple</li>
-                <li>
-                  For older babies, they may put their hands to their throat
-                </li>
-                <li>Losing consciousness</li>
-              </ul>
-            </div>
-            <div class="choking-box-what-to-do">
-              <h4>What to Do:</h4>
-              <ul>
-                <li>Call 999 immediately!</li>
-                <li>Perform infant choking first aid</li>
-                <li>
-                  Give 5 back blows between the shoulder blades - check between
-                  each blow
-                </li>
-                <li>If required, give up to 5 chest thrusts</li>
-                <li>Repeat until the object dislodges, or help arrives</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <div class="important-info-box">
-          <p>
-            <strong>IMPORTANT:</strong> This is not a substitute for proper
-            training. It is recommended to take an infant CPR and first aid
-            course prior to start BLW.
-          </p>
-          <p>
-            <em
-              >This is advice only - always call for professional medical
-              help</em
-            >
-          </p>
-        </div>
-      </section>
-
-      <!-- Safe Food Characteristics -->
-      <section class="safe-food-chars">
-        <div class="safe-food-chars-title">
-          <img src="./images/icons/shield.svg" alt="Shield" class="icon" />
-          <h3>Safe Food Characteristics</h3>
-        </div>
-
-        <div class="safe-food-char-info">
-          <img src="./images/icons/tick.svg" alt="tick" class="icon" />
-          <h4>Soft & Squishable</h4>
-        </div>
-        <p>Can be squished between thumb and finger</p>
-
-        <div class="safe-food-char-info">
-          <img src="./images/icons/tick.svg" alt="tick" class="icon" />
-          <h4>Appropriate Size</h4>
-        </div>
-        <p>Finger-sized strips or small pieces baby can manage</p>
-
-        <div class="safe-food-char-info">
-          <img src="./images/icons/tick.svg" alt="tick" class="icon" />
-          <h4>Easy to Dissolve</h4>
-        </div>
-        <p>Breaks down easily with saliva or gum pressure</p>
-        <div class="safe-food-char-info">
-          <img src="./images/icons/tick.svg" alt="tick" class="icon" />
-          <h4>Age-Appropriate Texture</h4>
-        </div>
-        <p>Matches baby's developmental stage</p>
-      </section>
-
-      <!-- High risk foods to avoid -->
-      <section class="high-risk-foods">
-        <div class="high-risk-foods-title">
-          <img src="./images/icons/cross.svg" alt="cross" class="icon" />
-          <h3>High-Risk Foods to Avoid</h3>
-        </div>
-
-        <div class="high-risk-foods-info">
-          <img src="./images/icons/cross.svg" alt="cross" class="icon" />
-          <h4>Round & Hard Foods</h4>
-        </div>
-        <p>Whole grapes, cherry tomatoes (cut lengthways), nuts, hard sweets</p>
-
-        <div class="high-risk-foods-info">
-          <img src="./images/icons/cross.svg" alt="cross" class="icon" />
-          <h4>Sticky or Thick Foods</h4>
-        </div>
-        <p>Peanut butter (by the spoon), thick nut butters, marshmallows</p>
-
-        <div class="high-risk-foods-info">
-          <img src="./images/icons/cross.svg" alt="cross" class="icon" />
-          <h4>Raw Hard Vegetables</h4>
-        </div>
-        <p>Raw carrots, apples, celery - they must be cooked until soft</p>
-
-        <div class="high-risk-foods-info">
-          <img src="./images/icons/cross.svg" alt="cross" class="icon" />
-          <h4>Popcorn & Small Seeds</h4>
-        </div>
-        <p>Can easily get lodged in the airway</p>
-      </section>
-
-      <!-- Creating a safe environment -->
-      <section class="safe-environment">
-        <div class="safe-environment-title">
-          <h3>Creating a Safe Eating Environment</h3>
-          <p>Essential safety practices for every meal</p>
-        </div>
-
-        <div class="safe-environment-info">
-          <div class="safe-environment-info-title">
-            <img src="./images/icons/shield.svg" alt="shield" class="icon" />
-            <h4>Always Supervise</h4>
-          </div>
-          <ul>
-            <li>Stay within arm's reach at all times</li>
-            <li>Give baby your full attention</li>
-            <li>No eating while in the car or a pushchair</li>
-            <li>Avoid distractions (e.g. TV or Mobile Phone)</li>
-          </ul>
-        </div>
-
-        <div class="safe-environment-info">
-          <div class="safe-environment-info-title">
-            <img src="./images/icons/shield.svg" alt="shield" class="icon" />
-            <h4>Proper Positioning</h4>
-          </div>
-          <ul>
-            <li>Baby sits fully upright</li>
-            <li>Feet supported on footrest</li>
-            <li>Never sit reclined or slouched</li>
-            <li>Secure with high chair straps</li>
-          </ul>
-        </div>
-
-        <div class="safe-environment-info">
-          <div class="safe-environment-info-title">
-            <img src="./images/icons/shield.svg" alt="shield" class="icon" />
-            <h4>Meal Pace</h4>
-          </div>
-          <ul>
-            <li>Let baby control their speed</li>
-            <li>Don't rush meals</li>
-            <li>Allow time to chew and swallow</li>
-            <li>Watch for signs of fullness</li>
-          </ul>
-        </div>
-
-        <div class="safe-environment-info">
-          <div class="safe-environment-info-title">
-            <img src="./images/icons/shield.svg" alt="shield" class="icon" />
-            <h4>Food Temperature</h4>
-          </div>
-          <ul>
-            <li>Always test temperature first</li>
-            <li>Serve food lukewarm, not hot</li>
-            <li>Stir to distribute heat evenly</li>
-            <li>Let food cool completely if needed</li>
-          </ul>
-        </div>
-
-        <div class="safe-environment-info">
-          <div class="safe-environment-info-title">
-            <img src="./images/icons/shield.svg" alt="shield" class="icon" />
-            <h4>Minimise Distractions</h4>
-          </div>
-          <ul>
-            <li>Turn off TV screens</li>
-            <li>Try and promote a quiet, calm environment</li>
-            <li>Focus on eating, not playing</li>
-            <li>Remove toys from tray</li>
-          </ul>
-        </div>
-
-        <div class="safe-environment-info">
-          <div class="safe-environment-info-title">
-            <img src="./images/icons/shield.svg" alt="shield" class="icon" />
-            <h4>Baby's State</h4>
-          </div>
-          <ul>
-            <li>Ensure baby is fully alert and awake</li>
-            <li>Not overtired or cranky</li>
-            <li>Not excessively hungry</li>
-            <li>In a good mood for eating</li>
-          </ul>
-        </div>
-      </section>
-
-      <!-- How to modify high-risk foods -->
-      <section class="modify-high-risk-foods">
-        <div class="modify-title">
-          <h3>How to Modify High-Risk Foods</h3>
-          <p>Make common foods safer for baby led weaning</p>
-        </div>
-
-        <div class="modify-info">
-          <h4>Grapes & Cherry Tomatoes</h4>
-          <p><bold>Risk:</bold> Round shapes can block the airway</p>
-          <p>
-            <bold>Make Safe:</bold> Cut lengthways and then into quarters for
-            infants under 12 months
-          </p>
-        </div>
-
-        <div class="modify-info">
-          <h4>Hot Dogs & Sausages</h4>
-          <p><bold>Risk:</bold> Round and slippery</p>
-          <p>
-            <bold>Make Safe:</bold> Cut lengthways into thin strips, then into
-            small pieces
-          </p>
-        </div>
-
-        <div class="modify-info">
-          <h4>Nut Butters</h4>
-          <p><bold>Risk:</bold> Thick and sticky</p>
-          <p>
-            <bold>Make Safe:</bold> Spread thinly on toast or mix into porridge
-            or yoghurt
-          </p>
-        </div>
-
-        <div class="modify-info">
-          <h4>Raw Apples & Carrots</h4>
-          <p><bold>Risk:</bold> Too hard to chew</p>
-          <p>
-            <bold>Make Safe:</bold> Steam or roast until fork-tender, or grate
-            finely
-          </p>
-        </div>
-
-        <div class="modify-info">
-          <h4>Berries (Blueberries)</h4>
-          <p><bold>Risk:</bold> Small and round</p>
-          <p>
-            <bold>Make Safe:</bold> Squish flat or cut in half for babies under
-            9 months
-          </p>
-        </div>
-
-        <div class="modify-info">
-          <h4>Bread</h4>
-          <p><bold>Risk:</bold> Can form a sticky ball in mouth</p>
-          <p>
-            <bold>Make Safe:</bold> Lightly toast and spread with toppings to
-            add moisture
-          </p>
-        </div>
-      </section>
-
-      <!-- Emergency preparedness -->
-      <section class="emergency-preparedness">
-        <img src="./images/icons/phone.svg" alt="phone" class="icon" />
-        <div class="preparedness-info">
-          <h3>Emergency Preparedness</h3>
-          <p>Before starting BLW, ensure you have:</p>
-          <ul>
-            <li>Emergency numbers handy (999 especially!)</li>
-            <li>Completed an infant CPR and first aid certification</li>
-            <li>Discussed BLW with your health visitor</li>
-            <li>Practiced choking response techniques</li>
-          </ul>
-        </div>
-      </section>
-    </main>
-
-    <!-- Footer -->
-    <footer class="site-footer">
-      <div class="footer-text">
-        <div class="footer-desc">
-          <div class="footer-logo">
-            <img
-              src="./images/logo.png"
-              alt="Cartoon baby hand holding broccoli"
-              id="footer-logo"
+        <div class="hamburger-symbol hover:cursor-pointer lg:hidden">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="size-6"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
             />
-            <h3>Munch Sprouts</h3>
+          </svg>
+        </div>
+
+        <!-- Lg navigation -->
+        <div class="hidden h-full self-stretch items-stretch lg:flex">
+          <nav class="h-full">
+            <ul class="flex h-full items-stretch gap-1 px-2.5 pt-2.5">
+              <li class="lg-nav-elems">
+                <a href="index.html">Home</a>
+              </li>
+              <li class="lg-nav-elems">
+                <a href="./getting-started.html">Getting Started</a>
+              </li>
+              <li class="lg-nav-elems">
+                <a href="./recipes.html">Recipes</a>
+              </li>
+              <li class="lg-nav-elems lg-this-page">
+                <a href="./safety.html">Safety</a>
+              </li>
+              <li class="lg-nav-elems">
+                <a href="./resources.html">Resources</a>
+              </li>
+              <li class="lg-nav-elems">
+                <a href="./tracker-new.html">Tracker</a>
+              </li>
+              <li class="lg-nav-elems">
+                <a href="./build/">Tracker App</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+
+      <!-- Mobile navigation -->
+      <nav class="primary-nav bg-bg-main nav-hidden fixed mt-14 lg:hidden">
+        <ul class="flex w-full flex-col items-center gap-2.5 p-2.5">
+          <li class="nav-elems">
+            <a href="index.html">Home</a>
+          </li>
+          <li class="nav-elems">
+            <a href="./getting-started.html" class="block h-full w-full"
+              >Getting Started</a
+            >
+          </li>
+          <li class="nav-elems">
+            <a href="./recipes.html" class="block h-full w-full">Recipes</a>
+          </li>
+          <li class="nav-elems this-page">
+            <a
+              href="./safety.html"
+              class="text-primary-pink-dark block h-full w-full"
+              >Safety</a
+            >
+          </li>
+          <li class="nav-elems">
+            <a href="./resources.html" class="block h-full w-full">Resources</a>
+          </li>
+          <li class="nav-elems">
+            <a href="./tracker-new.html" class="block h-full w-full">Tracker</a>
+          </li>
+          <li class="nav-elems">
+            <a href="./build/" class="block h-full w-full">Tracker App</a>
+          </li>
+        </ul>
+      </nav>
+
+      <main class="body bg-bg-main mt-14 flex flex-col gap-5">
+
+        <!-- Intro Section -->
+        <section class="section-base bg-bg-purple">
+          <div class="flex items-center gap-3">
+            <img src="./images/icons/shield.svg" alt="shield" class="icon" />
+            <h2 class="text-2xl font-bold">Safety Guidelines</h2>
           </div>
-          <p>
-            Your complete guide to introducing solid foods to your baby with
-            fun, safe, and nutritious recipes.
+          <p class="para text-center">
+            Understand choking risks and creating a safe feeding environment for
+            your baby
+          </p>
+        </section>
+
+        <!-- Emergency Warning Box -->
+        <section class="section-base bg-bg-warning border-2 border-warning-stroke">
+          <div class="flex w-full items-start gap-4">
+            <img
+              src="./images/icons/warning-tri.svg"
+              alt="Warning"
+              class="icon shrink-0 bg-bg-secondary-warning"
+            />
+            <div class="flex flex-col gap-2.5">
+              <h3 class="text-xl font-semibold">
+                Know What to Do in an Emergency
+              </h3>
+              <p class="para">
+                Before starting BLW, it is recommended to take an infant CPR
+                and choking course. It is important to know the difference
+                between gagging (normal and protective) and choking (rare but
+                serious). Remember — if you suspect choking call
+                <strong>999 immediately!</strong>
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Gagging vs Choking -->
+        <section class="section-base bg-bg-purple">
+          <div class="flex flex-col items-center gap-1">
+            <h3 class="text-xl font-semibold">
+              Gagging vs. Choking: Knowing the Difference
+            </h3>
+            <p class="para text-center">
+              Gagging is a normal, protective reflex. Choking is a medical
+              emergency
+            </p>
+          </div>
+
+          <div class="flex w-full flex-col gap-5 lg:flex-row">
+            <!-- Gagging card -->
+            <div
+              class="flex flex-1 flex-col gap-4 rounded-2xl bg-bg-green p-5 shadow-md"
+            >
+              <div class="flex items-center gap-3">
+                <img
+                  src="./images/icons/heart.svg"
+                  alt="Heart"
+                  class="icon shrink-0"
+                />
+                <h3 class="text-lg font-semibold">Gagging (Normal)</h3>
+              </div>
+              <div class="flex flex-col gap-2">
+                <h4 class="font-semibold">Signs:</h4>
+                <ul class="para flex list-inside list-disc flex-col gap-1">
+                  <li>Baby is making noises (coughing or sputtering)</li>
+                  <li>Their face may turn red</li>
+                  <li>Their eyes may water</li>
+                  <li>Their tongue may thrust forward</li>
+                  <li>They may vomit or spit up food</li>
+                </ul>
+              </div>
+              <div class="flex flex-col gap-2">
+                <h4 class="font-semibold">What to Do:</h4>
+                <ul class="para flex list-inside list-disc flex-col gap-1">
+                  <li>Stay calm and don't intervene</li>
+                  <li>Let your baby work it out themselves</li>
+                  <li>Offer reassurance with a calm voice</li>
+                  <li>Continue with their meal once resolved</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Choking card -->
+            <div
+              class="flex flex-1 flex-col gap-4 rounded-2xl border-2 border-warning-stroke bg-bg-warning p-5 shadow-md"
+            >
+              <div class="flex items-center gap-3">
+                <img
+                  src="./images/icons/warning-tri.svg"
+                  alt="Warning"
+                  class="icon shrink-0 bg-bg-secondary-warning"
+                />
+                <h3 class="text-lg font-semibold">Choking (Emergency)</h3>
+              </div>
+              <div class="flex flex-col gap-2">
+                <h4 class="font-semibold">Signs:</h4>
+                <ul class="para flex list-inside list-disc flex-col gap-1">
+                  <li>Silent or no crying</li>
+                  <li>Cannot cough or make sounds</li>
+                  <li>Face turns blue or purple</li>
+                  <li>
+                    For older babies, they may put their hands to their throat
+                  </li>
+                  <li>Losing consciousness</li>
+                </ul>
+              </div>
+              <div class="flex flex-col gap-2">
+                <h4 class="font-semibold">What to Do:</h4>
+                <ul class="para flex list-inside list-disc flex-col gap-1">
+                  <li>Call 999 immediately!</li>
+                  <li>Perform infant choking first aid</li>
+                  <li>
+                    Give 5 back blows between the shoulder blades — check
+                    between each blow
+                  </li>
+                  <li>If required, give up to 5 chest thrusts</li>
+                  <li>
+                    Repeat until the object dislodges, or help arrives
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Important note -->
+          <div
+            class="bg-bg-warning border-warning-stroke flex w-full flex-col items-center gap-2.5 rounded-xl border-2 p-5"
+          >
+            <p class="para text-center">
+              <strong>IMPORTANT:</strong> This is not a substitute for proper
+              training. It is recommended to take an infant CPR and first aid
+              course prior to starting BLW.
+            </p>
+            <p class="para text-center">
+              <em
+                >This is advice only — always call for professional medical
+                help</em
+              >
+            </p>
+          </div>
+        </section>
+
+        <!-- Safe Food Characteristics -->
+        <section class="section-base bg-bg-green">
+          <div class="flex items-center gap-3">
+            <img src="./images/icons/shield.svg" alt="Shield" class="icon" />
+            <h3 class="text-xl font-semibold">Safe Food Characteristics</h3>
+          </div>
+          <div class="grid w-full grid-cols-1 gap-4 lg:grid-cols-2">
+            <div class="info-card">
+              <img
+                src="./images/icons/tick.svg"
+                alt="tick"
+                class="icon shrink-0"
+              />
+              <div class="info-card-content">
+                <h4 class="font-semibold">Soft &amp; Squishable</h4>
+                <p class="para">Can be squished between thumb and finger</p>
+              </div>
+            </div>
+            <div class="info-card">
+              <img
+                src="./images/icons/tick.svg"
+                alt="tick"
+                class="icon shrink-0"
+              />
+              <div class="info-card-content">
+                <h4 class="font-semibold">Appropriate Size</h4>
+                <p class="para">
+                  Finger-sized strips or small pieces baby can manage
+                </p>
+              </div>
+            </div>
+            <div class="info-card">
+              <img
+                src="./images/icons/tick.svg"
+                alt="tick"
+                class="icon shrink-0"
+              />
+              <div class="info-card-content">
+                <h4 class="font-semibold">Easy to Dissolve</h4>
+                <p class="para">
+                  Breaks down easily with saliva or gum pressure
+                </p>
+              </div>
+            </div>
+            <div class="info-card">
+              <img
+                src="./images/icons/tick.svg"
+                alt="tick"
+                class="icon shrink-0"
+              />
+              <div class="info-card-content">
+                <h4 class="font-semibold">Age-Appropriate Texture</h4>
+                <p class="para">Matches baby's developmental stage</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- High Risk Foods to Avoid -->
+        <section class="section-base bg-bg-warning">
+          <div class="flex items-center gap-3">
+            <img
+              src="./images/icons/cross.svg"
+              alt="cross"
+              class="icon shrink-0 bg-bg-secondary-warning"
+            />
+            <h3 class="text-xl font-semibold">High-Risk Foods to Avoid</h3>
+          </div>
+          <div class="grid w-full grid-cols-1 gap-4 lg:grid-cols-2">
+            <div class="info-card bg-bg-warning">
+              <img
+                src="./images/icons/cross.svg"
+                alt="cross"
+                class="icon shrink-0 bg-bg-secondary-warning"
+              />
+              <div class="info-card-content">
+                <h4 class="font-semibold">Round &amp; Hard Foods</h4>
+                <p class="para">
+                  Whole grapes, cherry tomatoes (cut lengthways), nuts, hard
+                  sweets
+                </p>
+              </div>
+            </div>
+            <div class="info-card bg-bg-warning">
+              <img
+                src="./images/icons/cross.svg"
+                alt="cross"
+                class="icon shrink-0 bg-bg-secondary-warning"
+              />
+              <div class="info-card-content">
+                <h4 class="font-semibold">Sticky or Thick Foods</h4>
+                <p class="para">
+                  Peanut butter (by the spoon), thick nut butters, marshmallows
+                </p>
+              </div>
+            </div>
+            <div class="info-card bg-bg-warning">
+              <img
+                src="./images/icons/cross.svg"
+                alt="cross"
+                class="icon shrink-0 bg-bg-secondary-warning"
+              />
+              <div class="info-card-content">
+                <h4 class="font-semibold">Raw Hard Vegetables</h4>
+                <p class="para">
+                  Raw carrots, apples, celery — they must be cooked until soft
+                </p>
+              </div>
+            </div>
+            <div class="info-card bg-bg-warning">
+              <img
+                src="./images/icons/cross.svg"
+                alt="cross"
+                class="icon shrink-0 bg-bg-secondary-warning"
+              />
+              <div class="info-card-content">
+                <h4 class="font-semibold">Popcorn &amp; Small Seeds</h4>
+                <p class="para">Can easily get lodged in the airway</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Creating a Safe Eating Environment -->
+        <section class="section-base bg-bg-purple">
+          <div class="flex flex-col items-center gap-1">
+            <h3 class="text-xl font-semibold">
+              Creating a Safe Eating Environment
+            </h3>
+            <p class="para text-center">
+              Essential safety practices for every meal
+            </p>
+          </div>
+          <div class="grid w-full grid-cols-1 gap-5 lg:grid-cols-2">
+            <div class="info-card">
+              <img
+                src="./images/icons/shield.svg"
+                alt="shield"
+                class="icon shrink-0"
+              />
+              <div class="info-card-content">
+                <h4 class="font-semibold">Always Supervise</h4>
+                <ul class="para flex list-inside list-disc flex-col gap-1">
+                  <li>Stay within arm's reach at all times</li>
+                  <li>Give baby your full attention</li>
+                  <li>No eating while in the car or a pushchair</li>
+                  <li>Avoid distractions (e.g. TV or mobile phone)</li>
+                </ul>
+              </div>
+            </div>
+            <div class="info-card">
+              <img
+                src="./images/icons/shield.svg"
+                alt="shield"
+                class="icon shrink-0"
+              />
+              <div class="info-card-content">
+                <h4 class="font-semibold">Proper Positioning</h4>
+                <ul class="para flex list-inside list-disc flex-col gap-1">
+                  <li>Baby sits fully upright</li>
+                  <li>Feet supported on footrest</li>
+                  <li>Never sit reclined or slouched</li>
+                  <li>Secure with high chair straps</li>
+                </ul>
+              </div>
+            </div>
+            <div class="info-card">
+              <img
+                src="./images/icons/shield.svg"
+                alt="shield"
+                class="icon shrink-0"
+              />
+              <div class="info-card-content">
+                <h4 class="font-semibold">Meal Pace</h4>
+                <ul class="para flex list-inside list-disc flex-col gap-1">
+                  <li>Let baby control their speed</li>
+                  <li>Don't rush meals</li>
+                  <li>Allow time to chew and swallow</li>
+                  <li>Watch for signs of fullness</li>
+                </ul>
+              </div>
+            </div>
+            <div class="info-card">
+              <img
+                src="./images/icons/shield.svg"
+                alt="shield"
+                class="icon shrink-0"
+              />
+              <div class="info-card-content">
+                <h4 class="font-semibold">Food Temperature</h4>
+                <ul class="para flex list-inside list-disc flex-col gap-1">
+                  <li>Always test temperature first</li>
+                  <li>Serve food lukewarm, not hot</li>
+                  <li>Stir to distribute heat evenly</li>
+                  <li>Let food cool completely if needed</li>
+                </ul>
+              </div>
+            </div>
+            <div class="info-card">
+              <img
+                src="./images/icons/shield.svg"
+                alt="shield"
+                class="icon shrink-0"
+              />
+              <div class="info-card-content">
+                <h4 class="font-semibold">Minimise Distractions</h4>
+                <ul class="para flex list-inside list-disc flex-col gap-1">
+                  <li>Turn off TV screens</li>
+                  <li>Promote a quiet, calm environment</li>
+                  <li>Focus on eating, not playing</li>
+                  <li>Remove toys from tray</li>
+                </ul>
+              </div>
+            </div>
+            <div class="info-card">
+              <img
+                src="./images/icons/shield.svg"
+                alt="shield"
+                class="icon shrink-0"
+              />
+              <div class="info-card-content">
+                <h4 class="font-semibold">Baby's State</h4>
+                <ul class="para flex list-inside list-disc flex-col gap-1">
+                  <li>Ensure baby is fully alert and awake</li>
+                  <li>Not overtired or cranky</li>
+                  <li>Not excessively hungry</li>
+                  <li>In a good mood for eating</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- How to Modify High-Risk Foods -->
+        <section class="section-base bg-bg-purple">
+          <div class="flex flex-col items-center gap-1">
+            <h3 class="text-xl font-semibold">
+              How to Modify High-Risk Foods
+            </h3>
+            <p class="para text-center">
+              Make common foods safer for baby led weaning
+            </p>
+          </div>
+          <div class="grid w-full grid-cols-1 gap-5 lg:grid-cols-2">
+            <div class="flex flex-col gap-2 rounded-2xl bg-white p-5 shadow-md">
+              <h4 class="font-semibold">Grapes &amp; Cherry Tomatoes</h4>
+              <p class="para">
+                <strong>Risk:</strong> Round shapes can block the airway
+              </p>
+              <p class="para">
+                <strong>Make Safe:</strong> Cut lengthways and then into
+                quarters for infants under 12 months
+              </p>
+            </div>
+            <div class="flex flex-col gap-2 rounded-2xl bg-white p-5 shadow-md">
+              <h4 class="font-semibold">Hot Dogs &amp; Sausages</h4>
+              <p class="para">
+                <strong>Risk:</strong> Round and slippery
+              </p>
+              <p class="para">
+                <strong>Make Safe:</strong> Cut lengthways into thin strips,
+                then into small pieces
+              </p>
+            </div>
+            <div class="flex flex-col gap-2 rounded-2xl bg-white p-5 shadow-md">
+              <h4 class="font-semibold">Nut Butters</h4>
+              <p class="para">
+                <strong>Risk:</strong> Thick and sticky
+              </p>
+              <p class="para">
+                <strong>Make Safe:</strong> Spread thinly on toast or mix into
+                porridge or yoghurt
+              </p>
+            </div>
+            <div class="flex flex-col gap-2 rounded-2xl bg-white p-5 shadow-md">
+              <h4 class="font-semibold">Raw Apples &amp; Carrots</h4>
+              <p class="para">
+                <strong>Risk:</strong> Too hard to chew
+              </p>
+              <p class="para">
+                <strong>Make Safe:</strong> Steam or roast until fork-tender,
+                or grate finely
+              </p>
+            </div>
+            <div class="flex flex-col gap-2 rounded-2xl bg-white p-5 shadow-md">
+              <h4 class="font-semibold">Berries (Blueberries)</h4>
+              <p class="para">
+                <strong>Risk:</strong> Small and round
+              </p>
+              <p class="para">
+                <strong>Make Safe:</strong> Squish flat or cut in half for
+                babies under 9 months
+              </p>
+            </div>
+            <div class="flex flex-col gap-2 rounded-2xl bg-white p-5 shadow-md">
+              <h4 class="font-semibold">Bread</h4>
+              <p class="para">
+                <strong>Risk:</strong> Can form a sticky ball in mouth
+              </p>
+              <p class="para">
+                <strong>Make Safe:</strong> Lightly toast and spread with
+                toppings to add moisture
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Emergency Preparedness -->
+        <section class="section-base bg-bg-warning border-2 border-warning-stroke">
+          <div class="info-card w-full bg-bg-warning">
+            <img
+              src="./images/icons/phone.svg"
+              alt="phone"
+              class="icon shrink-0 bg-bg-secondary-warning"
+            />
+            <div class="info-card-content">
+              <h3 class="text-xl font-semibold">Emergency Preparedness</h3>
+              <p class="para">Before starting BLW, ensure you have:</p>
+              <ul class="para flex list-inside list-disc flex-col gap-1">
+                <li>Emergency numbers handy (999 especially!)</li>
+                <li>
+                  Completed an infant CPR and first aid certification
+                </li>
+                <li>Discussed BLW with your health visitor</li>
+                <li>Practiced choking response techniques</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+      </main>
+
+      <footer class="section-base bg-white">
+        <div class="flex items-center gap-3">
+          <img src="./images/logo.png" alt="munch sprouts logo" class="w-10" />
+          <h3 class="heading3">Munch Sprouts</h3>
+        </div>
+        <p class="para text-center">
+          Your complete guide to introducing solid foods to your baby with fun,
+          safe and nutritious recipes
+        </p>
+        <div
+          class="bg-bg-warning border-warning-stroke flex flex-col items-center gap-2.5 rounded-xl border-2 p-1"
+        >
+          <h4 class="text-lg font-bold">Important Note</h4>
+          <p class="para text-center">
+            Always consult your GP and Health Visitor before starting baby led
+            weaning. This site is for general information only and should not
+            replace professional advice.
           </p>
         </div>
+      </footer>
 
-        <div class="important-info">
-          <h3>Important Note</h3>
-          <p>
-            Always consult with your GP and health visitor before starting baby
-            led weaning. This site is for general information only and should
-            not replace professional advice.
-          </p>
-        </div>
+      <div class="section-base">
+        <p class="para text-center text-xs">
+          &copy; 2026 Munch Sprouts. For informational purposes only.
+        </p>
       </div>
+    </div>
 
-      <div class="horizontal-rule"></div>
-
-      <div class="copyright">
-        <p>&copy; 2026 MunchSprouts. For informational purposes only.</p>
-      </div>
-    </footer>
+    <script src="./js/main.js"></script>
+    <script src="./js/app-banner.js"></script>
   </body>
 </html>
