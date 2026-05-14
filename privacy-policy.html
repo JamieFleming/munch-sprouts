@@ -4,17 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="output.css" rel="stylesheet" />
-    <title>Privacy Policy - MunchSprout</title>
+    <title>Privacy Policy - Munch Sprouts</title>
   </head>
 
   <body class="bg-bg-main text-text-charcoal-dark">
     <!-- Header -->
-    <header
-      class="fixed flex w-screen items-center justify-between bg-white p-2.5 shadow-md"
-    >
-      <div
-        class="flex w-full items-center justify-between lg:justify-start lg:gap-5"
-      >
+    <header class="fixed flex w-screen items-center justify-between bg-white px-2.5 pt-2.5 pb-0 shadow-md">
+      <div class="flex w-full items-center justify-between lg:justify-start lg:gap-5">
         <img src="./images/logo.png" alt="munch sprouts logo" class="w-10" />
         <a href="https://www.munchsprouts.co.uk">
           <h1 class="text-3xl font-bold">Munch Sprouts</h1>
@@ -23,365 +19,295 @@
       </div>
 
       <div class="hamburger-symbol hover:cursor-pointer lg:hidden">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke-width="1.5"
-          stroke="currentColor"
-          class="size-6"
-        >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-          />
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
         </svg>
       </div>
 
       <!-- Lg navigation -->
-      <div class="hidden lg:flex">
+      <div class="hidden h-full self-stretch items-stretch lg:flex">
         <nav class="h-full">
-          <ul class="flex h-full items-center gap-5 p-2.5">
-            <li class="lg-nav-elems lg-this-page">
-              <a href="index.html" class="text-primary-pink-dark">Home</a>
-            </li>
-            <li class="lg-nav-elems">
-              <a href="./getting-started.html" class="">Getting Started</a>
-            </li>
-            <li class="lg-nav-elems">
-              <a href="./recipes.html" class="">Recipes</a>
-            </li>
-            <li class="lg-nav-elems">
-              <a href="./safety.html" class="">Safety</a>
-            </li>
-            <li class="lg-nav-elems">
-              <a href="./resources.html" class="">Resources</a>
-            </li>
-            <li class="lg-nav-elems">
-              <a href="./tracker-new.html" class="">Tracker</a>
-            </li>
-            <li class="lg-nav-elems">
-              <a href="./build/" class="">Tracker App New</a>
-            </li>
+          <ul class="flex h-full items-stretch gap-1 px-2.5 pt-2.5">
+            <li class="lg-nav-elems"><a href="index.html">Home</a></li>
+            <li class="lg-nav-elems"><a href="./getting-started.html">Getting Started</a></li>
+            <li class="lg-nav-elems"><a href="./recipes.html">Recipes</a></li>
+            <li class="lg-nav-elems"><a href="./safety.html">Safety</a></li>
+            <li class="lg-nav-elems"><a href="./resources.html">Resources</a></li>
+            <li class="lg-nav-elems"><a href="./tracker-new.html">Tracker</a></li>
+            <li class="lg-nav-elems"><a href="./build/">Tracker App</a></li>
           </ul>
         </nav>
       </div>
     </header>
 
-    <!-- navigation -->
+    <!-- Mobile navigation -->
     <nav class="primary-nav bg-bg-main nav-hidden fixed mt-14 lg:hidden">
       <ul class="flex flex-col items-center gap-2.5 p-2.5">
-        <li class="nav-elems this-page">
-          <a
-            href="index.html"
-            class="text-primary-pink-dark block h-full w-full"
-            >Home</a
-          >
-        </li>
-        <li class="nav-elems">
-          <a href="./getting-started.html" class="block h-full w-full"
-            >Getting Started</a
-          >
-        </li>
-        <li class="nav-elems">
-          <a href="./recipes.html" class="block h-full w-full">Recipes</a>
-        </li>
-        <li class="nav-elems">
-          <a href="./safety.html" class="block h-full w-full">Safety</a>
-        </li>
-        <li class="nav-elems">
-          <a href="./resources.html" class="block h-full w-full">Resources</a>
-        </li>
-        <li class="nav-elems">
-          <a href="./tracker-new.html" class="block h-full w-full">Tracker</a>
-        </li>
-        <li class="nav-elems">
-          <a href="./build/" class="block h-full w-full">Tracker App New</a>
-        </li>
+        <li class="nav-elems"><a href="index.html" class="block h-full w-full">Home</a></li>
+        <li class="nav-elems"><a href="./getting-started.html" class="block h-full w-full">Getting Started</a></li>
+        <li class="nav-elems"><a href="./recipes.html" class="block h-full w-full">Recipes</a></li>
+        <li class="nav-elems"><a href="./safety.html" class="block h-full w-full">Safety</a></li>
+        <li class="nav-elems"><a href="./resources.html" class="block h-full w-full">Resources</a></li>
+        <li class="nav-elems"><a href="./tracker-new.html" class="block h-full w-full">Tracker</a></li>
+        <li class="nav-elems"><a href="./build/" class="block h-full w-full">Tracker App</a></li>
       </ul>
     </nav>
 
-    <div class="mx-auto max-w-3xl p-6">
-      <!-- Card Container -->
-      <div class="mt-14 flex flex-col gap-6 rounded-2xl bg-white p-6 shadow-md">
-        <div>
-          <h1 class="heading2 text-primary-green">
-            Privacy Policy for MunchSprout
-          </h1>
-          <p class="para mt-2"><strong>Last updated:</strong> 25/04/2026</p>
-        </div>
+    <div class="mx-auto max-w-3xl px-2 pb-10">
+      <div class="mt-16 flex flex-col gap-7 rounded-2xl bg-white p-6 shadow-md">
 
-        <p class="para">
-          MunchSprout (“we”, “our”, or “us”) respects your privacy and is
-          committed to protecting your personal data. This Privacy Policy
-          explains how we collect, use, store, share, and safeguard your
-          information when you use the MunchSprout website and mobile
-          application, including related services, content, and features.
-        </p>
-
-        <p class="para">
-          We do not sell your personal data. We only collect and use personal
-          data where we have a valid legal reason to do so and where it is
-          necessary to provide MunchSprout, improve it, keep it secure, and
-          respond to support requests.
-        </p>
-
-        <!-- Section -->
-        <div class="flex flex-col gap-4">
-          <h2 class="heading3 text-primary-green">Who We Are</h2>
-          <p class="para">
-            MunchSprout is a website and app designed for parents and caregivers
-            to record and manage weaning and feeding information.
-          </p>
-          <p class="para">
-            For the purposes of UK data protection law, MunchSprout is the data
-            controller for the personal data described in this Privacy Policy.
-          </p>
-        </div>
-
-        <!-- Section -->
-        <div class="flex flex-col gap-4">
-          <h2 class="heading3 text-primary-green">Information We Collect</h2>
-
-          <div>
-            <h3 class="font-semibold">Information you provide directly</h3>
-            <ul class="para list-inside list-disc">
-              <li>Email address (for account creation, login, and support)</li>
-              <li>Name or display name associated with your account</li>
-              <li>Profile images or other images you choose to upload</li>
-              <li>Messages or information you send when contacting us</li>
-            </ul>
-          </div>
-
-          <div>
-            <h3 class="font-semibold">User-generated app data</h3>
-            <ul class="para list-inside list-disc">
-              <li>Child profiles (for example name, age, or date of birth)</li>
-              <li>Food logs, dates, reactions, categories, favourites, and preferences</li>
-              <li>Notes, feeding history, and other records you choose to add</li>
-              <li>Recipes or other content submitted through the app or website</li>
-            </ul>
-          </div>
-
-          <div>
-            <h3 class="font-semibold">Technical and usage information</h3>
-            <ul class="para list-inside list-disc">
-              <li>Device type, browser type, and operating system</li>
-              <li>Basic log, diagnostic, crash, and performance information</li>
-              <li>App and website usage information needed to maintain and improve the service</li>
-            </ul>
-          </div>
-        </div>
-
-        <!-- Section -->
-        <div class="flex flex-col gap-4">
-          <h2 class="heading3 text-primary-green">How We Use Your Information</h2>
-          <ul class="para list-inside list-disc">
-            <li>Provide, operate, and maintain MunchSprout</li>
-            <li>Create and manage your account</li>
-            <li>Sync your information securely across devices</li>
-            <li>Enable features such as dashboards, image upload, and exports</li>
-            <li>Respond to support requests and other enquiries</li>
-            <li>Improve app performance, reliability, and user experience</li>
-            <li>Monitor, prevent, and investigate misuse, fraud, or security issues</li>
-            <li>Comply with legal obligations and enforce our terms where necessary</li>
-          </ul>
-
-          <div class="info-card">
-            <div class="info-card-content">
-              <p class="font-semibold">We do not sell your personal data.</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Section -->
-        <div class="flex flex-col gap-4">
-          <h2 class="heading3 text-primary-green">Lawful Bases for Processing</h2>
-          <p class="para">
-            Depending on how you use MunchSprout, we rely on one or more lawful
-            bases under UK data protection law, including performance of a
-            contract where we provide the service you request, legitimate
-            interests in running, improving, and securing MunchSprout, legal
-            obligations where processing is required by law, and consent where
-            consent is specifically requested.
-          </p>
-          <p class="para">
-            Where we rely on legitimate interests, these interests generally
-            include operating the platform effectively, improving features,
-            preventing abuse, and keeping user data and systems secure.
-          </p>
-        </div>
-
-        <!-- Section -->
-        <div class="flex flex-col gap-4">
-          <h2 class="heading3 text-primary-green">Data Storage & Security</h2>
-          <ul class="para list-inside list-disc">
-            <li>Secure authentication systems</li>
-            <li>Encrypted data transmission where supported</li>
-            <li>Restricted access to stored data</li>
-            <li>Cloud storage and infrastructure providers used to host and process data</li>
-          </ul>
-          <p class="para">
-            Your data is stored securely and only accessible to you through your
-            account, subject to the technical and organisational measures used to
-            protect the service. No method of transmission or storage is
-            completely secure, so absolute security cannot be guaranteed.
-          </p>
-        </div>
-
-        <!-- Section -->
-        <div class="flex flex-col gap-4">
-          <h2 class="heading3 text-primary-green">Data Sync & Accounts</h2>
-          <ul class="para list-inside list-disc">
-            <li>Your data may be stored securely in the cloud to enable account access</li>
-            <li>You may be able to access your data across multiple devices</li>
-            <li>You are responsible for keeping your login details secure</li>
-            <li>You should notify us promptly if you believe your account has been accessed without permission</li>
-          </ul>
-        </div>
-
-        <!-- Section -->
-        <div class="flex flex-col gap-4">
-          <h2 class="heading3 text-primary-green">Data Sharing</h2>
-          <ul class="para list-inside list-disc">
-            <li>With service providers who help us operate the app or website, such as hosting, storage, authentication, analytics, or support tools</li>
-            <li>When required by law, regulation, court order, or legal process</li>
-            <li>To protect rights, safety, property, users, or the integrity of the service</li>
-            <li>In connection with a business transfer, merger, sale, or restructuring, if that ever occurs</li>
-          </ul>
-          <p class="para">
-            We require service providers to process personal data only as needed
-            to provide services to us and in accordance with appropriate privacy
-            and security obligations.
-          </p>
-        </div>
-
-        <!-- Section -->
-        <div class="flex flex-col gap-4">
-          <h2 class="heading3 text-primary-green">International Transfers</h2>
-          <p class="para">
-            Some of the service providers we use may process personal data
-            outside the UK. Where this happens, appropriate safeguards will be
-            used where required by law, such as adequacy regulations or
-            contractual protections designed to safeguard personal data.
-          </p>
-        </div>
-
-        <!-- Section -->
-        <div class="flex flex-col gap-4">
-          <h2 class="heading3 text-primary-green">Children’s Privacy</h2>
-          <p class="para">
-            MunchSprout is designed for use by parents and caregivers.
-          </p>
-          <div class="bg-bg-warning rounded-xl p-4">
-            <p class="para">
-              We do <strong>not knowingly collect personal data directly from children</strong>.
-              Any child-related data is entered by a parent or guardian and
-              remains under their control. Users should only enter information
-              they are entitled to provide.
+        <!-- Title block -->
+        <div class="border-b border-gray-100 pb-5">
+          <p class="mb-1 text-xs font-semibold uppercase tracking-widest text-gray-400">MunchSprouts</p>
+          <h1 class="heading2 text-primary-green">Privacy Policy</h1>
+          <p class="para mt-2 text-sm"><strong>Last updated:</strong> 14 May 2026</p>
+          <div class="mt-4 rounded-xl bg-bg-purple p-4">
+            <p class="para text-sm">
+              MunchSprouts ("we", "our", or "us") respects your privacy and is committed to protecting your personal data. This Privacy Policy explains how we collect, use, store, share, and safeguard your information when you use the MunchSprouts website, mobile application, and related services.
             </p>
+            <p class="para mt-2 text-sm font-semibold">We do not sell your personal data.</p>
           </div>
         </div>
 
-        <!-- Section -->
-        <div class="flex flex-col gap-4">
-          <h2 class="heading3 text-primary-green">Cookies and Similar Technologies</h2>
+        <!-- 1 -->
+        <div class="flex flex-col gap-3">
+          <h2 class="heading3 text-primary-green">1. Who We Are</h2>
           <p class="para">
-            The MunchSprout website may use cookies or similar technologies that
-            are necessary for the operation, security, performance, and
-            improvement of the website. If non-essential cookies or similar
-            technologies are used, they should only be activated in accordance
-            with applicable consent requirements.
+            MunchSprouts is a website and mobile application designed for parents and caregivers to record and manage baby feeding and weaning information.
           </p>
+          <p class="para">
+            For the purposes of UK data protection law, MunchSprouts is the <strong>data controller</strong> for the personal data described in this Privacy Policy.
+          </p>
+          <p class="para">Contact: 📧 <a href="mailto:munchsprouts@outlook.com" class="text-primary-pink-dark underline">munchsprouts@outlook.com</a></p>
         </div>
 
-        <!-- Section -->
-        <div class="flex flex-col gap-4">
-          <h2 class="heading3 text-primary-green">Your Rights</h2>
-          <ul class="para list-inside list-disc">
-            <li>Request access to personal data we hold about you</li>
-            <li>Request correction of inaccurate or incomplete data</li>
-            <li>Request deletion of your account and associated data</li>
-            <li>Request restriction of processing in certain circumstances</li>
-            <li>Object to certain processing where applicable</li>
-            <li>Request portability of data where applicable</li>
-            <li>Withdraw consent at any time where processing is based on consent</li>
-          </ul>
-          <p class="para">
-            To exercise any of these rights, contact us at:<br />
-            📧 munchsprouts@outlook.com
-          </p>
-        </div>
+        <!-- 2 -->
+        <div class="flex flex-col gap-3">
+          <h2 class="heading3 text-primary-green">2. Information We Collect</h2>
 
-        <!-- Section -->
-        <div class="flex flex-col gap-4">
-          <h2 class="heading3 text-primary-green">Data Retention</h2>
-          <p class="para">
-            We retain personal data only for as long as necessary for the
-            purposes described in this Privacy Policy, including to provide the
-            service, maintain records, resolve disputes, enforce agreements, and
-            comply with legal obligations. If you delete your account or request
-            deletion, your personal data will be deleted or anonymised within a
-            reasonable timeframe unless we are required or permitted to retain
-            certain information by law.
-          </p>
           <div class="flex flex-col gap-2">
-            <h3 class="font-semibold">Subscriptions and Billing</h3>
-            <p class="para">
-              MunchSprouts offers auto-renewable subscription plans. Subscriptions are purchased through the Apple App Store or Google Play Store. Payment is charged to your App Store or Google Play account at confirmation of purchase. Subscriptions automatically renew unless cancelled at least 24 hours before the end of the current period. You can manage or cancel your subscription at any time through your device's account settings. We do not have access to your payment card details — all billing is handled by Apple or Google.
+            <h3 class="font-semibold">Information you provide directly</h3>
+            <ul class="para list-inside list-disc flex flex-col gap-1 pl-2">
+              <li>Email address</li>
+              <li>Display name or account name</li>
+              <li>Uploaded profile images or photos</li>
+              <li>Messages or support enquiries</li>
+            </ul>
+          </div>
+
+          <div class="flex flex-col gap-2">
+            <h3 class="font-semibold">User-generated app data</h3>
+            <ul class="para list-inside list-disc flex flex-col gap-1 pl-2">
+              <li>Child profiles</li>
+              <li>Feeding records</li>
+              <li>Food logs</li>
+              <li>Allergens and reactions</li>
+              <li>Notes and preferences</li>
+              <li>Uploaded images and memory photos</li>
+              <li>Recipes or submitted content</li>
+            </ul>
+          </div>
+
+          <div class="flex flex-col gap-2">
+            <h3 class="font-semibold">Technical &amp; usage information</h3>
+            <ul class="para list-inside list-disc flex flex-col gap-1 pl-2">
+              <li>Device type</li>
+              <li>Operating system</li>
+              <li>Browser type</li>
+              <li>Diagnostic and crash data</li>
+              <li>Usage analytics and performance information</li>
+            </ul>
+          </div>
+
+          <div class="rounded-xl bg-bg-purple p-4">
+            <p class="para text-sm">
+              While some information entered into the app may relate to feeding, allergens, or reactions, MunchSprouts is not intended to collect or process medical records or healthcare data.
             </p>
           </div>
         </div>
 
-        <!-- Section -->
-        <div class="flex flex-col gap-4">
-          <h2 class="heading3 text-primary-green">Third-Party Links and Services</h2>
+        <!-- 3 -->
+        <div class="flex flex-col gap-3">
+          <h2 class="heading3 text-primary-green">3. How We Use Your Information</h2>
+          <p class="para">We use personal data to:</p>
+          <ul class="para list-inside list-disc flex flex-col gap-1 pl-2">
+            <li>Provide and maintain the service</li>
+            <li>Create and manage accounts</li>
+            <li>Sync data across devices</li>
+            <li>Enable app features and exports</li>
+            <li>Respond to support requests</li>
+            <li>Improve app reliability and performance</li>
+            <li>Prevent misuse, fraud, or security issues</li>
+            <li>Comply with legal obligations</li>
+          </ul>
+          <div class="rounded-xl bg-bg-purple p-4">
+            <p class="para text-sm font-semibold">We do not sell personal data.</p>
+          </div>
+        </div>
+
+        <!-- 4 -->
+        <div class="flex flex-col gap-3">
+          <h2 class="heading3 text-primary-green">4. Lawful Bases for Processing</h2>
+          <p class="para">Depending on how you use MunchSprouts, we rely on:</p>
+          <ul class="para list-inside list-disc flex flex-col gap-1 pl-2">
+            <li><strong>Performance of a contract</strong> — to provide the service you've signed up for</li>
+            <li><strong>Legitimate interests</strong> — to operate, improve, and secure the service</li>
+            <li><strong>Legal obligations</strong> — where processing is required by law</li>
+            <li><strong>Consent</strong> — where specifically requested</li>
+          </ul>
           <p class="para">
-            The website or app may contain links to third-party websites,
-            platforms, or services. We are not responsible for the privacy
-            practices, content, or security of third-party services, and users
-            should review their privacy policies separately.
+            Where we rely on legitimate interests, these include operating and improving the service, preventing abuse, and securing systems and user data.
           </p>
         </div>
 
-        <!-- Section -->
-        <div class="flex flex-col gap-4">
-          <h2 class="heading3 text-primary-green">Complaints</h2>
+        <!-- 5 -->
+        <div class="flex flex-col gap-3">
+          <h2 class="heading3 text-primary-green">5. Data Storage &amp; Security</h2>
+          <p class="para">We use reasonable technical and organisational measures to help protect personal data, including:</p>
+          <ul class="para list-inside list-disc flex flex-col gap-1 pl-2">
+            <li>Secure authentication systems</li>
+            <li>Encrypted transmission where supported</li>
+            <li>Restricted access to stored data</li>
+            <li>Reputable cloud infrastructure providers</li>
+          </ul>
           <p class="para">
-            If you have concerns about how your personal data is handled, please
-            contact us first so we can try to resolve the issue. You also have
-            the right to lodge a complaint with the Information Commissioner's
-            Office (ICO) in the UK.
+            Uploaded photos and user content are stored privately and are only accessible to authorised users on the associated account unless explicitly shared by the user.
+          </p>
+          <p class="para">
+            While we use reasonable safeguards, no method of storage or transmission is completely secure and absolute security cannot be guaranteed.
           </p>
         </div>
 
-        <!-- Section -->
-        <div class="flex flex-col gap-4">
-          <h2 class="heading3 text-primary-green">Changes to This Policy</h2>
+        <!-- 6 -->
+        <div class="flex flex-col gap-3">
+          <h2 class="heading3 text-primary-green">6. Data Sharing</h2>
+          <p class="para">We may share personal data:</p>
+          <ul class="para list-inside list-disc flex flex-col gap-1 pl-2">
+            <li>With trusted service providers used for hosting, authentication, analytics, storage, or support (including Firebase/Google, RevenueCat, Apple, and Google)</li>
+            <li>Where required by law or legal process</li>
+            <li>To protect rights, users, systems, or service integrity</li>
+            <li>In connection with a merger, acquisition, or business transfer</li>
+          </ul>
+          <p class="para">We require third-party providers to process data only as necessary and subject to appropriate privacy obligations.</p>
+        </div>
+
+        <!-- 7 -->
+        <div class="flex flex-col gap-3">
+          <h2 class="heading3 text-primary-green">7. International Transfers</h2>
           <p class="para">
-            We may update this Privacy Policy from time to time. Updates will be
-            posted within the app, on the website, or both. The “Last updated”
-            date at the top of this page shows when this Privacy Policy was most
-            recently revised.
+            Some service providers may process personal data outside the UK. Where required, we use appropriate safeguards such as adequacy regulations, contractual protections, or standard data protection clauses.
           </p>
         </div>
 
-        <!-- Section -->
-        <div class="flex flex-col gap-4">
-          <h2 class="heading3 text-primary-green">Contact Us</h2>
+        <!-- 8 -->
+        <div class="flex flex-col gap-3">
+          <h2 class="heading3 text-primary-green">8. Children's Privacy</h2>
+          <p class="para">MunchSprouts is intended for use by parents and caregivers.</p>
+          <div class="rounded-xl bg-bg-warning p-4">
+            <p class="para">
+              We do <strong>not knowingly collect personal data directly from children</strong>. Any child-related data is entered and controlled by a parent or guardian. Users are responsible for ensuring they have the right to upload any information, photos, or content entered into the service.
+            </p>
+          </div>
+        </div>
+
+        <!-- 9 -->
+        <div class="flex flex-col gap-3">
+          <h2 class="heading3 text-primary-green">9. Cookies &amp; Similar Technologies</h2>
           <p class="para">
-            If you have any questions, requests, or concerns about this Privacy
-            Policy or your personal data, contact us at:<br />
-            📧 munchsprouts@outlook.com
+            The MunchSprouts website may use cookies or similar technologies necessary for security, functionality, performance, and analytics. Where required by law, consent will be requested before non-essential cookies are used.
           </p>
+        </div>
+
+        <!-- 10 -->
+        <div class="flex flex-col gap-3">
+          <h2 class="heading3 text-primary-green">10. Your Rights</h2>
+          <p class="para">Subject to applicable law, you may have the right to:</p>
+          <ul class="para list-inside list-disc flex flex-col gap-1 pl-2">
+            <li>Access your personal data</li>
+            <li>Correct inaccurate information</li>
+            <li>Request deletion of your account and data</li>
+            <li>Restrict processing</li>
+            <li>Object to certain processing</li>
+            <li>Request portability of data</li>
+            <li>Withdraw consent where applicable</li>
+          </ul>
+          <p class="para">To exercise your rights: 📧 <a href="mailto:munchsprouts@outlook.com" class="text-primary-pink-dark underline">munchsprouts@outlook.com</a></p>
+        </div>
+
+        <!-- 11 -->
+        <div class="flex flex-col gap-3">
+          <h2 class="heading3 text-primary-green">11. Automated Decision-Making</h2>
+          <p class="para">
+            MunchSprouts does not use automated decision-making or profiling that produces legal or similarly significant effects on users. All decisions relating to your account are made by humans.
+          </p>
+        </div>
+
+        <!-- 12 -->
+        <div class="flex flex-col gap-3">
+          <h2 class="heading3 text-primary-green">12. Data Retention</h2>
+          <p class="para">
+            We retain personal data only as long as reasonably necessary for providing the service, maintaining records, resolving disputes, enforcing agreements, and complying with legal obligations.
+          </p>
+          <p class="para">
+            If you delete your account or request deletion, personal data will be deleted or anonymised within a reasonable timeframe unless retention is legally required.
+          </p>
+        </div>
+
+        <!-- 13 -->
+        <div class="flex flex-col gap-3">
+          <h2 class="heading3 text-primary-green">13. Subscriptions &amp; Billing</h2>
+          <p class="para">Subscriptions are purchased through Apple App Store or Google Play Store. Payments are handled entirely by Apple or Google. We do not have access to payment card details.</p>
+          <p class="para">Subscriptions automatically renew unless cancelled before renewal through your device account settings.</p>
+        </div>
+
+        <!-- 14 -->
+        <div class="flex flex-col gap-3">
+          <h2 class="heading3 text-primary-green">14. Third-Party Links &amp; Services</h2>
+          <p class="para">
+            The app or website may contain links to third-party websites or services. We are not responsible for the privacy, security, or content practices of third-party services. Users should review third-party privacy policies separately.
+          </p>
+        </div>
+
+        <!-- 15 -->
+        <div class="flex flex-col gap-3">
+          <h2 class="heading3 text-primary-green">15. Complaints</h2>
+          <p class="para">
+            If you have concerns about how personal data is handled, please contact us first so we can attempt to resolve the issue.
+          </p>
+          <p class="para">
+            You also have the right to lodge a complaint with the UK <strong>Information Commissioner's Office (ICO)</strong> at <a href="https://ico.org.uk" target="_blank" rel="noopener noreferrer" class="text-primary-pink-dark underline">ico.org.uk</a>.
+          </p>
+        </div>
+
+        <!-- 16 -->
+        <div class="flex flex-col gap-3">
+          <h2 class="heading3 text-primary-green">16. Changes to This Privacy Policy</h2>
+          <p class="para">
+            We may update this Privacy Policy from time to time. Updates may be posted within the app, on the website, or via email where appropriate. Continued use of MunchSprouts after updates take effect constitutes acceptance of the updated Privacy Policy.
+          </p>
+        </div>
+
+        <!-- 17 -->
+        <div class="flex flex-col gap-3">
+          <h2 class="heading3 text-primary-green">17. Contact</h2>
+          <p class="para">For questions or privacy requests:</p>
+          <div class="rounded-xl bg-bg-purple p-4 flex flex-col gap-1">
+            <p class="para font-semibold">MunchSprouts</p>
+            <p class="para">📧 <a href="mailto:munchsprouts@outlook.com" class="text-primary-pink-dark underline">munchsprouts@outlook.com</a></p>
+            <p class="para">🌐 <a href="https://www.munchsprouts.co.uk" class="text-primary-pink-dark underline">www.munchsprouts.co.uk</a></p>
+          </div>
         </div>
 
         <!-- Footer -->
-        <div class="text-text-charcoal-light mt-4 text-center text-sm">
-          © 2026 MunchSprout. All rights reserved.
+        <div class="text-text-charcoal-light mt-2 border-t border-gray-100 pt-4 text-center text-sm">
+          © 2026 Munch Sprouts. All rights reserved. ·
+          <a href="https://www.munchsprouts.co.uk/terms-of-use" class="underline hover:text-primary-pink-dark">Terms of Use</a>
         </div>
+
       </div>
     </div>
+
+    <script src="./js/nav.js"></script>
+    <script src="./js/app-banner.js"></script>
   </body>
 </html>
