@@ -142,11 +142,11 @@
   }
 
   .tab {
-    @apply bg-bg-purple border-b-primary-purple flex w-full border-b-2;
+    @apply bg-bg-purple border-b-primary-purple flex flex-wrap w-full border-b-2;
   }
 
   .tablinks {
-    @apply text-text-charcoal-light hover:bg-primary-purple hover:text-text-charcoal-dark float-left flex-1 cursor-pointer border-b-4 border-b-transparent p-4 text-center font-bold transition-all duration-300;
+    @apply text-text-charcoal-light hover:bg-primary-purple hover:text-text-charcoal-dark w-1/2 sm:flex-1 cursor-pointer border-b-4 border-b-transparent px-2 py-3 sm:p-4 text-center text-sm font-bold transition-all duration-300;
   }
 
   .active {
