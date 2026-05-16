@@ -5,42 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- SEO -->
-    <meta
-      name="description"
-      content="Recipes, safety tips, resources, and support for parents embarking on the baby led weaning journey. UK-focused BLW guides."
-    />
-    <meta
-      name="keywords"
-      content="baby led weaning, BLW recipes UK, weaning safety, baby food tracker, BLW 6 months"
-    />
+    <meta name="description" content="Baby led weaning recipes for every stage — 4–6 months, 6 months, and 10 months+. Simple, nutritious BLW meals for UK families." />
+    <meta name="keywords" content="baby led weaning recipes, BLW recipes UK, 6 month baby food, first finger foods, weaning meal ideas" />
     <meta name="author" content="MunchSprouts" />
     <meta name="robots" content="index, follow" />
 
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="MunchSprouts - Fun Baby Led Weaning" />
-    <meta
-      name="twitter:description"
-      content="Recipes, safety tips, and trackers for baby led weaning."
-    />
-    <meta
-      name="twitter:image"
-      content="https://munchsprouts.co.uk/images/logo.png"
-    />
-
     <!-- Open Graph -->
-    <meta property="og:title" content="MunchSprouts - Fun Baby Led Weaning" />
-    <meta
-      property="og:description"
-      content="Recipes, safety tips, and trackers for baby led weaning. UK parents."
-    />
-    <meta
-      property="og:image"
-      content="https://munchsprouts.co.uk/images/logo.png"
-    />
-    <meta property="og:url" content="https://munchsprouts.co.uk/" />
+    <meta property="og:title" content="BLW Recipes by Age | Munch Sprouts" />
+    <meta property="og:description" content="Baby led weaning recipes for every stage — 4–6 months, 6 months, and 10 months+." />
+    <meta property="og:image" content="https://munchsprouts.co.uk/images/logo.png" />
+    <meta property="og:url" content="https://munchsprouts.co.uk/recipes" />
     <meta property="og:type" content="website" />
-    <meta property="og:site_name" content="MunchSprouts" />
 
     <!-- Favicons -->
     <link rel="icon" type="image/x-icon" href="favicon.ico" />
@@ -48,185 +23,301 @@
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
     <link rel="manifest" href="site.webmanifest" />
 
-    <!-- CSS -->
+    <!-- Styles -->
+    <!-- Recipe card styles must load first so Tailwind can override them -->
     <link rel="stylesheet" href="./css/styles.css" />
     <link href="output.css" rel="stylesheet" />
-    <script src="./js/main.js" defer></script>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+      /* Override old styles.css nav rules that conflict with the Tailwind nav */
+      nav.primary-nav { display: block !important; }
+      nav.primary-nav ul { display: flex !important; flex-direction: column !important; justify-content: center !important; align-items: center !important; gap: 0.625rem !important; padding: 0.625rem !important; list-style: none !important; }
+      nav.primary-nav ul li { height: auto !important; min-height: 3rem !important; flex-direction: row !important; width: 100vw !important; display: flex !important; align-items: center !important; justify-content: center !important; }
+      nav.primary-nav a { padding: 0 !important; font-size: 1rem !important; font-weight: 500 !important; border-radius: 0 !important; width: 100% !important; display: block !important; text-align: center !important; }
+      @media (min-width: 1024px) { nav.primary-nav { display: none !important; } }
+    </style>
 
-    <img loading="lazy" decoding="async" />
-
-    <title>MunchSprouts - Recipes</title>
+    <link rel="canonical" href="https://munchsprouts.co.uk/recipes" />
+    <title>BLW Recipes by Age | Munch Sprouts</title>
   </head>
 
   <body>
-    <!-- Site header -->
-    <!-- <header class="site-header">
-      <div class="header-container">
-        <a
-          href="https://munchsprouts.co.uk"
-          class="logo-title-link"
-          aria-label="Go to homepage"
-        >
-          <div class="title-container">
-            <div class="logo-title-container">
-              <img
-                src="./images/logo.png"
-                alt="MunchSprouts Logo"
-                class="logo"
-              />
-            </div>
-            <h1 class="site-title">Munch Sprouts</h1>
-          </div>
-        </a> -->
+    <div class="body bg-bg-main flex flex-col gap-5 px-2">
 
-        <!-- Button for mobile -->
-        <!-- <button
-          class="mobile-menu-toggle"
-          aria-label="Open menu"
-          aria-expanded="false"
-        >
-          <span class="hamburger-line"></span>
-          <span class="hamburger-line"></span>
-          <span class="hamburger-line"></span>
-        </button>
+      <!-- Header -->
+      <header class="fixed z-50 flex w-screen items-center justify-between bg-white px-2.5 pt-2.5 pb-0 shadow-md">
+        <div class="flex w-full items-center justify-between lg:justify-start lg:gap-5">
+          <img src="./images/logo.png" alt="munch sprouts logo" class="w-10" />
+          <h1 class="text-3xl font-bold">Munch Sprouts</h1>
+          <div></div>
+        </div>
 
-        <nav class="primary-nav">
-          <ul>
-            <li><a href="./index.html">Home</a></li>
-            <li><a href="./getting-started.html">Getting Started</a></li>
-            <li class="active"><a href="./recipes.html">Recipes</a></li>
-            <li><a href="./safety.html">Safety</a></li>
-            <li><a href="./resources.html">Resources</a></li>
-          </ul>
-        </nav>
-      </div>
-    </header> -->
-
-    <div class="body bg-bg-main flex flex-col gap-5"></div>
-    <!-- Header -->
-      <header
-        class="fixed flex w-screen items-center justify-between bg-white p-2.5 shadow-md"
-      >
-        <img src="./images/logo.png" alt="munch sprouts logo" class="w-10" />
-        <h1 class="text-3xl font-bold">Munch Sprouts</h1>
-        <div class="hamburger-symbol hover:cursor-pointer">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke-width="1.5"
-            stroke="currentColor"
-            class="size-6"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-            />
+        <div class="hamburger-symbol hover:cursor-pointer lg:hidden">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
           </svg>
+        </div>
+
+        <!-- Desktop navigation -->
+        <div class="hidden h-full self-stretch items-stretch lg:flex">
+          <nav class="h-full">
+            <ul class="flex h-full items-stretch gap-1 px-2.5 pt-2.5">
+              <li class="lg-nav-elems"><a href="index.html">Home</a></li>
+              <li class="lg-nav-elems"><a href="./getting-started.html">Getting Started</a></li>
+              <li class="lg-nav-elems lg-this-page"><a href="./recipes.html">Recipes</a></li>
+              <li class="lg-nav-elems"><a href="./safety.html">Safety</a></li>
+              <li class="lg-nav-elems"><a href="./resources.html">Resources</a></li>
+              <li class="lg-nav-elems"><a href="https://apps.apple.com/gb/app/munch-sprouts-weaning-tracker/id6763142582" target="_blank" rel="noopener noreferrer">Tracker App</a></li>
+            </ul>
+          </nav>
         </div>
       </header>
 
-      <!-- navigation -->
-      <nav class="primary-nav bg-bg-main nav-hidden fixed mt-14">
+      <!-- Mobile navigation -->
+      <nav class="primary-nav bg-bg-main nav-hidden fixed z-40 mt-14 lg:hidden">
         <ul class="flex flex-col items-center gap-2.5 p-2.5">
-          <li class="nav-elems this-page">
-            <a
-              href="index.html"
-              class="text-primary-pink-dark block h-full w-full"
-              >Home</a
-            >
-          </li>
-          <li class="nav-elems">
-            <a href="./getting-started.html" class="block h-full w-full"
-              >Getting Started</a
-            >
-          </li>
-          <li class="nav-elems">
-            <a href="./recipes.html" class="block h-full w-full">Recipes</a>
-          </li>
-          <li class="nav-elems">
-            <a href="./safety.html" class="block h-full w-full">Safety</a>
-          </li>
-          <li class="nav-elems">
-            <a href="./resources.html" class="block h-full w-full">Resources</a>
-          </li>
+          <li class="nav-elems"><a href="index.html" class="block h-full w-full">Home</a></li>
+          <li class="nav-elems"><a href="./getting-started.html" class="block h-full w-full">Getting Started</a></li>
+          <li class="nav-elems this-page"><a href="./recipes.html" class="text-primary-pink-dark block h-full w-full">Recipes</a></li>
+          <li class="nav-elems"><a href="./safety.html" class="block h-full w-full">Safety</a></li>
+          <li class="nav-elems"><a href="./resources.html" class="block h-full w-full">Resources</a></li>
+          <li class="nav-elems"><a href="https://apps.apple.com/gb/app/munch-sprouts-weaning-tracker/id6763142582" target="_blank" rel="noopener noreferrer" class="block h-full w-full">Tracker App</a></li>
         </ul>
       </nav>
 
-    <!-- Main section -->
-    <main class="recipes-main">
-      <!-- Recipe index section -->
-      <section class="recipe-index collapsed">
-        <button class="recipe-toggle" id="recipe-toggle">
-          All Recipes<span class="toggle-icon">▲</span>
-        </button>
-        <input type="text" id="recipe-search" placeholder="Search recipes..." />
-        <div class="recipe-list" id="recipe-list">
-          <!-- Populated by JS -->
-        </div>
-      </section>
+      <main class="mt-14 flex flex-col gap-5">
 
-      <!-- Nav stays -->
-      <nav class="recipe-nav">
-        <ul>
-          <li><a href="#" data-load="4-6-months">4-6 Months</a></li>
-          <li><a href="#" data-load="6-months">6 Months</a></li>
-          <li><a href="#" data-load="10-months">10 Months</a></li>
-        </ul>
-      </nav>
-
-      <!-- Dynamic content area -->
-      <div id="recipes-container">
-        <!-- Loads here -->
-      </div>
-
-      <!-- Back to top button -->
-      <button id="back-to-top" onclick="scrollToTop()" title="Back to Top">
-        ▲
-      </button>
-    </main>
-
-    <!-- JS to bring recipes -->
-    <script src="./recipes/main.js"></script>
-
-    <!-- Footer -->
-    <footer class="site-footer">
-      <div class="footer-text">
-        <div class="footer-desc">
-          <div class="footer-logo">
-            <img
-              src="./images/logo.png"
-              alt="Cartoon baby hand holding broccoli"
-              id="footer-logo"
-            />
-            <h3>Munch Sprouts</h3>
+        <!-- Page intro -->
+        <section class="section-base bg-bg-purple">
+          <div class="flex items-center gap-3">
+            <img src="./images/logo.png" alt="Munch Sprouts" class="w-10" />
+            <h2 class="text-2xl font-bold">BLW Recipes</h2>
           </div>
-          <p>
-            Your complete guide to introducing solid foods to your baby with
-            fun, safe, and nutritious recipes.
+          <p class="para text-center">
+            Simple, nutritious meals for every stage of your baby's weaning journey — from first tastes to family favourites.
           </p>
-        </div>
 
-        <div class="important-info">
-          <h3>Important Note</h3>
-          <p>
-            Always consult with your GP and health visitor before starting baby
-            led weaning. This site is for general information only and should
-            not replace professional advice.
+          <!-- Search bar — constrained width, centred, less gap above dropdown -->
+          <div style="width:100%; max-width:420px; margin:0 auto 0; background:white; border-radius:0.75rem; box-shadow:0 1px 3px rgba(0,0,0,0.12); padding:10px 14px; display:flex; align-items:center; gap:10px; box-sizing:border-box;">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" style="height:18px; width:18px; flex-shrink:0; color:#666666;">
+              <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 15.803a7.5 7.5 0 0 0 10.607 0Z" />
+            </svg>
+            <input
+              type="text"
+              id="recipe-search"
+              placeholder="Search recipes..."
+              style="flex:1; min-width:0; background:transparent; border:none; outline:none; font-size:0.95rem; line-height:1.5;"
+            />
+          </div>
+
+          <!-- Quick recipe index (collapsible) — full width, 2-col grid when open -->
+          <div style="width:100%; box-sizing:border-box; margin-top:-12px;">
+            <button
+              id="recipe-toggle"
+              style="width:100%; display:flex; align-items:center; justify-content:space-between; background:white; border-radius:0.75rem; box-shadow:0 1px 3px rgba(0,0,0,0.12); padding:16px 20px; font-size:1rem; font-weight:600; box-sizing:border-box; cursor:pointer; border:none;"
+            >
+              <span>All Recipes</span>
+              <span class="toggle-icon" style="color:#d53696; flex-shrink:0; margin-left:12px;">▼</span>
+            </button>
+            <div class="recipe-index" style="display:none; margin-top:8px;">
+              <div id="recipe-list" style="background:white; border-radius:0.75rem; box-shadow:0 1px 3px rgba(0,0,0,0.12); padding:12px; display:grid; grid-template-columns:1fr 1fr; gap:4px;"></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Age tabs -->
+        <section class="section-base bg-white">
+          <h2 class="text-xl font-semibold">Browse by Age</h2>
+
+          <!-- Tab bar — flex-nowrap + equal widths to stay on one row -->
+          <div class="tab w-full" style="flex-wrap: nowrap;">
+            <button class="tablinks active" data-load="4-6-months" style="flex: 1; min-width: 0; width: auto; padding: 0.5rem 0.25rem; font-size: 0.8rem;">4–6 Months</button>
+            <button class="tablinks" data-load="6-months" style="flex: 1; min-width: 0; width: auto; padding: 0.5rem 0.25rem; font-size: 0.8rem;">6 Months+</button>
+            <button class="tablinks" data-load="10-months" style="flex: 1; min-width: 0; width: auto; padding: 0.5rem 0.25rem; font-size: 0.8rem;">10 Months+</button>
+          </div>
+
+          <!-- Dynamic recipe content loads here -->
+          <div id="recipes-container" class="w-full"></div>
+        </section>
+
+        <!-- App CTA -->
+        <section class="section-base bg-bg-purple">
+          <div class="flex items-center gap-3">
+            <img src="./images/logo.png" alt="Munch Sprouts" class="w-10" />
+            <h2 class="text-xl font-semibold">Track What They Try</h2>
+          </div>
+          <p class="para text-center">
+            Log every new food, track allergen introductions, and record your baby's reactions — all in the free Munch Sprouts app.
           </p>
+          <a
+            href="https://apps.apple.com/gb/app/munch-sprouts-weaning-tracker/id6763142582"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"
+              alt="Download on the App Store"
+              class="h-12"
+            />
+          </a>
+        </section>
+
+      </main>
+
+      <!-- Footer -->
+      <footer class="section-base bg-white">
+        <div class="flex items-center gap-3">
+          <img src="./images/logo.png" alt="munch sprouts logo" class="w-10" />
+          <h3 class="heading3 lg:text-left">Munch Sprouts</h3>
         </div>
-      </div>
-
-      <div class="horizontal-rule"></div>
-
-      <div class="copyright">
-        <p>
-          &copy; 2026 MunchSprouts. For informational purposes only. | Content
-          may be inspired by public sources under UK fair dealing.
+        <p class="para text-center">
+          Your complete guide to introducing solid foods to your baby with fun, safe and nutritious recipes
         </p>
-      </div>
-    </footer>
-</div>
+        <div class="bg-bg-warning border-warning-stroke flex flex-col items-center gap-2.5 rounded-xl border-2 p-1">
+          <h4 class="text-lg font-bold">Important Note</h4>
+          <p class="para text-center">
+            Always consult your GP and Health Visitor before starting baby led weaning. This site is for general information only and should not replace professional advice.
+          </p>
+        </div>
+        <div class="text-text-charcoal-light border-t border-gray-100 pt-3 text-center text-sm">
+          © 2026 Munch Sprouts. All rights reserved. ·
+          <a href="./terms-of-use.html" class="underline hover:text-primary-pink-dark">Terms of Use</a> ·
+          <a href="./privacy-policy.html" class="underline hover:text-primary-pink-dark">Privacy Policy</a>
+        </div>
+      </footer>
+
+    </div>
+
+    <!-- Back to top -->
+    <button
+      id="back-to-top"
+      onclick="scrollToTop()"
+      title="Back to Top"
+      class="fixed bottom-24 right-4 z-40 hidden h-11 w-11 items-center justify-center rounded-full bg-primary-purple shadow-lg hover:bg-secondary-purple"
+    >
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="h-5 w-5">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 10.5 12 3m0 0 7.5 7.5M12 3v18" />
+      </svg>
+    </button>
+
+    <script src="./js/main.js"></script>
+    <script src="./js/app-banner.js"></script>
+    <script>
+      // Tab switching — rewired to work with Tailwind tab classes
+      document.querySelectorAll('.tablinks[data-load]').forEach(btn => {
+        btn.addEventListener('click', async (e) => {
+          const month = btn.dataset.load;
+
+          // Update active tab style
+          document.querySelectorAll('.tablinks').forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+
+          // Load recipe HTML
+          try {
+            const response = await fetch(`recipes/${month}.html`);
+            const html = await response.text();
+            document.getElementById('recipes-container').innerHTML = html;
+            document.getElementById('recipes-container').scrollIntoView({ behavior: 'smooth', block: 'start' });
+          } catch (err) {
+            document.getElementById('recipes-container').innerHTML = '<p class="para p-4">Could not load recipes. Please try again.</p>';
+          }
+        });
+      });
+
+      // Recipe index toggle — hidden by default, show on click
+      const toggleBtn = document.getElementById('recipe-toggle');
+      if (toggleBtn) {
+        toggleBtn.addEventListener('click', () => {
+          const index = document.querySelector('.recipe-index');
+          const icon = document.querySelector('.toggle-icon');
+          const isHidden = index.style.display === 'none';
+          index.style.display = isHidden ? 'block' : 'none';
+          icon.textContent = isHidden ? '▲' : '▼';
+        });
+      }
+
+      // Click handler for recipe links inside the index
+      document.addEventListener('click', (e) => {
+        if (e.target.classList.contains('recipe-link')) {
+          e.preventDefault();
+          const month = e.target.dataset.month;
+          const tabBtn = document.querySelector(`.tablinks[data-load="${month}"]`);
+          if (tabBtn) tabBtn.click();
+          setTimeout(() => {
+            const recipeId = e.target.getAttribute('href').slice(1);
+            const recipe = document.getElementById(recipeId);
+            if (recipe) recipe.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          }, 300);
+        }
+      });
+
+      // Search filter
+      async function loadRecipeIndex() {
+        const recipes = [
+          { name: "Avocado Basil Puree", id: "avocado-basil-puree", month: "4-6-months" },
+          { name: "Aubergine Pepper Sweet Potato", id: "aubergine-pepper-sweet-potato", month: "4-6-months" },
+          { name: "Butternut Squash Mint Broccoli", id: "butternut-squash-mint-broccoli-courgette-puree", month: "4-6-months" },
+          { name: "Butternut Squash Sweetcorn Carrot", id: "butternut-squash-sweetcorn-carrot-puree", month: "4-6-months" },
+          { name: "Brussels Sprouts Puree", id: "brussels-sprouts-puree", month: "4-6-months" },
+          { name: "Carrot Puree", id: "carrot-puree", month: "4-6-months" },
+          { name: "Broccoli Puree", id: "broccoli-puree", month: "4-6-months" },
+          { name: "Bright Start Breakfast Bowl", id: "bright-start-breakfast-bowl", month: "6-months" },
+          { name: "Herby Scrambled Egg", id: "herby-scrambled-egg", month: "6-months" },
+          { name: "My First Chicken Curry", id: "my-first-chicken-curry", month: "6-months" },
+          { name: "Pea and Ham Bake", id: "pea-and-ham-bake", month: "6-months" },
+          { name: "Creamy Hotpot", id: "creamy-hotpot", month: "6-months" },
+          { name: "Cheese and Mushroom Cakes", id: "cheese-and-mushroom-cakes", month: "6-months" },
+          { name: "Smashed Avocado Banana", id: "smashed-avocado-and-banana", month: "6-months" },
+          { name: "Simple Baked Fish", id: "simple-baked-fish", month: "6-months" },
+          { name: "Crustless Mini Quiche", id: "crustless-mini-quiche", month: "6-months" },
+          { name: "Steamed Apple Pear", id: "steamed-apple-and-pear", month: "6-months" },
+          { name: "Yummy Fish Pie", id: "yummy-fish-pie", month: "6-months" },
+          { name: "Cheesy Tomato Pitta Pizzas", id: "cheesy-tomato-pitta-pizzas", month: "10-months" },
+          { name: "Baked Bean Breakfast Pancakes", id: "baked-bean-breakfast-pancakes", month: "10-months" },
+          { name: "Smoky Bean One-Pot Hotpot", id: "smoky-bean-one-pot-hotpot", month: "10-months" },
+          { name: "Green Bean Basil Pasta", id: "green-bean-basil-pasta", month: "10-months" },
+          { name: "Cheesy Broccoli Potato Gratin", id: "cheesy-broccoli-potato-gratin", month: "10-months" },
+          { name: "On The Go Porridge Bars", id: "on-the-go-porridge-bars", month: "10-months" },
+          { name: "Fruity Delicious Porridge", id: "fruity-delicious-porridge", month: "10-months" },
+        ];
+
+        const listEl = document.getElementById('recipe-list');
+        if (listEl) {
+          listEl.innerHTML = recipes.map(r => `
+            <a href="#${r.id}" class="recipe-link" data-month="${r.month}" style="display:block; padding:7px 10px; border-radius:8px; font-size:0.85rem; color:#444; text-decoration:none; background:transparent; transition:background 0.15s;" onmouseover="this.style.background='#f9f4fe'" onmouseout="this.style.background='transparent'">
+              ${r.name}
+            </a>
+          `).join('');
+        }
+
+        const searchInput = document.getElementById('recipe-search');
+        if (searchInput) {
+          searchInput.addEventListener('input', (e) => {
+            const term = e.target.value.toLowerCase();
+            document.querySelectorAll('.recipe-link').forEach(link => {
+              link.style.display = link.textContent.toLowerCase().includes(term) ? 'block' : 'none';
+            });
+          });
+        }
+      }
+
+      document.addEventListener('DOMContentLoaded', async () => {
+        await loadRecipeIndex();
+        // Auto-load first tab
+        document.querySelector('.tablinks[data-load="4-6-months"]').click();
+
+        // Back-to-top visibility
+        window.addEventListener('scroll', () => {
+          const btn = document.getElementById('back-to-top');
+          if (!btn) return;
+          if (window.scrollY >= 300) {
+            btn.classList.remove('hidden');
+            btn.style.display = 'flex';
+          } else {
+            btn.style.display = 'none';
+          }
+        });
+      });
+    </script>
   </body>
 </html>

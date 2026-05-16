@@ -3,18 +3,27 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="MunchSprouts" />
+    <meta name="robots" content="index, follow" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+    <link rel="manifest" href="site.webmanifest" />
     <link href="output.css" rel="stylesheet" />
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+    </style>
     <title>Terms of Use - Munch Sprouts</title>
   </head>
 
-  <body class="bg-bg-main text-text-charcoal-dark">
-    <!-- Header -->
-    <header class="fixed flex w-screen items-center justify-between bg-white px-2.5 pt-2.5 pb-0 shadow-md">
+  <body>
+    <div class="body bg-bg-main flex flex-col gap-5 px-2">
+
+      <!-- Header -->
+    <header class="fixed z-50 flex w-screen items-center justify-between bg-white px-2.5 pt-2.5 pb-0 shadow-md">
       <div class="flex w-full items-center justify-between lg:justify-start lg:gap-5">
         <img src="./images/logo.png" alt="munch sprouts logo" class="w-10" />
-        <a href="https://www.munchsprouts.co.uk">
-          <h1 class="text-3xl font-bold">Munch Sprouts</h1>
-        </a>
+        <h1 class="text-3xl font-bold">Munch Sprouts</h1>
         <div></div>
       </div>
 
@@ -33,28 +42,27 @@
             <li class="lg-nav-elems"><a href="./recipes.html">Recipes</a></li>
             <li class="lg-nav-elems"><a href="./safety.html">Safety</a></li>
             <li class="lg-nav-elems"><a href="./resources.html">Resources</a></li>
-            <li class="lg-nav-elems"><a href="./tracker-new.html">Tracker</a></li>
-            <li class="lg-nav-elems"><a href="./build/">Tracker App</a></li>
+            <li class="lg-nav-elems"><a href="https://apps.apple.com/gb/app/munch-sprouts-weaning-tracker/id6763142582" target="_blank" rel="noopener noreferrer">Tracker App</a></li>
           </ul>
         </nav>
       </div>
     </header>
 
     <!-- Mobile navigation -->
-    <nav class="primary-nav bg-bg-main nav-hidden fixed mt-14 lg:hidden">
+    <nav class="primary-nav bg-bg-main nav-hidden fixed z-40 mt-14 lg:hidden">
       <ul class="flex flex-col items-center gap-2.5 p-2.5">
         <li class="nav-elems"><a href="index.html" class="block h-full w-full">Home</a></li>
         <li class="nav-elems"><a href="./getting-started.html" class="block h-full w-full">Getting Started</a></li>
         <li class="nav-elems"><a href="./recipes.html" class="block h-full w-full">Recipes</a></li>
         <li class="nav-elems"><a href="./safety.html" class="block h-full w-full">Safety</a></li>
         <li class="nav-elems"><a href="./resources.html" class="block h-full w-full">Resources</a></li>
-        <li class="nav-elems"><a href="./tracker-new.html" class="block h-full w-full">Tracker</a></li>
-        <li class="nav-elems"><a href="./build/" class="block h-full w-full">Tracker App</a></li>
+        <li class="nav-elems"><a href="https://apps.apple.com/gb/app/munch-sprouts-weaning-tracker/id6763142582" target="_blank" rel="noopener noreferrer" class="block h-full w-full">Tracker App</a></li>
       </ul>
     </nav>
 
-    <div class="mx-auto max-w-3xl px-2 pb-10">
-      <div class="mt-16 flex flex-col gap-7 rounded-2xl bg-white p-6 shadow-md">
+      <main class="mt-14 flex flex-col gap-5">
+      <div class="mx-auto w-full max-w-3xl">
+      <div class="flex flex-col gap-7 rounded-2xl bg-white p-6 shadow-md">
 
         <!-- Title block -->
         <div class="border-b border-gray-100 pb-5">
@@ -329,9 +337,12 @@
         </div>
 
       </div>
+      </div>
+      </main>
+
     </div>
 
-    <script src="./js/nav.js"></script>
+    <script src="./js/main.js"></script>
     <script src="./js/app-banner.js"></script>
   </body>
 </html>

@@ -63,7 +63,7 @@
 
       <!-- Header -->
       <header
-        class="fixed flex w-screen items-center justify-between bg-white px-2.5 pt-2.5 pb-0 shadow-md"
+        class="fixed z-50 flex w-screen items-center justify-between bg-white px-2.5 pt-2.5 pb-0 shadow-md"
       >
         <div
           class="flex w-full items-center justify-between lg:justify-start lg:gap-5"
@@ -110,10 +110,7 @@
                 <a href="./resources.html">Resources</a>
               </li>
               <li class="lg-nav-elems">
-                <a href="./tracker-new.html">Tracker</a>
-              </li>
-              <li class="lg-nav-elems">
-                <a href="./build/">Tracker App</a>
+                <a href="https://apps.apple.com/gb/app/munch-sprouts-weaning-tracker/id6763142582" target="_blank" rel="noopener noreferrer">Tracker App</a>
               </li>
             </ul>
           </nav>
@@ -121,7 +118,7 @@
       </header>
 
       <!-- Mobile navigation -->
-      <nav class="primary-nav bg-bg-main nav-hidden fixed mt-14 lg:hidden">
+      <nav class="primary-nav bg-bg-main nav-hidden fixed z-40 mt-14 lg:hidden">
         <ul class="flex w-full flex-col items-center gap-2.5 p-2.5">
           <li class="nav-elems">
             <a href="index.html">Home</a>
@@ -145,15 +142,12 @@
             >
           </li>
           <li class="nav-elems">
-            <a href="./tracker-new.html" class="block h-full w-full">Tracker</a>
-          </li>
-          <li class="nav-elems">
-            <a href="./build/" class="block h-full w-full">Tracker App</a>
+            <a href="https://apps.apple.com/gb/app/munch-sprouts-weaning-tracker/id6763142582" target="_blank" rel="noopener noreferrer" class="block h-full w-full">Tracker App</a>
           </li>
         </ul>
       </nav>
 
-      <main class="body bg-bg-main mt-14 flex flex-col gap-5">
+      <main class="mt-14 flex flex-col gap-5">
 
         <!-- Intro -->
         <section class="section-base bg-bg-purple">
@@ -442,35 +436,29 @@
           </p>
           <div class="grid w-full grid-cols-1 gap-5 lg:grid-cols-2">
 
-            <div class="info-card">
-              <img
-                src="./images/icons/light-bulb.svg"
-                alt="light bulb"
-                class="icon shrink-0"
-              />
+            <!-- Mess Management — purple -->
+            <div class="info-card bg-bg-purple rounded-xl shadow-sm">
+              <div class="icon-border shrink-0" style="background-color:#ede9fe; border-color:#7c3aed;">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="icon" style="color:#7c3aed;"><path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904 9 18.75l-.813-2.846a4.5 4.5 0 0 0-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 0 0 3.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 0 0 3.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 0 0-3.09 3.09Z" /></svg>
+              </div>
               <div class="info-card-content">
                 <h4 class="font-semibold">Mess Management</h4>
                 <ul class="para flex list-inside list-disc flex-col gap-1">
                   <li>Use a splat mat or old sheet under the high chair</li>
-                  <li>
-                    Try feeding baby in just a nappy during warmer weather
-                  </li>
+                  <li>Try feeding baby in just a nappy during warmer weather</li>
                   <li>Keep a wet cloth or wipes handy for quick cleanup</li>
-                  <li>
-                    Get a high chair with minimal crevices for easier cleaning
-                  </li>
+                  <li>Get a high chair with minimal crevices for easier cleaning</li>
                   <li>If you have a pet, let them help clean the floor</li>
                   <li>Take lots of photos — especially of the mess!</li>
                 </ul>
               </div>
             </div>
 
-            <div class="info-card">
-              <img
-                src="./images/icons/light-bulb.svg"
-                alt="light bulb"
-                class="icon shrink-0"
-              />
+            <!-- Making Life Easier — green -->
+            <div class="info-card bg-bg-green rounded-xl shadow-sm">
+              <div class="icon-border shrink-0" style="background-color:#dcfce7; border-color:#16a34a;">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="icon" style="color:#16a34a;"><path stroke-linecap="round" stroke-linejoin="round" d="M12 18v-5.25m0 0a6.01 6.01 0 0 0 1.5-.189m-1.5.189a6.01 6.01 0 0 1-1.5-.189m3.75 7.478a12.06 12.06 0 0 1-4.5 0m3.75 2.383a14.406 14.406 0 0 1-3 0M14.25 18v-.192c0-.983.658-1.823 1.508-2.316a7.5 7.5 0 1 0-7.517 0c.85.493 1.509 1.333 1.509 2.316V18" /></svg>
+              </div>
               <div class="info-card-content">
                 <h4 class="font-semibold">Making Life Easier</h4>
                 <ul class="para flex list-inside list-disc flex-col gap-1">
@@ -484,50 +472,38 @@
               </div>
             </div>
 
-            <div class="info-card">
-              <img
-                src="./images/icons/light-bulb.svg"
-                alt="light bulb"
-                class="icon shrink-0"
-              />
+            <!-- Stay Motivated — amber/orange -->
+            <div class="info-card rounded-xl shadow-sm" style="background-color:#fff7ed;">
+              <div class="icon-border shrink-0" style="background-color:#ffedd5; border-color:#f97316;">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="icon" style="color:#f97316;"><path stroke-linecap="round" stroke-linejoin="round" d="M15.182 15.182a4.5 4.5 0 0 1-6.364 0M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0ZM9.75 9.75c0 .414-.168.75-.375.75S9 10.164 9 9.75 9.168 9 9.375 9s.375.336.375.75Zm-.375 0h.008v.015h-.008V9.75Zm5.625 0c0 .414-.168.75-.375.75s-.375-.336-.375-.75.168-.75.375-.75.375.336.375.75Zm-.375 0h.008v.015h-.008V9.75Z" /></svg>
+              </div>
               <div class="info-card-content">
                 <h4 class="font-semibold">Stay Motivated</h4>
                 <ul class="para flex list-inside list-disc flex-col gap-1">
                   <li>Join online BLW communities for support</li>
                   <li>Document the journey with photos and videos</li>
-                  <li>
-                    Celebrate the small wins — first taste, new textures, etc.
-                  </li>
-                  <li>
-                    Remember: progress isn't always linear — bad days happen
-                  </li>
+                  <li>Celebrate the small wins — first taste, new textures, etc.</li>
+                  <li>Remember: progress isn't always linear — bad days happen</li>
                   <li>Focus on exploration, not consumption</li>
                   <li>Trust your baby's natural eating instincts</li>
                 </ul>
               </div>
             </div>
 
-            <div class="info-card">
-              <img
-                src="./images/icons/light-bulb.svg"
-                alt="light bulb"
-                class="icon shrink-0"
-              />
+            <!-- Problem Solving — blue, question-mark-circle icon -->
+            <div class="info-card rounded-xl shadow-sm" style="background-color:#eff6ff;">
+              <div class="icon-border shrink-0" style="background-color:#dbeafe; border-color:#3b82f6;">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="icon" style="color:#3b82f6;"><path stroke-linecap="round" stroke-linejoin="round" d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9 5.25h.008v.015H12v-.015Z" /></svg>
+              </div>
               <div class="info-card-content">
                 <h4 class="font-semibold">Problem Solving</h4>
                 <ul class="para flex list-inside list-disc flex-col gap-1">
-                  <li>
-                    If your baby seems uninterested, try different times of day
-                  </li>
+                  <li>If your baby seems uninterested, try different times of day</li>
                   <li>Vary presentation — same food but different shapes</li>
                   <li>Let your baby see you eating and enjoying food</li>
-                  <li>
-                    Don't force or pressure anything — keep mealtimes positive
-                  </li>
+                  <li>Don't force or pressure anything — keep mealtimes positive</li>
                   <li>Some babies are cautious — respect their pace</li>
-                  <li>
-                    If concerned about intake, consult your health visitor
-                  </li>
+                  <li>If concerned about intake, consult your health visitor</li>
                 </ul>
               </div>
             </div>
@@ -1020,7 +996,6 @@
                 <li>Built for UK parents</li>
               </ul>
             </div>
-            <a
             <div class="flex shrink-0 flex-col items-center gap-3">
               <img src="./images/logo.png" alt="Munch Sprouts" class="w-16" />
               <a
@@ -1038,30 +1013,18 @@
           </div>
         </section>
 
-        <!-- Coming Soon -->
-        <section class="section-base bg-bg-purple">
-          <h2 class="text-2xl font-bold">More Features Coming Soon!</h2>
-          <img
-            src="./images/coming-soon.png"
-            alt="Coming soon"
-            class="w-48"
-          />
-        </section>
-
       </main>
 
       <footer class="section-base bg-white">
         <div class="flex items-center gap-3">
           <img src="./images/logo.png" alt="munch sprouts logo" class="w-10" />
-          <h3 class="heading3">Munch Sprouts</h3>
+          <h3 class="heading3 lg:text-left">Munch Sprouts</h3>
         </div>
         <p class="para text-center">
           Your complete guide to introducing solid foods to your baby with fun,
           safe and nutritious recipes
         </p>
-        <div
-          class="bg-bg-warning border-warning-stroke flex flex-col items-center gap-2.5 rounded-xl border-2 p-1"
-        >
+        <div class="bg-bg-warning border-warning-stroke flex flex-col items-center gap-2.5 rounded-xl border-2 p-1">
           <h4 class="text-lg font-bold">Important Note</h4>
           <p class="para text-center">
             Always consult your GP and Health Visitor before starting baby led
@@ -1071,16 +1034,10 @@
         </div>
         <div class="text-text-charcoal-light border-t border-gray-100 pt-3 text-center text-sm">
           © 2026 Munch Sprouts. All rights reserved. ·
-          <a href="https://www.munchsprouts.co.uk/terms-of-use" class="underline hover:text-primary-pink-dark">Terms of Use</a> ·
-          <a href="https://www.munchsprouts.co.uk/privacy-policy" class="underline hover:text-primary-pink-dark">Privacy Policy</a>
+          <a href="./terms-of-use.html" class="underline hover:text-primary-pink-dark">Terms of Use</a> ·
+          <a href="./privacy-policy.html" class="underline hover:text-primary-pink-dark">Privacy Policy</a>
         </div>
       </footer>
-
-      <div class="section-base">
-        <p class="para text-center text-xs">
-          &copy; 2026 Munch Sprouts. For informational purposes only.
-        </p>
-      </div>
 
     </div>
 
